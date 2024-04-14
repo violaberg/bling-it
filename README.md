@@ -2,6 +2,8 @@
 
 ## **Overview**
 
+Bling It is a fictional user-friendly gemstone shop, designed and developed using Django, Python, HTML, CSS and Javascript, born from my personal love for diamonds and rubies.<br>
+It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized by type, cut, color, and clarity to find the perfect piece. Added is a secure checkout process to ensure a safe and smooth transaction. 
 <img scr><br>
 
 Deployed project can be found here: [Bling It]()
@@ -37,52 +39,90 @@ During the planning phase I revisited UX videos provided on the course and used 
 
 ### **Site goals**
 
+Site goal is to give any gem lover/ collector a chance to jump into extraordinary journey of purchasing gemstones from comfort of their own home.
+
 * Offer a fully responsive user-friendly site to browse through.
 * Implement fully functional features.
+* Aim to curate a diverse and exceptional collection of gemstones.
+* Provide detailed information about each gemstone.
+* Create a user-friendly interface with intuitive navigation and robust search capabilities.
+* Create a responsive design for seamless browsing across devices.
+* Implement a secure checkout process.
+* Implement a wishlist feature.
+* Offer ability to leave a review and read other user reviews.
+* Implement SEO best practices to improve visibility in search engines and leverage digital marketing strategies.
 
 ### **Opportunities**
 
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
-Age verification | 5 | 5
 Newsletter list | 3 | 5
 User register/login | 5 | 5
 User profile | 3 | 1
-User ability to add photos to gallery | 2 | 3
-User ability to delete previously added photos | 2 | 3
 User reviews | 5 | 5
+User messages for actions taken | 5 | 5
 Full CRUD funcionality for user | 5 | 5
 Full CRUD funcionality for admin | 5 | 5
-Admin login via front end | 5 | 5
+Admin login | 5 | 5
+Product filters/searching | 5 | 5
 Password recovery | 5 | 5
-Reservation management system for admin | 5 | 3
-User ability to book a tour online | 5 | 5
-User ability to edit/cancel booking online | 3 | 3
-Booking confirmation on site | 5 | 5
-Booking confirmation by email | 5 | 5
-Booking reminder by email | 3 | 3
-Visible booking for logged-in user | 3 | 2
-Option to pay for booking online | 3 | 1
+Order confirmation on site | 5 | 5
+Order confirmation by email | 5 | 5
+Option to safely pay for order with Stripe | 3 | 1
+Delivery information 4 | 4
+Order history in profile | 3 | 3
+Special offers | 5 | 5
 About page | 5 | 5
 Contact form | 5 | 5
 Social media links | 3 | 5
-Terms & conditions | 3 | 3
-Wine blog | 2 | 2
+SEO implementation | 5 | 5
+Privacy Policy | 3 | 3
+FAQ | 2 | 2
+Gemstone blog 1 | 1
 ---|---|---
 Total |95|96
 
 ## **Scope plane**
 
-Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development.
+Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development. During development some features might be added/ discarded and some design changes are possible.
 
 * Must Have:
-    + 
+    + Admin login
+    + Purchase total
+    + Product list
+    + Individual product page
+    + Order confirmation
+    + Personal and payment information safety
+    + Payment information
+    + View items in bag
+    + Add a product
+    + Edit/update a product
+    + Delete a product
+    + Contact details
 
 * Should Have:
-    + 
+    + User register
+    + User login/logout
+    + Personalized profile
+    + Adjust bag items
+    + Specials
+    + Sorting list
+    + Product search
+    + Search results
+    + Order confirmation by email
+    + Contact form
 
 * Could Have:
-    + 
+    + Sorting multiples
+    + Gemstone type
+    + Wishlist
+    + Rating
+    + Leave a review
+    + Edit/update review
+    + Delete a review
+    + Email confirmation after registration
+    + Password recovery
+    + Subscription
 
 * Won't Have:
     + Bling It blog
