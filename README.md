@@ -1,110 +1,263 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Bling It**
 
-Welcome USER_NAME,
+## **Overview**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img scr><br>
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Deployed project can be found here: [Bling It]()
 
-## Gitpod Reminders
+## **Table of Contents**
+* [**Overview**](#overview)
+* [**User experience**](#user-experience-ux)
+    + [**Strategy plane**](#strategy-plane)
+        - [**Site goals**](#site-goals)
+        - [**Opportunities**](#opportunities)
+    + [**Scope plane**](#scope-plane)
+    + [**Structure plane**](#structure-plane)
+        - [**Developer Tasks & User Stories**](#developer-tasks--user-stories)
+        - [**Flowchart**](#flowchart)
+    + [**Skeleton plane**](#skeleton-plane)
+        - [**Wireframes**](#wireframes)
+    + [**Surface plane**](#surface-plane)
+        - [**Color Scheme**](#color-scheme)
+        - [**Typography**](#typography)
+* [**Agile Development**](#agile-development)
+* [**Features & Future Development**](#features--future-development)
+* [**Technologies used**](#technologies-used)
+* [**Testing**](#testing)
+* [**Deployment**](#deployment)
+* [**Acknowledgement & Credits**](#acknowledgement--credits)
+* [**Media**](#media)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# **User experience (UX)**
 
-`python3 -m http.server`
+During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design.
 
-A blue button should appear to click: _Make Public_,
+## **Strategy plane**
 
-Another blue button should appear to click: _Open Browser_.
+### **Site goals**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Offer a fully responsive user-friendly site to browse through.
+* Implement fully functional features.
 
-A blue button should appear to click: _Make Public_,
+### **Opportunities**
 
-Another blue button should appear to click: _Open Browser_.
+Opportunity | Importance | Viability/Feasibility
+---|---|---
+Age verification | 5 | 5
+Newsletter list | 3 | 5
+User register/login | 5 | 5
+User profile | 3 | 1
+User ability to add photos to gallery | 2 | 3
+User ability to delete previously added photos | 2 | 3
+User reviews | 5 | 5
+Full CRUD funcionality for user | 5 | 5
+Full CRUD funcionality for admin | 5 | 5
+Admin login via front end | 5 | 5
+Password recovery | 5 | 5
+Reservation management system for admin | 5 | 3
+User ability to book a tour online | 5 | 5
+User ability to edit/cancel booking online | 3 | 3
+Booking confirmation on site | 5 | 5
+Booking confirmation by email | 5 | 5
+Booking reminder by email | 3 | 3
+Visible booking for logged-in user | 3 | 2
+Option to pay for booking online | 3 | 1
+About page | 5 | 5
+Contact form | 5 | 5
+Social media links | 3 | 5
+Terms & conditions | 3 | 3
+Wine blog | 2 | 2
+---|---|---
+Total |95|96
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## **Scope plane**
 
-To log into the Heroku toolbelt CLI:
+Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Must Have:
+    + 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Should Have:
+    + 
 
-------
+* Could Have:
+    + 
 
-## Release History
+* Won't Have:
+    + Bling It blog
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## **Structure plane**
 
-**September 20 2023:** Update Python version to 3.9.17.
+### **Developer Tasks & User Stories**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+|   EPIC                    |ID|    Task        |
+|:--------------------------|--|:---------------|
+|SET UP & DEPLOYMENT        |  ||
+|                           |  | As a developer, I can create a new Github repository to store my project files online|
+|                           |  | As a developer, I can create a new workspace on Gitpod, install Django and add required libraries to have access to cloudbased images and postgress database|
+|                           |  | As a developer, I can create a Heroku app and deploy project early to confirm funcionality|
+|                           |  ||
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+|   EPIC                    |ID|    User Story  |
+|:--------------------------|--|:---------------|
+|NAVIGATION AND CONTENT     |  ||
+|                           |  | As a user, I can navigate through website easily|
+|                           |  | As a user, I can clearly understand the purpose of the site|
+|                           |  | As a user, I can read relevant content|
+|USER REGISTRATION & LOGIN  |  ||
+|                           |  | As a user, I can register on the site|
+|                           |  | As a user, I can login using USERNAME and password|
+|                           |  | As a user, I can logout|
+|BOOKING                    |  ||
+|                           |  | As a user, I can book a tour|
+|                           |  | As a logged-in user, I can see my booking|
+|                           |  | As a logged-in user, I can edit my booking|
+|                           |  | As a logged-in user, I can cancel my booking|
+|REVIEWS                    |  ||
+|                           |  | As a user, I can read reviews from other visitors|
+|                           |  | As a logged-in user, I can leave a review|
+|                           |  | As a logged-in user, I can add my photo taken at wine cellar when leaving a review|
+|                           |  | As a logged-in user, I can delete my previously added photo to review|
+|                           |  | As a logged-in user, I can edit my review|
+|                           |  | As a logged-in user, I can delete my review|
+|BLOG                       |  ||
+|                           |  | As a user, I can see a paginated list of posts|
+|                           |  | As a user, I can click on a post to see full text|
+|COMMENTS                   |  ||
+|                           |  | As a logged-in user, I can write a comment on post|
+|                           |  | As a logged-in user, I can edit my comment|
+|                           |  | As a logged-in user, I can delete my comment|
+|                           |  | As a user, I can read other people comments|
+|GALLERY                    |  ||
+|                           |  | As a user, I explore images in gallery|
+|CONTACT                    |  ||
+|                           |  | As a user, I can find wine cellar's opening hours|
+|                           |  | As a user, I can find wine cellar's location|
+|                           |  | As a user, I can contact someone at wine cellar|
+|ADMIN                      |  ||
+|                           |  | As an admin, I can login to access admin panel|
+|                           |  | As an admin, I can add/edit content|
+|                           |  | As an admin, I can create draft posts|
+|                           |  | As an admin, I can create, read, update and delete posts|
+|                           |  | As an admin, I can delete inappropriate reviews/photos|
+|                           |  | As an admin, I can approve comments|
+|                           |  | As an admin, I can delete inappropriate comments|
+|                           |  | As an admin, I can upload/ delete images from gallery|
+|                           |  | As an admin, I can add description to images in gallery|
+|DEVELOPER                  |  ||
+|                           |  | As a developer, I can create wireframes|
+|                           |  | As a developer, I can create a fully responsive site|
+|                           |  | As a developer, I can choose color scheme and style of the website|
+|                           |  | As a developer, I can choose fonts|
+|                           |  ||
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### **Flowchart**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Flowchart](static/docs/flowchart.drawio.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## **Skeleton plane**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **Wireframes**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be seen below:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### **Original wireframes:**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### **Desktop wireframes:**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### **Mobile wireframes:**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<details><summary>Home Page</summary><img src="static/docs/wireframes/"></details>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<details><summary>About Page</summary><img src="static/docs/wireframes/"></details>
 
-------
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/"></details>
 
-## FAQ about the uptime script
+<details><summary>Gemstone Page</summary><img src="static/docs/wireframes/"></details>
 
-**Why have you added this script?**
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/"></details>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<details><summary>Contact Success Page</summary><img src="static/docs/wireframes/"></details>
 
-**How will this affect me?**
+<details><summary>Login Page</summary><img src="static/docs/wireframes/"></details>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<details><summary>Logout Page</summary><img src="static/docs/wireframes/"></details>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<details><summary>Register Page</summary><img src="static/docs/wireframes/"></details>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### **Database schema**
 
-**So….?**
+![Database schema]()
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## **Surface plane**
 
-**Can I opt out?**
+### **Color Scheme**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Color palette]()
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+To add more depth and interest to design but not make it overwhelming for user to look at, I created a pattern for background using two of my colors - ***:
 
-**Anything more?**
+![Pattern]()
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### **Typography**
 
----
+In planning the visual identity of my website, I meticulously selected two fonts, ***, to convey a harmonious blend of elegance and readability.
 
-Happy coding!
+# **Agile Development**
+
+I have included details of agile development in a separate file [AGILE.md](AGILE.md).
+
+# **Features & Future Development**
+
+## **Features**
+
+## **Future Development**
+
+In the second half of development I realized what I won't be able to implement due to dealine fast approaching. I decided to leave following features for future development:
+* 
+
+# **Technologies used**
+
+* HTML
+* CSS
+* Javascript
+* Python
+* Django
+* Django allAuth
+* Bootstrap
+* [Heroku](https://www.heroku.com/)
+* Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
+* Jinja
+* Whitenoise
+* Cloudinary
+* Summernote
+
+# **Testing**
+
+I have included details of testing in a separate file [TESTING.md](TESTING.md).
+
+# **Deployment**
+
+I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT.md).
+
+# **Acknowledgement & Credits**
+
+* [Hero Patterns](https://heropatterns.com/) - background pattern
+* [Google Fonts](https://fonts.google.com/) - fonts
+* [Font Awesome](https://fontawesome.com/) - icons
+* Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project.
+
+* The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
+* Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
+* And thank you to [Kim](https://github.com/kimatron) for continuous support during late and long nights and in general for convincing me to take on this course.
+* And last but not least, thank you to Code Institute for organising hackathons. They have been a tremendous learning opportunity and therefore a great help during my project struggles.
+
+# **Media**
+
+## **Images**
+* []() - image by ***, available at this [link]()
