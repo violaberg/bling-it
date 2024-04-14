@@ -216,6 +216,10 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 
 ## **Features**
 
+* Logo created using [Vecteezy](https://www.vecteezy.com/) - original image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
+
+* Favicon created using [Favicon Generator](https://www.favicongenerator.com/)
+
 ## **Future Development**
 
 In the second half of development I realized what I won't be able to implement due to dealine fast approaching. I decided to leave following features for future development:
@@ -260,4 +264,4 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 # **Media**
 
 ## **Images**
-* []() - image by ***, available at this [link]()
+* [Vecteezy](https://www.vecteezy.com/) - image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
