@@ -8,6 +8,21 @@ body {
     font-family: "Cormorant Garamond", serif;
 }
 
+.custom-font {
+    font-family: "Parisienne", cursive;
+}
+
+/* Colors */
+.custom-blue {
+    color: #020c1b;
+}
+
+.logo-img {
+    margin-left: 5rem;
+    padding-top: 0.5rem;
+    width: 50px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -32,17 +47,17 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-blue {
+    background: #020c1b;
     color: white;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
     background: #daa520;
     color: white;
 }
@@ -51,14 +66,20 @@ body {
     color: #daa520 !important;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.border-blue {
+    border: 1px solid #020c1b !important;
 }
 
 #topnav {
     border-bottom: #daa520;
     border-bottom-width: 5px;
     border-bottom-style: outset;
+}
+
+footer {
+    border-top: #daa520;
+    border-top-width: 5px;
+    border-top-style: inset;
 }
 
 /* Media Queries */
