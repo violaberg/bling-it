@@ -23,6 +23,11 @@ body {
     width: 50px;
 }
 
+.hero-img {
+    border-color: #daa520;
+    border-style: groove;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -73,13 +78,13 @@ body {
 #topnav {
     border-bottom: #daa520;
     border-bottom-width: 5px;
-    border-bottom-style: outset;
+    border-bottom-style: groove;
 }
 
 footer {
     border-top: #daa520;
     border-top-width: 5px;
-    border-top-style: inset;
+    border-top-style: groove;
 }
 
 /* Media Queries */
