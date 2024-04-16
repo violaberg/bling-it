@@ -38,7 +38,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <img src="{% static 'images/logo.png' %}" alt="" class="logo-img">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
@@ -62,7 +62,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="custom-font list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="text-gold nav-link" href="#" id="user-options">
+                        <a class="header-item text-gold nav-link" href="#" id="user-options">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-heart"></i></div>
                                 <p class="my-0">Wishlist</p>
@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item dropdown">
-                        <a class="text-gold nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-item text-gold nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -90,7 +90,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-gold{% endif %} nav-link" href="#">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link" href="#">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
@@ -106,6 +106,20 @@
                 </ul>
             </div>
         </div>
+        <div class="custom-nav row">
+            <nav class="navbar navbar-expand-lg navbar-ligt mx-auto width-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-blue text-gold">
+                <h4 class="banner my-1">Free delivery with every purchase!</h4>
+            </div>
+        </div>
     </header>
 
     {% if messages %}
@@ -118,7 +132,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="text-gold font-weight-bold bg-white mb-0 py-3">
+    <footer class="text-gold font-weight-bold width-100 mb-0 py-3">
         <div class="container-lg">
           <div class="row">
             <div class="col-md-4 mt-md-0 pb-2">
