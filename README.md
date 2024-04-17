@@ -17,7 +17,6 @@ Deployed project can be found here: [Bling It]()
     + [**Scope plane**](#scope-plane)
     + [**Structure plane**](#structure-plane)
         - [**Developer Tasks & User Stories**](#developer-tasks--user-stories)
-        - [**Flowchart**](#flowchart)
     + [**Skeleton plane**](#skeleton-plane)
         - [**Wireframes**](#wireframes)
     + [**Surface plane**](#surface-plane)
@@ -195,12 +194,6 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a user I can read through FAQ so that I can find answers to my questions without contacting shop|
 |                           |  | As a user I can read Privacy Policy so that I can see how my personal information, data will be used and what rights I have|
 
-### **Flowchart**
-
-To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
-
-![Flowchart](static/docs/flowchart.drawio.png)
-
 ## **Skeleton plane**
 
 ### **Wireframes**
@@ -261,20 +254,24 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 ### **Database schema**
 
-![Database schema]()
+I created database schema to design the structure and organization of a database to efficiently store, manage, and retrieve data. This was crucial part when creating models and try and escape unneccesary migration complications.
+
+![Database schema](static/docs/database.png)
 
 ## **Surface plane**
 
 ### **Color Scheme**
 
-![Color palette](static/docs/color/color_palette_bling_it.png)
+![Color palette](static/docs/color/color_palette.png)
+
+
 
 To add more depth and interest to design but not make it overwhelming for user to look at, I created a pattern for background using two of my colors - Midnight Blue `#020c1b` and Goldenrod `#daa520`.<br>
 Midnight Blue is a deep, dark shade of blue resembling the color of a moonlit night sky. It conveys a sense of mystery, depth, and tranquility, providing a striking contrast to lighter elements. As a background color it serves as a sophisticated backdrop that enhances the visual appeal of gemstones, allowing them to stand out vividly while creating a calming and immersive browsing experience.<br>
 Goldenrod is a warm and rich yellow-gold color reminiscent of the golden hue of ripe wheat fields or autumn leaves. It exudes a sense of warmth, vibrancy, and luxury, making it an excellent choice for adding a touch of elegance to project. As part of background it creates a welcoming and inviting atmosphere, evoking feelings of opulence and sophistication that complement the beauty of gemstones.<br>
 Combining the warm, luxurious tones of Goldenrod with the deep, serene tones of Midnight Blue, creates a visually captivating and harmonious color palette for Bling It gemstone app. This color scheme can effectively highlight the beauty and elegance of gemstone offerings while providing a pleasing backdrop for typography and design elements.
 
-![Pattern]()
+![Pattern](static/docs/color/bg-pattern.png)
 
 ### **Typography**
 
