@@ -68,7 +68,7 @@ Password recovery | 5 | 5
 Order confirmation on site | 5 | 5
 Order confirmation by email | 5 | 5
 Option to safely pay for order with Stripe | 5 | 5
-Delivery information 4 | 4
+Delivery information | 4 | 4
 Order history in profile | 3 | 3
 Special offers | 5 | 5
 About page | 5 | 5
@@ -78,7 +78,7 @@ Wishlist | 3 | 3
 SEO implementation | 5 | 5
 Privacy Policy | 3 | 3
 FAQ | 2 | 2
-Gemstone blog 1 | 1
+Gemstone blog | 1 | 1
 ---|---|---
 Total |100|105
 
@@ -88,6 +88,8 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 * Must Have:
     + Admin login
+    + User register
+    + User login/logout
     + Purchase total
     + Product list
     + Individual product page
@@ -101,8 +103,6 @@ Due to a incredible amount of new knowledge and deadline for this project as for
     + Contact details
 
 * Should Have:
-    + User register
-    + User login/logout
     + Personalized profile
     + Adjust bag items
     + Specials
@@ -262,9 +262,14 @@ I created database schema to design the structure and organization of a database
 
 ### **Color Scheme**
 
+For this project I chose 3 colors - White `#ffffff`, Goldenrod `#daa520` and Midnight Blue `#020c1b`. This color palette combines the purity of white with the warmth of goldenrod and the depth of midnight blue, creating a harmonious balance of sophistication and elegance. The colors work together to highlight the beauty of gemstones and create a luxurious, visually engaging and immersive experience for users.
+* `#ffffff` - White represents purity and elegance. It serves as a clean and neutral backdrop, allowing other design elements to stand out vividly.<br>
+* `#daa520` - Goldenrod is a warm and luxurious yellow-gold color, reminiscent of precious metals and sun-kissed hues. It adds a touch of sophistication and vibrancy.<br>
+* `#020c1b` - Midnight Blue is a deep, rich shade of blue that conveys mystery, elegance, and depth. It provides a striking contrast and a sense of tranquility.<br>
+
 ![Color palette](static/docs/color/color_palette.png)
 
-
+### **Background pattern**
 
 To add more depth and interest to design but not make it overwhelming for user to look at, I created a pattern for background using two of my colors - Midnight Blue `#020c1b` and Goldenrod `#daa520`.<br>
 Midnight Blue is a deep, dark shade of blue resembling the color of a moonlit night sky. It conveys a sense of mystery, depth, and tranquility, providing a striking contrast to lighter elements. As a background color it serves as a sophisticated backdrop that enhances the visual appeal of gemstones, allowing them to stand out vividly while creating a calming and immersive browsing experience.<br>
@@ -279,6 +284,10 @@ In planning the visual identity of my website, I meticulously selected two Googl
 Parisienne is an elegant and flowing script font that evokes a sense of romance and sophistication. With its graceful strokes and whimsical charm, Parisienne adds a touch of luxury to brand. This font is perfect for headings, logos, and special accents, enhancing the overall visual appeal of Bling It app.<br>
 Cormorant Garamond is a classic serif font known for its timeless elegance and readability. Inspired by the traditional Garamond typefaces, Cormorant Garamond features delicate serifs and balanced proportions, making it ideal for body text and longer passages. This font exudes refinement and professionalism, enhancing the overall readability and aesthetic of Bling It gemstone app.<br>
 Combining Parisienne for decorative elements and headings with Cormorant Garamond for body text and details, creates a harmonious typography scheme that reflects the sophistication and style associated with gemstones. These fonts enhance the overall visual identity of my project, making it both inviting and professional.<br>
+
+![Parisienne](static/docs/parisienne_font.png)
+
+![Cormorant Garamond](static/docs/cormorant_garamond_font.png)
 
 # **Agile Development**
 
