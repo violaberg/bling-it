@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="gemstone-container container-fluid width-70 py-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-f offset-lg-2">
+                <div class="image-container">
+                    {% if gemstone.image %}
+                        <a href="{{ gemstone.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}" alt="{{ gemstone.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ gemstone.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="gemstone-detail-container custom-blue mb-5 mt-md-5">
+                    <p class="gemstone-name custom-font text-gold font-weight-bold mb-0">{{ gemstone.name }}<i class="custom-blue float-right fa-solid fa-heart"></i></p>
+                    <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
+                    <p class="mt-3">{{ gemstone.description }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Colour:</span> {{ gemstone.color }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Cut:</span> {{ gemstone.cut }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Clarity:</span> {{ gemstone.clarity }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Carats:</span> {{ gemstone.carats }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Treatment:</span> {{ gemstone.treatment }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Origin:</span> {{ gemstone.origin }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Certification:</span> {{ gemstone.certification }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
