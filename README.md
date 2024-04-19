@@ -19,20 +19,28 @@ Deployed project can be found here: [Bling It]()
         - [**Developer Tasks & User Stories**](#developer-tasks--user-stories)
     + [**Skeleton plane**](#skeleton-plane)
         - [**Wireframes**](#wireframes)
+            - [**Desktop wireframes**](#desktop-wireframes)
+            - [**Mobile wireframes**](#mobile-wireframes)
+        - [**Database schema**](#database-schema)
+        - [**Stock keeping units**](#stock-keeping-units)
     + [**Surface plane**](#surface-plane)
         - [**Color Scheme**](#color-scheme)
+        - [**Background pattern**](#background-pattern)
         - [**Typography**](#typography)
 * [**Agile Development**](#agile-development)
 * [**Features & Future Development**](#features--future-development)
+        - [**Features**](#features)
+        - [**Future Development**](#future-development)
 * [**Technologies used**](#technologies-used)
 * [**Testing**](#testing)
 * [**Deployment**](#deployment)
 * [**Acknowledgement & Credits**](#acknowledgement--credits)
 * [**Media**](#media)
+        - [**Images**](#images)
 
 # **User experience (UX)**
 
-During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design.
+During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. Due to type of e-commerce app I was planning and natural gemstones always being exclusive items with no two being the same, there won't be an option to increment amount of gemstones in bag and I decided not to have reviews and ratings for individual gemstones bought as they would be automatically removed from shop after being sold, but give user an option to leave a review/ rating for Bling It as a business and their experience as customer, allowing to mention gemstones purchased if wished. It also ensures for additional safety for buyers as gemstones can be very expensive therefore not disclosing what they bought specifically might keep those with illegal intentions away. 
 
 ## **Strategy plane**
 
@@ -257,6 +265,14 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 I created database schema to design the structure and organization of a database to efficiently store, manage, and retrieve data. This was crucial part when creating models and try and escape unneccesary migration complications.
 
 ![Database schema](static/docs/database.png)
+
+### **Stock keeping units**
+
+As I didn't use dataset but entered all gemstones manually through admin panel, I created a system to generate SKU numbers consistently as to resemble real-life scenario. In table bellow I've enter one gemstone as example of system I followed. This specific gemstone belongs to category 'Diamonds', originated in South Africa, is 3 carats in weight, flawless in clarity and as I entered it as second item, stock ID is 0002. Altogether it creates SKU - DSA3FL0002. I did some research before and know there are SKU generators but decided to go ahead with my own as to better memorize how SKU is created.
+
+| Category | Origin | Carats | Clarity | Stock ID | SKU number |
+| -------- | ------ | ------ | ------- | -------- | ---------- |
+| Diamonds | SA | 3 | FL | 0002 | DSA3FL0002 |
 
 ## **Surface plane**
 

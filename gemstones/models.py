@@ -59,6 +59,7 @@ class Gemstone (models.Model):
     description = models.TextField()
     color = models.CharField(max_length=20)
     cut = models.CharField(max_length=20)
+    clarity = models.CharField(max_length=20, default='')
     carats = models.DecimalField(max_digits=6, decimal_places=2)
     treatment = models.CharField(max_length=20)
     certification = models.CharField(max_length=20)

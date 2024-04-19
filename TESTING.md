@@ -167,11 +167,12 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Responsiveness**
 
-Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 280px wide.
+Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 320px wide.
 
 ## **Bugs & Fixes**
 
 | Bug                                          | Cause                        | Solution                                                                              |
 | -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
+| <img src="static/bugs/non_nullable_field.png">| Forgot to add default value to new field when modifying Gemstone model | Adding <code>default=''</code> to clarity field fixed the issue |
 
 [Back to Readme](README.md)
