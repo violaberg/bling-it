@@ -15,19 +15,19 @@
                 All Gemstones
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-gemstones-link">
-                <a href="" class="dropdown-item ">Amethysts</a>
-                <a href="" class="dropdown-item ">Alexandrites</a>
-                <a href="" class="dropdown-item ">Apatites</a>
-                <a href="" class="dropdown-item ">Aquamarines</a>
-                <a href="" class="dropdown-item ">Diamonds</a>
-                <a href="" class="dropdown-item ">Emeralds</a>
-                <a href="" class="dropdown-item ">Garnets</a>
-                <a href="" class="dropdown-item ">Peridots</a>
-                <a href="" class="dropdown-item ">Rubies</a>
-                <a href="" class="dropdown-item ">Sapphires</a>
-                <a href="" class="dropdown-item ">Spinels</a>
-                <a href="" class="dropdown-item ">Tourmalines</a>
-                <a href="{% url 'gemstones' %}" class="dropdown-item">All Gemstones</a>
+                <a href="{% url 'gemstones' %}?category=amethysts" class="dropdown-item ">Amethysts</a>
+                <a href="{% url 'gemstones' %}?category=alexandrites" class="dropdown-item ">Alexandrites</a>
+                <a href="{% url 'gemstones' %}?category=apatites" class="dropdown-item ">Apatites</a>
+                <a href="{% url 'gemstones' %}?category=aquamarines" class="dropdown-item ">Aquamarines</a>
+                <a href="{% url 'gemstones' %}?category=diamonds" class="dropdown-item ">Diamonds</a>
+                <a href="{% url 'gemstones' %}?category=emeralds" class="dropdown-item ">Emeralds</a>
+                <a href="{% url 'gemstones' %}?category=garnets" class="dropdown-item ">Garnets</a>
+                <a href="{% url 'gemstones' %}?category=peridots" class="dropdown-item ">Peridots</a>
+                <a href="{% url 'gemstones' %}?category=rubies" class="dropdown-item ">Rubies</a>
+                <a href="{% url 'gemstones' %}?category=sapphires" class="dropdown-item ">Sapphires</a>
+                <a href="{% url 'gemstones' %}?category=spinels" class="dropdown-item ">Spinels</a>
+                <a href="{% url 'gemstones' %}?category=tourmalines" class="dropdown-item ">Tourmalines</a>
+                <a href="{% url 'gemstones' %}?category=amethysts,alexandrites,apatites,aquamarines,diamonds,emeralds,garnets,peridots,rubies,sapphires,spinels,tourmalines" class="dropdown-item">All Gemstones</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -35,19 +35,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-gemstones-link">
-                <a href="" class="dropdown-item ">Amethysts</a>
-                <a href="" class="dropdown-item ">Alexandrites</a>
-                <a href="" class="dropdown-item ">Apatites</a>
-                <a href="" class="dropdown-item ">Aquamarines</a>
-                <a href="" class="dropdown-item ">Diamonds</a>
-                <a href="" class="dropdown-item ">Emeralds</a>
-                <a href="" class="dropdown-item ">Garnets</a>
-                <a href="" class="dropdown-item ">Peridots</a>
-                <a href="" class="dropdown-item ">Rubies</a>
-                <a href="" class="dropdown-item ">Sapphires</a>
-                <a href="" class="dropdown-item ">Spinels</a>
-                <a href="" class="dropdown-item ">Tourmalines</a>
-                <a href="" class="dropdown-item">All Special Offers</a>
+                <a href="{% url 'gemstones' %}?category=new_arrivals" class="dropdown-item ">New Arrivals</a>
+                <a href="{% url 'gemstones' %}?category=dealss" class="dropdown-item ">Deals</a>
+                <a href="{% url 'gemstones' %}?category=clearance" class="dropdown-item ">Clearance</a>
+                <a href="{% url 'gemstones' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Special Offers</a>
             </div>
         </li>
         <li class="nav-item">
