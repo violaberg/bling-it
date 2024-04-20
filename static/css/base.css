@@ -29,6 +29,7 @@ body {
 }
 
 header,
+.dropdown-menu,
 footer,
 .card {
     background-color: #ffffff;
@@ -139,8 +140,6 @@ footer,
     border-style: groove;
     border-width: 3px;
     position: relative;
-    top: 10em;
-    width: 90vw;
 }
 
 .gemstone-name {
