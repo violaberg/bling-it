@@ -67,15 +67,36 @@ a.category-badge > span.badge:hover {
 }
 
 .search-results {
-    background-color: #020c1b;
+    background-color: #ffffff;
+}
+
+.border-info {
+    border-color: #daa520 !important;
+}
+
+#sort-selector {
+    color: #020c1b;
 }
 
 .gemstones-home {
-    color: #ffffff;
+    color: #020c1b;
 }
 
 .gemstones-home:hover {
     color: #daa520;
+}
+
+.btt-button {
+    border-color: #daa520;
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* from Bulma */
