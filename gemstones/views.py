@@ -20,6 +20,8 @@ def all_gemstones(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 gemstones = gemstones.annotate(lower_name=lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':

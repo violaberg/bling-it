@@ -50,14 +50,32 @@ footer,
     font-family: 'Parisienne';
 }
 
-.hero-img {
+.hero-img,
+.subscribe,
+.badge,
+.search-results {
     border-color: #daa520;
     border-style: groove;
 }
 
-.subscribe {
-    border-color: #daa520;
-    border-style: groove;
+.badge {
+    background-color: #020c1b;
+}
+
+a.category-badge > span.badge:hover {
+    background-color: #daa520;
+}
+
+.search-results {
+    background-color: #020c1b;
+}
+
+.gemstones-home {
+    color: #ffffff;
+}
+
+.gemstones-home:hover {
+    color: #daa520;
 }
 
 /* from Bulma */
