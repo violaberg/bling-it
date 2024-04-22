@@ -86,6 +86,11 @@ footer,
     color: #daa520;
 }
 
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: rgba(218, 165, 32, 0.8);
+    color: #020c1b;
+}
+
 .gemstone-categories {
     display: none;
     left: 100%;
