@@ -1,4 +1,4 @@
-html {
+html, body {
     height: 100%;
 }
 
@@ -52,7 +52,6 @@ footer,
 
 .hero-img,
 .subscribe,
-.badge,
 .search-results {
     border-color: #daa520;
     border-style: groove;
@@ -60,6 +59,13 @@ footer,
 
 .badge {
     background-color: #020c1b;
+}
+
+.sort-select-wrapper,
+.badge {
+    border-color: #daa520;
+    border-style: groove;
+    border-width: 2px;
 }
 
 a.category-badge > span.badge:hover {
@@ -84,19 +90,26 @@ a.category-badge > span.badge:hover {
 
 .gemstones-home:hover {
     color: #daa520;
+    text-decoration: none;
 }
 
 .btt-button {
-    border-color: #daa520;
-    height: 42px;
-    width: 42px;
+    color: #daa520;
+    height: 40px;
+    width: 40px;
     position: fixed;
     bottom: 10px;
     right: 10px;
 }
 
 .btt-link {
+    color: #daa520;
     cursor: pointer;
+}
+
+.btt-link:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* from Bulma */
@@ -121,7 +134,7 @@ a.category-badge > span.badge:hover {
     color: #020c1b;
 }
 
-.dropdown-item, a.dropdown-item {
+.dropdown-item, a.dropdown-item, .nav-link:hover {
     color: #daa520;
 }
 
@@ -159,25 +172,30 @@ a.category-badge > span.badge:hover {
 /* End chocolate */
 
 /* Buttons */
-.shop-now-button {
-    background: #daa520;
-    color: white;
-    min-width: 260px;
+.custom-primary-btn {
+    background-color: #daa520;
+    border-color: #ffffff;
+    border-style: groove;
+}
+
+.custom-primary-btn:hover,
+.custom-primary-btn:active,
+.custom-primary-btn:focus {
+    background-color: #020c1b;
+    border-color: #daa520;
+    color: #ffffff;
 }
 
 .btn-blue {
     background: #020c1b;
-    color: white;
+    color: #ffffff;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
     background: #daa520;
-    color: white;
+    color: #ffffff;
 }
 
 .text-gold {

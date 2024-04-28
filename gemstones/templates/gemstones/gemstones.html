@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-10 offset-1">
                 <div class="row mt-1 mb-2">
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="col-12 col-md-6 pt-2 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -42,7 +42,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="search-results text-gold py-1 pl-2 mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'gemstones' %}" class="gemstones-home custom-font">Gemstones Home</a> | </span>
+                                <span class="small"><a href="{% url 'gemstones' %}" class="gemstones-home float-left pr-2 font-weight-bold">Gemstones Home</a> | </span>
                             {% endif %}
                             {{ gemstones|length }} Gemstones{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -100,9 +100,9 @@
             </div>
         </div>
     </div>
-    <div class="btt-button shadow-sm rounded-0 border">
+    <div class="btt-button bg-blue shadow-sm rounded-0 border">
         <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
         </a>	
     </div>
 {% endblock %}
