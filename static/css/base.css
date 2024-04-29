@@ -102,6 +102,7 @@ a.category-badge > span.badge:hover {
     text-decoration: none;
 }
 
+ /* Back to top */
 .btt-button {
     color: #daa520;
     height: 40px;
@@ -121,8 +122,18 @@ a.category-badge > span.badge:hover {
     text-decoration: none;
 }
 
-.remove-item {
-    cursor: pointer;
+/* Toast messages */
+.message-container {
+    border-color: #daa520;
+    border-style: groove;
+    position: fixed;
+    right: 15px;
+    top: 72px;
+    z-index: 9999999;
+}
+
+.custom-toast {
+    overflow: visible;
 }
 
 /* from Bulma */
@@ -185,6 +196,12 @@ a.category-badge > span.badge:hover {
 /* End chocolate */
 
 /* Buttons */
+.custom-gemstone-btn {
+    background-color: #daa520;
+    border-color: #020c1b;
+    border-style: groove;
+}
+
 .custom-primary-btn {
     background-color: #daa520;
     border-color: #ffffff;
@@ -193,7 +210,10 @@ a.category-badge > span.badge:hover {
 
 .custom-primary-btn:hover,
 .custom-primary-btn:active,
-.custom-primary-btn:focus {
+.custom-primary-btn:focus,
+.custom-gemstone-btn:hover,
+.custom-gemstone-btn:active,
+.custom-gemstone-btn:focus {
     background-color: #020c1b;
     border-color: #daa520;
     color: #ffffff;
@@ -284,6 +304,10 @@ footer {
 }
 .table thead th {
     text-align: center;
+}
+
+.remove-item {
+    cursor: pointer;
 }
 
 /* Media Queries */
