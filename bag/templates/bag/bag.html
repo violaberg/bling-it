@@ -35,11 +35,12 @@
                                     <img class="img-fluid rounded-0" src="{{ item.gemstone.image.url }}">
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0"><strong>{{ item.gemstone.name }}</strong></p>
+                                    <p class="custom-gold my-0"><strong>{{ item.gemstone.name }}</strong></p>
                                     <p class="my-0 small text-muted">SKU: {{ item.gemstone.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.gemstone.price }}</p>
+                                    <p class="text-center my-0">${{ item.gemstone.price }}</p>
+                                    <a class="remove-item text-center text-danger pl-4" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -80,4 +81,26 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        // Prevent default link behavior
+        e.preventDefault();
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}`;
+
+        $.post(url, {csrfmiddlewaretoken: csrfToken})
+         .done(function() {
+             location.reload();
+         })
+         .fail(function() {
+             console.error('Error: Unable to remove item from bag');
+         });
+    });
+</script>
 {% endblock %}

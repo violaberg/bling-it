@@ -121,6 +121,10 @@ a.category-badge > span.badge:hover {
     text-decoration: none;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -211,6 +215,18 @@ a.category-badge > span.badge:hover {
     color: #ffffff;
 }
 
+.btn-blue {
+    background: #020c1b;
+    color: white;
+}
+
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
+    background: #daa520;
+    color: white;
+}
+
 .text-gold {
     color: #daa520 !important;
 }
@@ -265,6 +281,9 @@ footer {
 .shopping-bag {
     border-color: #daa520;
     border-style: groove;
+}
+.table thead th {
+    text-align: center;
 }
 
 /* Media Queries */
