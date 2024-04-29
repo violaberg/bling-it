@@ -174,5 +174,9 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | Bug                                          | Cause                        | Solution                                                                              |
 | -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
 | <img src="static/bugs/non_nullable_field.png">| Forgot to add default value to new field when modifying Gemstone model | Adding <code>default=''</code> to clarity field fixed the issue |
+| <img src="static/bugs/transparent-toast.png">| # | # |
+| <img src="static/bugs/navbar-toggle.png">| # | # |
+| <img src="static/bugs/footer-not-fixed.png">| # | # |
+
 
 [Back to Readme](README.md)

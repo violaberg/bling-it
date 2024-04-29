@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from gemstones.models import Gemstone
@@ -13,7 +13,7 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a specified product to the shopping bag """
 
-    gemstone = Gemstone.objects.get(pk=item_id)
+    gemstone = get_object_or_404(Gemstone, pk=item_id)
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
@@ -29,10 +29,12 @@ def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 
     try:
+        gemstone = get_object_or_404(Gemstone, pk=item_id)
         bag = request.session.get('bag', {})
 
         if item_id in bag:
             bag.pop(item_id)
+            messages.success(request, f'Removed {gemstone.name} from your bag')
 
         request.session['bag'] = bag
 
