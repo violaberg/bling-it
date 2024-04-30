@@ -173,10 +173,11 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 
 | Bug                                          | Cause                        | Solution                                                                              |
 | -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
-| <img src="static/bugs/non_nullable_field.png">| Forgot to add default value to new field when modifying Gemstone model | Adding <code>default=''</code> to clarity field fixed the issue |
-| <img src="static/bugs/transparent-toast.png">| # | # |
-| <img src="static/bugs/navbar-toggle.png">| # | # |
-| <img src="static/bugs/footer-not-fixed.png">| # | # |
+| <details><summary>Non Nullable Field</summary><img src="static/bugs/non_nullable_field.png"></details>| Forgot to add default value to new field when modifying Gemstone model | Adding <code>default=''</code> to clarity field fixed the issue |
+| <details><summary>Transparent Toast</summary><img src="static/bugs/transparent-toast.png"></details>| # | # |
+| <details><summary>Navbar Toggle</summary><img src="static/bugs/navbar-toggle.png"></details>| # | # |
+| <details><summary>Footer Not Fixed</summary><img src="static/bugs/footer-not-fixed.png"></details>| # | # |
+| No error message displayed when user tries to add the same gemstone to shoppping bag | No message added to 'add_to_bag' view | Adjusting view with <code>messages.error(request, 'This gemstone is already in your shopping bag.')</code> |
 
 
 [Back to Readme](README.md)
