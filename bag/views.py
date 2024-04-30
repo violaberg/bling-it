@@ -14,11 +14,15 @@ def add_to_bag(request, item_id):
     """ Add a specified product to the shopping bag """
 
     gemstone = get_object_or_404(Gemstone, pk=item_id)
-    quantity = 1
     redirect_url = request.POST.get('redirect_url')
-    bag = request.session.get('bag', {})
 
-    bag[item_id] = quantity
+    bag = request.session.get('bag', {})
+    if item_id in bag:
+        # If gemstone already exists in the bag, display error message
+        messages.error(request, 'This gemstone is already in your shopping bag.')
+        return redirect('gemstone_detail', gemstone_id=item_id)
+
+    bag[item_id] = 1
     messages.success(request, f'Added {gemstone.name} to your bag')
 
     request.session['bag'] = bag

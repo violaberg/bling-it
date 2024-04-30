@@ -147,6 +147,10 @@ a.category-badge > span.badge:hover {
     overflow: visible;
 }
 
+.toast-header {
+    font-size: large;
+}
+
 /* Bag notification popup */
 .bag-notification-wrapper {
     height: 100px;
