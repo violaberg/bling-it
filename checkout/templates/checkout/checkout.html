@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% bloack extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col mt-2">
+                <h2 class="page-title custom-font text-white text-center mt-5 mx-auto py-2">Shopping Bag</h2>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col col-lg-6 mx-auto">
+                <p class="text-muted">Please fill out the form to complete your order!</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
