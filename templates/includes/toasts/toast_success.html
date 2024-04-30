@@ -1,13 +1,47 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
     <div class="w-100 bg-success"></div>
-    <div class="toast-header bg-white text-blue">
-        <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1 close text-blue" data-dismiss="toast" aria-label="Close">
+    <div class="toast-header bg-white">
+        <strong class="bag-total mr-auto">Success!</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body text-blue bg-white">
-        {{ message }}        
+    <div class="toast-body custom-blue bg-white">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="bg-white custom-blue py-1">Your Bag ({{ gemstone_count }})</p>
+            <div class="bag-notification-wrapper">
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img class="w-100" src="{{ item.gemstone.image.url }}">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.gemstone.name }}</strong></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><p class="mt-3 mb-1 custom-blue">
+                        Total: 
+                        <span class="bag-total">${{ total|floatformat:2 }}</span>
+                    </p></strong>
+                    <p class="custom-blue font-weight-bold">Delivery:<span class="custom-gold pl-2">FREE</span></p>
+                    <a href="{% url 'view_bag' %}" class="custom-primary-btn btn btn-block rounded-0">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}        
     </div>
 </div>
