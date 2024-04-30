@@ -40,7 +40,7 @@ Deployed project can be found here: [Bling It]()
 
 # **User experience (UX)**
 
-During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. Due to type of e-commerce app I was planning and natural gemstones always being exclusive items with no two being the same, there won't be an option to increment amount of gemstones in bag and I decided not to have reviews and ratings for individual gemstones bought as they would be automatically removed from shop after being sold, but give user an option to leave a review/ rating for Bling It as a business and their experience as customer, allowing to mention gemstones purchased if wished. It also ensures for additional safety for buyers as gemstones can be very expensive therefore not disclosing what they bought specifically might keep those with illegal intentions away. 
+During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. Due to type of e-commerce app I was planning and natural gemstones always being exclusive items with no two being the same, there won't be an option to increment amount of gemstones in a bag and I decided not to have reviews and ratings for individual gemstones bought as they would be automatically removed from shop after being sold, but instead give user an option to leave a review/ rating for Bling It as a business and their experience as customer, allowing to mention gemstones purchased if wished. As gemstones can be very expensive, not disclosing what each user has bought specifically ensures for additional safety.
 
 ## **Strategy plane**
 
