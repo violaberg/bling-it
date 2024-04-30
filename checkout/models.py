@@ -3,10 +3,18 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+
 from gemstones.models import Gemstone
 
 
 # Create your models here.
+STATUS = (
+    ('in_progress', 'In Progress'),
+    ('delivered', 'Delivered'),
+    ('cancelled', 'Cancelled'),
+)
+
+
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -66,3 +74,13 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.gemstone.sku} on order {self.order.order_number}'
+
+
+class OrderStatus(models.Model):
+    order = models.OneToOneField(Order, on_delete=models.CASCADE)
+    status = models.CharField(
+        max_length=200, null=True, blank=True, choices=STATUS,
+        default=STATUS[0][0])
+
+    def __str__(self):
+        return f'{self.order.order_number} - {self.status}'
