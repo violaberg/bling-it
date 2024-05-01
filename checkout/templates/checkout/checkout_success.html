@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col mt-2">
+            <h2 class="page-title custom-font text-white text-center mt-5 mx-auto py-2">Thank You For Shopping With Us</h2>
+        </div>
+        <p class="custom-blue">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+    </div>
+    <div class="checkout-bg row p-3 my-3 mx-auto">
+        <div class="col-12 col-lg-7"></div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'gemstones' %}?category=new_arrivals,deals,clearance" class="custom-primary-btn btn rounded-0 my-2">
+					<span class="icon mr-2">
+						<i class="fas fa-gifts"></i>
+					</span>
+					<span class="text-uppercase">Now check out the latest gemstones!</span>
+				</a>
+			</div>
+		</div>
+    </div>
+</div>
+{% endblock %}

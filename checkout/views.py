@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
+from decimal import Decimal
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -18,6 +19,7 @@ def checkout(request):
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
+        # Process the form data
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -38,19 +40,12 @@ def checkout(request):
             for item_id in bag.keys():
                 try:
                     gemstone = get_object_or_404(Gemstone, pk=item_id)
-                    if gemstone.stock_amount > 0:
-                        gemstone.stock_amount -= 1
-                        gemstone.save()
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            gemstone=gemstone,
-                            lineitem_total=gemstone.price
-                        )
-                        order_line_item.save()
-                    else:
-                        messages.error(request,
-                                       f'{gemstone.title} is not available')
-                        return redirect('view_bag')
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        gemstone=gemstone,
+                        lineitem_total=gemstone.price
+                    )
+                    order_line_item.save()
 
                 except Gemstone.DoesNotExist:
                     messages.error(
@@ -60,6 +55,7 @@ def checkout(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
+
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
