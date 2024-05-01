@@ -2,45 +2,51 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100 mt-5 py-5">
-        <div class="row mx-auto py-2 mb-3 h-100">
-            <div class="col-12 col-md-6 text-center mx-auto my-auto">
-                <h4 class="custom-font text-white">
-                    New gemstone arrivals are here!
-                </h4>
-            </div>
-            <div class="row text-center my-3">
-                <div class="col-md-10 col-sm-12 col-xl-10 mx-auto">
-                    <img src="{% static 'images/hero_img.jpg' %}" alt="" class="hero-img mx-auto img-fluid">
-                    <a href="{% url 'gemstones' %}" class="custom-primary-btn font-weight-bold btn rounded-0 text-uppercase mt-3 py-1">Shop Now</a>
-                </div>
+<div class="container h-100 mt-5 py-5">
+    <div class="row mx-auto py-2 mb-3 h-100">
+        <div class="col-12 col-md-6 text-center mx-auto my-auto">
+            <h4 class="custom-font text-white">
+                New gemstone arrivals are here!
+            </h4>
+        </div>
+        <div class="row text-center my-3">
+            <div class="col-md-10 col-sm-12 col-xl-10 mx-auto">
+                <img src="{% static 'images/hero_img.jpg' %}" alt="" class="hero-img mx-auto img-fluid">
+                <a href="{% url 'gemstones' %}"
+                    class="custom-primary-btn font-weight-bold btn rounded-0 text-uppercase mt-3 py-1">Shop Now</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <div class="row subscribe bg-blue mx-auto my-2 py-2">
-                    <div class="col text-center py-2">
-                        <h3 class="custom-font text-white mx-auto"><i class="fa-solid fa-envelope-open-text text-gold py-2"></i> Subscribe to our newsletter!</h3>
-                        <p class="text-white mx-auto">Subscribe to receive the latest news, special offers and sales notifications</p>
-                        <form>
-                            <div class="form-group">
+    </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="row subscribe bg-blue mx-auto my-2 py-2">
+                <div class="col text-center py-2">
+                    <h3 class="custom-font text-white mx-auto"><i
+                            class="fa-solid fa-envelope-open-text text-gold py-2"></i> Subscribe to our newsletter!</h3>
+                    <p class="text-white mx-auto">Subscribe to receive the latest news, special offers and sales
+                        notifications</p>
+                    <form>
+                        <div class="form-group">
                             <label class="text-gold text-muted" for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted text-gold">We'll never share your email with anyone else.</small>
-                            </div>
-                            <button type="submit" class="custom-primary-btn font-weight-bold btn rounded-0 text-uppercase py-1">Subscribe</button>
-                        </form>
-                    </div>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted text-gold">We'll never share your email
+                                with anyone else.</small>
+                        </div>
+                        <button type="submit"
+                            class="custom-primary-btn font-weight-bold btn rounded-0 text-uppercase py-1">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

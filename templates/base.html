@@ -2,188 +2,209 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Parisienne&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Parisienne&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     <title>Bling It {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <img src="{% static 'images/logo.png' %}" alt="" class="logo-img">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
-                    <span class="logo-font text-gold my-0">Bling It</span>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'gemstones' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-blue rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-blue border border-blue rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logo-img">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
+                        <span class="logo-font text-gold my-0">Bling It</span>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'gemstones' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-blue rounded-0" type="text" name="q"
+                                placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-blue border border-blue rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
-                    <li class="list-inline-item">
-                        <a class="header-item text-gold nav-link" href="#" id="user-options">
-                            <div class="text-center">
-                                <div><i class="fa-solid fa-heart"></i></div>
-                                <p class="my-0">Wishlist</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item dropdown">
-                        <a class="header-item text-gold nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg pb-2"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
+                        <li class="list-inline-item">
+                            <a class="header-item text-gold nav-link" href="#" id="user-options">
+                                <div class="text-center">
+                                    <div><i class="fa-solid fa-heart"></i></div>
+                                    <p class="my-0">Wishlist</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a class="header-item text-gold nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg pb-2"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="#" class="dropdown-item">Product Management</a>
+                                <a href="#" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="#" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
+                                {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
-                                <p class="grand-total my-0">
-                                    {% if grand_total %}
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link"
+                                href="{% url 'view_bag' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
+                                    <p class="grand-total my-0">
+                                        {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
-                                    {% else %}
+                                        {% else %}
                                         $0.00
-                                    {% endif %}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="custom-nav row">
+                <nav class="navbar navbar-expand-lg mx-auto width-100">
+                    <button class="chocolate navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-blue text-gold">
+                    <h4 class="banner my-1 pt-1">Free delivery on all orders!</h4>
+                </div>
+            </div>
+        </header>
+
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        <footer class="text-gold font-weight-bold width-100 py-3">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-md-4 mt-md-0 pb-2">
+                        <p class="text-center mb-0">
+                            <a href="#" target="_blank" class="custom-blue text-decoration-none">FAQ</a><br>
+                            <a href="#" target="_blank" class="custom-blue text-decoration-none">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <div class="col ml-5 pl-5">
+                        <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> 01 574 0586</p>
+                        <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> info@blingit.com</p>
+                    </div>
+                    <div class="col-md-4 mt-2 mt-md-0">
+                        <div class="text-center">
+                            <p class="custom-blue mb-0">All Rights Reserved 2024<span
+                                    class="custom-font custom-gold font-weight-normal pl-2">Bling It</span></p>
+                            <div class="opening-hours font-montserrat custom-white mb-0">
+                                <p class="custom-blue mb-0 pt-2">Created by <span
+                                        class="custom-font custom-gold font-weight-normal pr-2">Viola Bergere</span>
+                                    <a href="https://github.com/violaberg" target="_blank"
+                                        class="ms-2 text-decoration-none"><i
+                                            class="custom-blue fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
+                                        class="ms-2 text-decoration-none"><i
+                                            class="custom-blue fa-brands fa-linkedin"></i>
+                                    </a>
                                 </p>
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="custom-nav row">
-            <nav class="navbar navbar-expand-lg mx-auto width-100">
-                <button class="chocolate navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-blue text-gold">
-                <h4 class="banner my-1 pt-1">Free delivery on all orders!</h4>
-            </div>
-        </div>
-    </header>
-
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-    </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    <footer class="text-gold font-weight-bold width-100 py-3">
-        <div class="container-lg">
-          <div class="row">
-            <div class="col-md-4 mt-md-0 pb-2">
-                <p class="text-center mb-0">
-                <a href="#" target="_blank" class="custom-blue text-decoration-none">FAQ</a><br>
-                <a href="#" target="_blank" class="custom-blue text-decoration-none">Privacy Policy</a>
-              </p>
-            </div>
-              <div class="col ml-5 pl-5">
-                <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> 01 574 0586</p>
-                <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> info@blingit.com</p>
-              </div>
-            <div class="col-md-4 mt-2 mt-md-0">
-              <div class="text-center">
-                <p class="custom-blue mb-0">All Rights Reserved 2024<span class="custom-font custom-gold font-weight-normal pl-2">Bling It</span></p>
-                <div class="opening-hours font-montserrat custom-white mb-0">
-                    <p class="custom-blue mb-0 pt-2">Created by <span class="custom-font custom-gold font-weight-normal pr-2">Viola Bergere</span>
-                        <a href="https://github.com/violaberg" target="_blank" class="ms-2 text-decoration-none"><i class="custom-blue fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank" class="ms-2 text-decoration-none"><i class="custom-blue fa-brands fa-linkedin"></i>
-                        </a>
-                      </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
     </div>
 
     {% block postloadjs %}
@@ -193,5 +214,6 @@
     {% endblock %}
 
     <script src="https://kit.fontawesome.com/284fde1047.js" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
