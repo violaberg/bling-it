@@ -20,8 +20,8 @@
             <h2 class="page-title custom-font text-white text-center mt-5 mx-auto py-2">Checkout</h2>
         </div>
     </div>
-    <div class="row mx-auto">
-        <div class="checkout-bg custom-blue col col-lg-6 order-lg-last p-3 my-3">
+    <div class="checkout-bg row p-3 my-3 mx-auto">
+        <div class="custom-blue col col-lg-6 order-lg-last">
             <p class="font-weight-bold">Order Summary ({{ gemstone_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="checkout-bg custom-blue col col-lg-6 my-3 p-3 mx-auto">
+        <div class="custom-blue col col-lg-6 mx-auto">
             <p>Please fill out the form to complete your order!</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
@@ -129,4 +129,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
