@@ -49,7 +49,8 @@ def checkout(request):
 
                 except Gemstone.DoesNotExist:
                     messages.error(
-                        request, "Gemstone in your shopping bag was not found. Please contact us for further assistance!")
+                        request, "Gemstone in your shopping bag was not found. \
+                                Please contact us for further assistance!")
                     order.delete()
                     return redirect('view_bag')
 

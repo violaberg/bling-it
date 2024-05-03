@@ -178,6 +178,7 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | <details><summary>Navbar Toggle</summary><img src="static/bugs/navbar-toggle.png"></details>| # | # |
 | <details><summary>Footer Not Fixed</summary><img src="static/bugs/footer-not-fixed.png"></details>| # | # |
 | No error message displayed when user tries to add the same gemstone to shoppping bag | No message added to 'add_to_bag' view | Adjusting view with <code>messages.error(request, 'This gemstone is already in your shopping bag.')</code> |
+| <details><summary>Decimal error</summary><img src="static/bugs/decimal-error.png"></details>| Model OrderLineItem field <code>lineitem_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, editable=False)</code> max digits were set as 6, causing error as gemstone price was 20000.00 | Increasing max digits to 10 resolved the issue |
 
 
 [Back to Readme](README.md)
