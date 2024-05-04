@@ -353,6 +353,7 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Font Awesome](https://fontawesome.com/) - icons
 * Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project.
 * Choccolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
+* Animation for loader taken from [CSS-tricks](https://css-tricks.com/making-css-animations-feel-natural/)
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.

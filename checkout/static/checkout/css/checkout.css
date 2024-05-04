@@ -57,7 +57,8 @@
   color: #020c1b;
 }
 
-/* Loading diamond */
+/* Diamond loader */
+/* Animation for loader taken from https://css-tricks.com/making-css-animations-feel-natural/ */
 #loading-overlay {
 	display: none;
 	position: fixed;
