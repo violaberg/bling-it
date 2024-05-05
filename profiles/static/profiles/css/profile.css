@@ -23,6 +23,16 @@
     justify-content: center;
 }
 
+.account-link:hover {
+    color: #020c1b;
+    text-decoration: none;
+}
+
+.account-p-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .form-control {
     color: #020c1b;
 }

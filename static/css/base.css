@@ -227,12 +227,14 @@ a.category-badge > span.badge:hover {
     background-color: #daa520;
     border-color: #020c1b;
     border-style: groove;
+    font-weight: 700;
 }
 
 .custom-primary-btn {
     background-color: #daa520;
     border-color: #ffffff;
     border-style: groove;
+    font-weight: 700;
 }
 
 .custom-primary-btn:hover,
