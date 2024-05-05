@@ -57,6 +57,20 @@
   color: #020c1b;
 }
 
+.text-info {
+  color: #020c1b !important;
+}
+
+select,
+select option {
+    color: #020c1b;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #020c1b !important;
+}
+
 /* Diamond loader */
 /* Animation for loader taken from https://css-tricks.com/making-css-animations-feel-natural/ */
 #loading-overlay {
