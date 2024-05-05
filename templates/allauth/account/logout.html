@@ -2,19 +2,21 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Log Out" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+{% block inner_content %}
+<h2 class="page-title custom-font text-white text-center mx-auto py-2">{% trans "Log Out" %}</h2>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="account-p mx-auto mt-3">{% trans 'Are you sure you want to log out?' %}</p>
 
-<form method="post" action="{% url 'account_logout' %}">
+<form class="logout custom-blue p-2 my-3 mx-2" method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
+  <div class="account-btn mb-2">
+    <button class="custom-gemstone-btn px-2 py-1" type="submit">{% trans 'Log Out' %}</button>
+  </div>
 </form>
 
 
