@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="gemstone-container container-fluid width-70 py-4">
+<div class="gemstone-container container-fluid mx-auto mx-3 my-3">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-f offset-lg-2">
+        <div class="col-12 col-md-6 col-lg-f">
             <div class="image-container">
                 {% if gemstone.image %}
                 <a href="{{ gemstone.image.url }}" target="_blank">
@@ -25,7 +25,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6">
             <div class="gemstone-detail-container custom-blue mb-5 mt-md-5">
                 <p class="gemstone-name custom-font text-gold font-weight-bold mb-0">{{ gemstone.name }}<i
                         class="custom-blue float-right fa-solid fa-heart"></i></p>
@@ -49,17 +49,17 @@
                     <div class="form-row">
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity available: 1</strong></p>
-                            <p class="custom-red">All our gemstones are one of a kind</p>
+                            <p class="custom-red">* All our gemstones are one of a kind</p>
                         </div>
 
-                        <div class="col-12">
-                            <a href="{% url 'gemstones' %}" class="custom-secondary-btn btn rounded-0 mt-5">
+                        <div class="text-center col-12">
+                            <a href="{% url 'gemstones' %}" class="custom-secondary-btn btn rounded-0 mt-2 py-2">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="custom-gemstone-btn btn rounded-0 text-uppercase mt-5"
+                            <input type="submit" class="custom-gemstone-btn btn rounded-0 text-uppercase mt-2"
                                 value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
