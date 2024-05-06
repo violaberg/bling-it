@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block content %}
 <div class="container-fluid">
     <div class="row">
@@ -12,5 +8,54 @@
             <h2 class="page-title custom-font text-white mx-auto p-2">My Profile</h2>
         </div>
     </div>
-    {{ profile }}
-    {% endblock %}
+    <div class="profile-container my-3">
+        <div class="row text-center py-2">
+            <div class="profile-img mx-auto col-sm-2">
+                <a href="#"><img title="profile image" class="img-fluid"
+                        src="{% static 'profiles/images/noimage.png' %}"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 mx-auto">
+                <!--left col-->
+                <div class="text-center">
+                    <h6>Upload a different photo</h6>
+                    <input type="file" class="text-center center-block file-upload">
+                </div><br>
+            </div>
+            <!--/col-3-->
+        </div>
+        <div class="tab">
+            <button class="tablinks" onmouseover="openTab(event, 'Dashboard')">Dashboard</button>
+            <button class="tablinks" onmouseover="openTab(event, 'Delivery Info')">Delivery Info</button>
+            <button class="tablinks" onmouseover="openTab(event, 'Orders')">Orders</button>
+            <button class="tablinks" onmouseover="openTab(event, 'Wishlist')">Wishlist</button>
+        </div>
+
+            <div id="dashboard" class="tab-content">
+                    <h4 class="text-white">Dashboard</h4>
+            </div>
+
+            <div id="delivery-info" class="tab-content">
+                <h4 class="text-white">Default Delivery Information</h4>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="delivery-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="text-center">
+                        <button class="custom-gemstone-btn btn rounded-0">Update Information</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="orders" class="tab-content">
+                <h4 class="text-white">Orders</h4>
+            </div>
+
+        <div id="wishlist" class="tab-content">
+                <h4 class="text-white">Wishlist</h4>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}
