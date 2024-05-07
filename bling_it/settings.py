@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)#+5-kzhsjm_c_to0349up7lfbwkp&boahjha@o62-!tm7v$!*
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-violaberg-blingit-24rhiwcm9kv.ws-eu110.gitpod.io',
-                '8000-violaberg-blingit-24rhiwcm9kv.ws-eu111.gitpod.io']
+                '8000-violaberg-blingit-24rhiwcm9kv.ws-eu113.gitpod.io']
 
 
 # Application definition
