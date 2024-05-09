@@ -12,3 +12,7 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})
+
+
+def contact_success(request):
+    return render(request, 'contact/contact_success.html')
