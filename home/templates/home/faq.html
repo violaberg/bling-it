@@ -1,17 +1,173 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}FAQ{% endblock %}
+
 {% block content %}
 <div class="container h-100 py-3">
     <div class="row mx-auto py-2 mb-3 h-100">
-        <div class="col-12 col-md-6 text-center mx-auto my-auto">
-            <h2 class="page-title custom-font text-white mx-auto p-2">Frequently Asked Questions</h2>
+        <div class="col-12 text-center mx-auto my-auto">
+            <h2 class="page-title custom-font text-white mx-auto mb-4 p-2">Frequently Asked Questions</h2>
         </div>
-        <div class="row text-center my-3">
-            <div class="col-md-10 col-sm-12 col-xl-10 mx-auto">
-                <img src="#" alt="" class="hero-img mx-auto img-fluid">
+
+        <div class="col">
+            <div id="faq-section">
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading1" data-toggle="collapse" data-target="#faqCollapse1"
+                            aria-expanded="true" aria-controls="faqCollapse1">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    What is your return policy?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Our return policy allows for returns within 30 days of purchase. Items must be
+                                unused and in the same condition as received. Please
+                                <a href="#" class="faq-link">contact us</a> prior to returning your purchase!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading2" data-toggle="collapse" data-target="#faqCollapse2"
+                            aria-expanded="true" aria-controls="faqCollapse2">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    Do you offer international delivery?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Yes, we offer international shipping worldwide. Delivery is complimentary to all
+                                orders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading3" data-toggle="collapse" data-target="#faqCollapse3"
+                            aria-expanded="true" aria-controls="faqCollapse3">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    Can I cancel or modify my order?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Orders can typically be canceled or modified within a short window after they're
+                                placed. Contact our customer support team as soon as possible with your order
+                                details to request changes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading4" data-toggle="collapse" data-target="#faqCollapse4"
+                            aria-expanded="true" aria-controls="faqCollapse4">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    Do you offer gift wrapping services?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Yes, we offer gift wrapping services on request. You can contact us shortly after
+                                placing your order but rest assured all gemstones arrive beautifully packed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading5" data-toggle="collapse" data-target="#faqCollapse5"
+                            aria-expanded="true" aria-controls="faqCollapse5">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    What is your privacy policy?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse5" class="collapse" aria-labelledby="faqHeading5"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Our privacy policy outlines how we collect, use, and protect your personal
+                                information. You can view our full privacy policy by following
+                                <a href="{% url 'faq' %}" class="faq-link">this link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading6" data-toggle="collapse" data-target="#faqCollapse6"
+                            aria-expanded="true" aria-controls="faqCollapse6">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    Are you gemstones natural or lab grown?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse6" class="collapse" aria-labelledby="faqHeading6"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                We only sell naturally grown and ethically sourced gemstones.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="card">
+                        <div class="card-header" id="faqHeading7" data-toggle="collapse" data-target="#faqCollapse7"
+                            aria-expanded="true" aria-controls="faqCollapse7">
+                            <h3 class="mb-0 d-flex justify-content-between align-items-center">
+                                <button class="faq-link btn" type="button">
+                                    Do you provide certificates?
+                                </button>
+                                <small><i class="fa-solid fa-chevron-down"></i></small>
+                            </h3>
+                        </div>
+                        <div id="faqCollapse7" class="collapse" aria-labelledby="faqHeading7"
+                            data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Yes, all our gemstones are certified and delivered with individual certificates.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var faqLink = document.querySelector(".faq-link");
+
+            faqLink.addEventListener("click", function (event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+    {% endblock %}
