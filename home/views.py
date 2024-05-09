@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import FAQ
 
 # Create your views here.
 def index(request):
@@ -15,8 +16,9 @@ def about(request):
 
 def faq(request):
     """ A view to return the FAQ page"""
+    faqs = FAQ.objects.all()
 
-    return render(request, "home/faq.html")
+    return render(request, "home/faq.html", {'faqs': faqs})
 
 
 def privacy_policy(request):
