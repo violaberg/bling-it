@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from checkout.models import Order
 
@@ -9,6 +9,9 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+
+    # Get or create the wishlist for the user
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -23,6 +26,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'wishlist': wishlist,
         'on_profile_page': True,
     }
 

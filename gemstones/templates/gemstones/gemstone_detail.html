@@ -23,7 +23,7 @@
         <div class="col-12 col-md-6">
             <div class="gemstone-detail-container custom-blue mb-5 mt-md-5">
                 <p class="gemstone-name custom-font text-gold font-weight-bold mb-0">{{ gemstone.name }}<i
-                        class="custom-blue float-right fa-solid fa-heart"></i></p>
+                    id="wishlist-icon" class="custom-blue float-right fa-solid fa-heart"></i></p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
                 {% if gemstone.category %}
                 <p class="small mt-1 mb-0">
@@ -64,4 +64,29 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#wishlist-icon').click(function() {
+            var gemstoneId = "{{ gemstone.id }}";
+            var csrfToken = "{{ csrf_token }}";
+
+            // AJAX request to add gemstone to wishlist
+            $.ajax({
+                type: "POST",
+                url: "{% url 'add_to_wishlist' %}",
+                headers: { "X-CSRFToken": csrfToken },
+                data: { gemstone_id: gemstoneId },
+                success: function(response) {
+                    alert("Gemstone added to wishlist!");
+                },
+                error: function(xhr, status, error) {
+                    alert("Error: Failed to add gemstone to wishlist!");
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}
