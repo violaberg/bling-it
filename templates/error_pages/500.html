@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="error-container h-100 py-3">
+    <div class="row mx-auto py-2 mb-3 h-100">
+        <div class="col-md-10 col-sm-12 col-xl-10 mx-auto">
+            <h4 class="custom-font text-center custom-gold pt-2">Oops! Something Went Wrong</h4>
+            <p>Looks like our server got into trouble and could not complete your request. Let's get you back to safety!</p>
+            <a href="{% url 'home' %}" class="custom-primary-btn font-weight-bold btn rounded-0 mt-3 py-1">Back to Home
+                page</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
