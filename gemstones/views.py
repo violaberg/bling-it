@@ -2,11 +2,21 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Gemstone, Category
+from profiles.views import add_to_wishlist
+from profiles.forms import WishlistForm
 
 # Create your views here.
 def all_gemstones(request):
     """ A view to return all gemstone page """
+    if request.method == 'POST':
+        # Process the form submission
+        form = WishlistForm(request.POST)
+        if form.is_valid():
+            gemstone_id = form.cleaned_data['gemstone_id']
+
+            return redirect('gemstones')
 
     gemstones = Gemstone.objects.all()
     query = None
@@ -49,6 +59,7 @@ def all_gemstones(request):
 
     context = {
         'gemstones': gemstones,
+        'form': WishlistForm(),
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -59,11 +70,38 @@ def all_gemstones(request):
 
 def gemstone_detail(request, gemstone_id):
     """ A view to return all individual gemstone page """
-
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+    wishlist = False
+
+    if request.method == 'POST':
+        # Process the form submission
+        if request.user.is_authenticated:
+            profile = request.user.userprofile
+            form = WishlistForm(request.POST)
+            if form.is_valid():
+                gemstone_id = form.cleaned_data['gemstone_id']
+                if not Wishlist.objects.filter(user=profile, gemstone=gemstone).exists():
+                    wishlist = True
+                    # Add gemstone to the wishlist
+                    wishlist, created = Wishlist.objects.get_or_create(user=profile)
+                    wishlist.gemstone.add(gemstone)
+
+                    # Add a success message
+                    messages.success(request, f'{gemstone.name} added to your wishlist')
+                    # Redirect to the same page
+                    return redirect('gemstone_detail', gemstone_id=gemstone_id)
+            else:
+                # Optionally, you can add an error message here
+                messages.error(request, 'Invalid form submission')
+
+    else:
+        # Initialize the form for rendering
+        form = WishlistForm(initial={'gemstone_id': gemstone_id})
 
     context = {
         'gemstone': gemstone,
+        'form': form,
+        'wishlist': wishlist,
     }
 
     return render(request, "gemstones/gemstone_detail.html", context)

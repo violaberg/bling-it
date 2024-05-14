@@ -58,7 +58,7 @@
             <div class="row">
                 {% for gemstone in gemstones %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="gemstone-container card h-100">
+                    <div class="gemstone-container rounded-0 card h-100">
                         {% if gemstone.image %}
                         <a href="{% url 'gemstone_detail' gemstone.id %}">
                             <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
@@ -71,8 +71,7 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="custom-font custom-gold mb-0">{{ gemstone.name }}<i
-                                    class="custom-blue float-right fa-solid fa-heart"></i></p>
+                            <p class="gemstone-name text-center custom-font custom-gold mb-0">{{ gemstone.name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">

@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.template.loader import render_to_string
 
-from .models import UserProfile, Wishlist
+from .models import UserProfile, Gemstone, Wishlist
 from .forms import UserProfileForm
 from checkout.models import Order
 
@@ -9,9 +10,6 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-
-    # Get or create the wishlist for the user
-    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -22,11 +20,14 @@ def profile(request):
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    # Render wishlist template within profile context
+    wishlist_template = render_to_string('profiles/wishlist.html', {'wishlist': wishlist}, request=request)
+
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
-        'wishlist': wishlist,
+        'wishlist_content': wishlist_template,
         'on_profile_page': True,
     }
 
@@ -48,3 +49,37 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def wishlist(request):
+    """ A view to return the wishlist page"""
+
+    return render(request, "profiles/wishlist.html")
+
+
+def add_to_wishlist(request, gemstone_id):
+    if request.method == 'POST':
+        gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+
+        # Ensure the user is authenticated before proceeding
+        if not request.user.is_authenticated:
+            messages.error(request, 'Please login to add this gemstone to your wishlist.')
+            return redirect('login')
+
+        # Get or create the wishlist for the user
+        wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+        
+        # Toggle gemstone addition/removal based on whether it's already in the wishlist
+        if gemstone in wishlist.gemstone.all():
+            wishlist.gemstone.remove(gemstone)
+            messages.success(request, f'{gemstone.name} removed from your wishlist')
+        else:
+            wishlist.gemstone.add(gemstone)
+            messages.success(request, f'{gemstone.name} added to your wishlist')
+
+        return redirect('gemstone_detail')
+
+    else:
+        # Handle invalid request method (GET, PUT, etc.)
+        messages.error(request, 'Invalid request method.')
+        return redirect('gemstone_detail')

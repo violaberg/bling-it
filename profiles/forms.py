@@ -38,3 +38,7 @@ class UserProfileForm(forms.ModelForm):
     #class Meta:
         #model = OrderStatus
         #fields = ('status',)
+
+
+class WishlistForm(forms.Form):
+    gemstone_id = forms.IntegerField(widget=forms.HiddenInput())

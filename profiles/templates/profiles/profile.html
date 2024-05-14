@@ -76,23 +76,7 @@
             <div id="wishlist" class="tabcontent p-2">
                 <!-- Display Wishlist -->
                 <h4 class="custom-font text-center custom-gold pt-2">Wishlist</h4>
-                    {% if wishlist %}
-            <ul>
-                {% for gemstone in wishlist.gemstones.all %}
-                <li>
-                    <div class="gemstone-info">
-                        <img src="{{ gemstone.image.url }}" alt="{{ gemstone.name }}">
-                        <p class="text-blue">Name: {{ gemstone.name }}</p>
-                        <p class="text-blue">Carats: {{ gemstone.carats }}</p>
-                        <p class="text-blue">Price: ${{ gemstone.price }}</p>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-            {% else %}
-            <p id="wishlist-text" class="text-center text-blue text-justify">Your wishlist is currently empty.
-                Explore our stunning gemstones and add your favourites to the wishlist to keep track of them!</p>
-            {% endif %}
+                {{ wishlist_content | safe }}
             </div>
         </div>
 

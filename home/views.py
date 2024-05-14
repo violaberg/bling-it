@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+from .forms import NewsletterSubscriptionForm
 from .models import FAQ
 
-# Create your views here.
+
 def index(request):
     """ A view to return the index page"""
 
@@ -25,3 +28,17 @@ def privacy_policy(request):
     """ A view to return the Privacy Policy page"""
 
     return render(request, "home/privacy_policy.html")
+
+
+def subscribe_to_newsletter(request):
+    """ A view for newsletter subscription"""
+    if request.method == 'POST':
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for subscribing to our newsletter!')
+            return redirect('home')
+    else:
+        form = NewsletterSubscriptionForm()
+
+    return render(request, 'index.html', {'form': form})

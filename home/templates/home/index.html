@@ -27,7 +27,8 @@
                             class="fa-solid fa-envelope-open-text text-gold py-2"></i> Subscribe to our newsletter!</h3>
                     <p class="text-white mx-auto">Subscribe to receive the latest news, special offers and sales
                         notifications</p>
-                    <form>
+                    <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+                        {% csrf_token %}
                         <div class="form-group">
                             <label class="text-gold text-muted" for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
