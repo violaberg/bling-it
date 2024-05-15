@@ -254,8 +254,34 @@ a.dropdown-item,
     height: 6px;
     width: 6px;
 }
-
 /* End chocolate */
+
+/* Gemstone Admin Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #880101;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #880101;
+    border-color: #880101;
+    border-radius: 0;
+}
 
 /* Buttons */
 .custom-gemstone-btn {
