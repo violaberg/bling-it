@@ -32,7 +32,13 @@
                     {% for item in bag_items %}
                     <tr class="shopping-bag">
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded-0" src="{{ item.gemstone.image.url }}">
+                            {% if item.gemstone.image %}
+                            <img class="img-fluid rounded-0" src="{{ item.gemstone.image.url }}"
+                                alt="{{ item.gemstone.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded-0" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ item.gemstone.name }}">
+                            {% endif %}
                         </td>
                         <td class="py-3">
                             <p class="custom-gold my-0"><strong>{{ item.gemstone.name }}</strong></p>

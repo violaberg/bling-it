@@ -110,7 +110,17 @@ def gemstone_detail(request, gemstone_id):
 
 def add_gemstone(request):
     """ Add a gemstone to the store """
-    form = GemstoneForm()
+    if request.method == 'POST':
+        form = GemstoneForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Gemstone added successfully!')
+            return redirect(reverse('add_gemstone'))
+        else:
+            messages.error(request, 'Failed to add gemstone. Please ensure the form is valid.')
+    else:
+        form = GemstoneForm()
+
     template = 'gemstones/add_gemstone.html'
     context = {
         'form': form,
