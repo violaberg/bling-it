@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from .models import Gemstone, Category
 from profiles.views import add_to_wishlist
 from profiles.forms import WishlistForm
+from .forms import GemstoneForm
 
 # Create your views here.
 def all_gemstones(request):
@@ -105,3 +106,14 @@ def gemstone_detail(request, gemstone_id):
     }
 
     return render(request, "gemstones/gemstone_detail.html", context)
+
+
+def add_gemstone(request):
+    """ Add a gemstone to the store """
+    form = GemstoneForm()
+    template = 'gemstones/add_gemstone.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
