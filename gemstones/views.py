@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -8,7 +9,7 @@ from profiles.views import add_to_wishlist
 from profiles.forms import WishlistForm
 from .forms import GemstoneForm
 
-# Create your views here.
+
 def all_gemstones(request):
     """ A view to return all gemstone page """
     if request.method == 'POST':
@@ -108,8 +109,13 @@ def gemstone_detail(request, gemstone_id):
     return render(request, "gemstones/gemstone_detail.html", context)
 
 
+@login_required
 def add_gemstone(request):
     """ Add a gemstone to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = GemstoneForm(request.POST, request.FILES)
         if form.is_valid():
@@ -129,8 +135,13 @@ def add_gemstone(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_gemstone(request, gemstone_id):
     """ Edit a gemstone in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        return redirect(reverse('home'))
+
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     if request.method == 'POST':
         form = GemstoneForm(request.POST, request.FILES, instance=gemstone)
@@ -153,8 +164,13 @@ def edit_gemstone(request, gemstone_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_gemstone(request, gemstone_id):
     """ Delete a gemstone from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        return redirect(reverse('home'))
+        
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     gemstone.delete()
     messages.success(request, 'Gemstone deleted!')

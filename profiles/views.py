@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.loader import render_to_string
 
@@ -7,6 +8,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -36,6 +38,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -53,12 +56,14 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+@login_required
 def wishlist(request):
     """ A view to return the wishlist page"""
 
     return render(request, "profiles/wishlist.html")
 
 
+@login_required
 def add_to_wishlist(request, gemstone_id):
     if request.method == 'POST':
         gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
