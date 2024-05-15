@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-12 col-md-6 mt-2">
+            <h2 class="page-title custom-font text-white text-center mx-auto py-2">Store Management</h2>
+        </div>
+    </div>
+    <div class="row p-3 my-3 mx-auto">
+        <div class="admin-form col-12 col-md-6 py-3">
+            <h4 class="custom-font custom-gold text-center">Edit a Gemstone</h4>
+            <form method="POST" action="{% url 'edit_gemstone' gemstone.id %}" class="custom-blue form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a class="custom-gemstone-btn btn rounded-0" href="{% url 'gemstones' %}">Cancel</a>
+                    <button class="custom-secondary-btn btn rounded-0" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

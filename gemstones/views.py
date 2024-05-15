@@ -127,3 +127,27 @@ def add_gemstone(request):
     }
 
     return render(request, template, context)
+
+
+def edit_gemstone(request, gemstone_id):
+    """ Edit a gemstone in the store """
+    gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+    if request.method == 'POST':
+        form = GemstoneForm(request.POST, request.FILES, instance=gemstone)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Gemstone updated successfully!')
+            return redirect(reverse('gemstone_detail', args=[gemstone.id]))
+        else:
+            messages.error(request, 'Failed to update gemstone. Please ensure the form is valid.')
+    else:
+        form = GemstoneForm(instance=gemstone)
+        messages.info(request, f'You are editing {gemstone.name}')
+
+    template = 'gemstones/edit_gemstone.html'
+    context = {
+        'form': form,
+        'gemstone': gemstone,
+    }
+
+    return render(request, template, context)

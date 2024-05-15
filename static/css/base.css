@@ -30,6 +30,10 @@ body {
     font-family: "Parisienne", cursive;
 }
 
+a {
+    color: #daa520;
+}
+
 /* Colors */
 .custom-blue {
     color: #020c1b;
