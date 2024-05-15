@@ -22,9 +22,10 @@ Gemstone Details
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <div class="gemstone-detail-container custom-blue mb-5 mt-md-5">
-                <p class="gemstone-name custom-font text-gold mb-0">{{ gemstone.name }}<i
-                    id="add-to-wishlist" data-url="{% url 'add_to_wishlist' %}" data-gemstone-id="{{ gemstone.id }}" class="custom-blue float-right fa-solid fa-heart"></i></p>
+            <div class="gemstone-detail-container custom-blue mb-4 mt-md-5">
+                <p class="gemstone-name custom-font text-gold mb-0">{{ gemstone.name }}<i id="add-to-wishlist"
+                        data-url="{% url 'add_to_wishlist' %}" data-gemstone-id="{{ gemstone.id }}"
+                        class="custom-blue float-right fa-solid fa-heart"></i></p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
                 {% if gemstone.category %}
                 <p class="small mt-1 mb-0">
@@ -45,7 +46,15 @@ Gemstone Details
                     <div class="form-row">
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity available: 1</strong></p>
-                            <p class="custom-red">* All our gemstones are one of a kind</p>
+                            <small class="custom-red">* All our gemstones are one of a kind</small>
+                        </div>
+                        <div class="col-12 py-2">
+                            {% if request.user.is_superuser %}
+                            <small class="font-weight-bold">
+                                <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}">Edit</a> |
+                                <a class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}">Delete</a>
+                            </small>
+                            {% endif %}
                         </div>
 
                         <div class="text-center col-12">

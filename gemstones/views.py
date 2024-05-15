@@ -135,7 +135,7 @@ def edit_gemstone(request, gemstone_id):
     if request.method == 'POST':
         form = GemstoneForm(request.POST, request.FILES, instance=gemstone)
         if form.is_valid():
-            form.save()
+            gemstone = form.save()
             messages.success(request, 'Gemstone updated successfully!')
             return redirect(reverse('gemstone_detail', args=[gemstone.id]))
         else:
@@ -151,3 +151,11 @@ def edit_gemstone(request, gemstone_id):
     }
 
     return render(request, template, context)
+
+
+def delete_gemstone(request, gemstone_id):
+    """ Delete a gemstone from the store """
+    gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+    gemstone.delete()
+    messages.success(request, 'Gemstone deleted!')
+    return redirect(reverse('gemstones'))

@@ -85,6 +85,12 @@
                                     </p>
                                     {% endif %}
                                     <p class="mb-0">{{ gemstone.carats }} carats</p>
+                                    {% if request.user.is_superuser %}
+                                    <small class="font-weight-bold">
+                                        <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}">Edit</a> |
+                                        <a class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
