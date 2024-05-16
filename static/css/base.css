@@ -229,6 +229,18 @@ a.dropdown-item,
     color: #020c1b;
 }
 
+.dropdown-menu,
+.gemstone-categories {
+    border-color: #daa520;
+    border-style: groove;
+    border-color: #daa520;
+    border-style: groove;
+    border-color: #daa520;
+    border-style: groove;
+    border-top: none;
+    border-width: 2px;
+}
+
 .gemstone-categories {
     display: none;
     left: 100%;
@@ -513,6 +525,7 @@ footer {
     text-decoration: none;
 }
 
+/* -------------- */
 /* Media Queries */
 
 @media (min-width: 320px) {
