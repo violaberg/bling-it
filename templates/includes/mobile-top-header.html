@@ -22,14 +22,6 @@
         </form>
     </div>
 </li>
-<li class="list-inline-item">
-    <a class="text-gold nav-link d-block d-lg-none" href="#" id="user-options">
-        <div class="text-center">
-            <div><i class="fa-solid fa-heart"></i></div>
-            <p class="custom-font my-0">Wishlist</p>
-        </div>
-    </a>
-</li>
 <li class="list-inline-item dropdown">
     <a class="text-gold nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -38,12 +30,13 @@
             <p class="custom-font my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 rounded-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="{% url 'add_gemstone' %}" class="dropdown-item">Store Management</a>
         {% endif %}
         <a href="{#}" class="dropdown-item">My Profile</a>
+        <a href="{% url 'profile' %}" class="dropdown-item">Wishlist</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

@@ -256,6 +256,7 @@ a.dropdown-item,
     height: 6px;
     width: 6px;
 }
+
 /* End chocolate */
 
 /* Gemstone Admin Form */
@@ -486,6 +487,32 @@ footer {
     text-decoration: none;
 }
 
+/* Privacy Policy */
+.privacy-policy-container {
+    text-align: justify;
+    width: 100%;
+}
+
+.policy-heading {
+    font-family: "Parisienne", cursive;
+    text-align: center;
+}
+
+.policy-list {
+    margin-left: -1.5rem;
+}
+
+.custom-link {
+    color: #daa520;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.custom-link:hover {
+    color: #020c1b;
+    text-decoration: none;
+}
+
 /* Media Queries */
 
 @media (min-width: 320px) {
@@ -574,14 +601,22 @@ footer {
     }
 
     #faq-section {
-        max-width: 60vw;
         margin: 0 auto;
+        max-width: 60vw;
+    }
+
+    .privacy-policy-container {
+        width: 80%;
     }
 }
 
 @media (min-width: 1500px) {
     #faq-section {
-        max-width: 50vw;
         margin: 0 auto;
+        max-width: 50vw;
+    }
+
+    .privacy-policy-container {
+        width: 66%;
     }
 }

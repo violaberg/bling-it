@@ -6,7 +6,7 @@ Bling It is a fictional user-friendly gemstone shop, designed and developed usin
 It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized by type, cut, color, and clarity to find the perfect piece. Added is a secure checkout process to ensure a safe and smooth transaction. 
 <img scr><br>
 
-Deployed project can be found here: [Bling It]()
+Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.herokuapp.com/)
 
 ## **Table of Contents**
 * [**Overview**](#overview)
@@ -354,7 +354,8 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project.
 * Choccolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
 * Animation for loader taken from [CSS-tricks](https://css-tricks.com/making-css-animations-feel-natural/)
-* Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)<hr>
+* Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)
+* Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)<hr>
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
