@@ -61,10 +61,7 @@ footer,
 .gemstone-categories,
 .gemstone-container,
 .shopping-bag,
-.login,
-.signup,
-.email,
-.password,
+.account-container,
 #faq-section,
 .privacy-policy-container,
 .about-p,
@@ -101,6 +98,7 @@ footer,
 .subscribe,
 .search-results,
 #faq-section,
+.account-container,
 .privacy-policy-container,
 .about-p,
 .error-container,
@@ -193,6 +191,11 @@ a.category-badge>span.badge:hover {
 .bag-total {
     color: #daa520;
     font-size: large;
+}
+
+/* Error pages */
+.error-p {
+    text-align: justify;
 }
 
 /* from Bulma */
@@ -437,10 +440,6 @@ footer {
 }
 
 /* Allauth styling */
-.login,
-.signup,
-.email,
-.password,
 .contact-form {
     border-color: #daa520;
     border-style: groove;
@@ -474,11 +473,6 @@ footer {
 
 .account-link:hover {
     color: #020c1b;
-    text-decoration: none;
-}
-
-.account-p-link:hover {
-    color: #ffffff;
     text-decoration: none;
 }
 
@@ -548,6 +542,10 @@ footer {
     .page-title {
         max-width: 70%;
     }
+
+    .error-container {
+        width: 80%;
+    }
 }
 
 /* Pad the top a bit when navbar is collapsed on mobile */
@@ -606,6 +604,9 @@ footer {
         padding-bottom: 0.5rem;
         width: 2%;
     }
+    .error-container {
+        width: 66%;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -620,6 +621,9 @@ footer {
 
     .privacy-policy-container {
         width: 80%;
+    }
+    .error-container {
+        width: 50%;
     }
 }
 

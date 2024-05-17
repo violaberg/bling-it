@@ -29,24 +29,28 @@
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p class="account-p mx-auto mt-3">{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}" class="account-p-link custom-gold">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
+<div class="account-container row mx-1 my-4">
+  <div class="col">
+    <p class="custom-blue font-weight-bold text-center mt-3 py-1">{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}" class="account-link custom-gold">sign up</a> first.{% endblocktrans %}</p>
+    {% endif %}
 
-<form class="login custom-blue p-3 my-3 mx-2" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <div class="account-btn mb-2">
-    <button class="custom-gemstone-btn px-2 py-1" type="submit">{% trans "Log In" %}</button>
+    <form class="custom-blue p-3 mx-2" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form|crispy }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <div class="account-btn mb-2">
+        <button class="custom-gemstone-btn px-2 py-1" type="submit">{% trans "Log In" %}</button>
+      </div>
+      <p class="mt-2 text-center">
+        <a class="account-link custom-gold font-weight-bold"
+          href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      </p>
+    </form>
   </div>
-  <p class="mt-2 text-center">
-    <a class="account-link custom-gold font-weight-bold"
-      href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  </p>
-</form>
+</div>
 <div class="account-btn mb-2">
   <a class="custom-primary-btn btn rounded-0" href="{% url 'home' %}">Home</a>
 </div>

@@ -7,10 +7,12 @@
 {% block inner_content %}
 <h2 class="page-title custom-font text-white text-center mx-auto mt-2 px-2 py-2">{% trans "Sign Up" %}</h2>
 
-<p class="account-p mx-auto mt-4 py-2">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="account-p-link custom-gold">log
+<div class="account-container row mx-1 my-4">
+  <div class="col">
+<p class="custom-blue font-weight-bold text-center mt-3 py-1">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="account-link custom-gold">log
     in</a>.{% endblocktrans %}</p>
 
-<form class="signup custom-blue p-3 my-3 mx-2" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<form class="custom-blue p-3 mx-2" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form|crispy }}
   {% if redirect_field_value %}
@@ -20,5 +22,7 @@
     <button class="custom-gemstone-btn px-2 py-1" type="submit">{% trans "Sign Up" %} &raquo;</button>
   </div>
 </form>
+</div>
+</div>
 
 {% endblock %}
