@@ -36,9 +36,11 @@ def subscribe_to_newsletter(request):
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Thank you for subscribing to our newsletter!')
+            messages.success(
+                request, 'Thank you for subscribing to our newsletter!')
             return redirect('home')
     else:
         form = NewsletterSubscriptionForm()
 
     return render(request, 'index.html', {'form': form})
+    

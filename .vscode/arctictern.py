@@ -61,12 +61,13 @@ def get_versions():
     else:
         with open(".vscode/version.txt", "w") as f:
             f.write(str(THIS_VERSION))
-    
+
     r = requests.get(BASE_URL + ".vscode/version.txt")
     CURRENT_VERSION = float(r.content)
 
     return {"this_version": THIS_VERSION,
             "current_version": CURRENT_VERSION}
+
 
 def needs_upgrade():
     """
@@ -106,8 +107,10 @@ def build_post_upgrade():
         content += FINAL_LINES
         with open(".vscode/post_upgrade.sh", "w") as f:
             f.writelines(content)
-    
-    print("Built post_upgrade.sh. Restart your workspace for it to take effect.")
+
+    print(
+        "Built post_upgrade.sh. Restart your workspace for it to take effect."
+        )
 
 
 def process(file, suffix):
@@ -133,7 +136,7 @@ def process(file, suffix):
         if result != 0:
             os.remove(f"{file}.tmp")
             return True
-    
+
     return False
 
 
@@ -166,7 +169,9 @@ def start_migration():
     print("the changes to take effect.\n")
 
     if push_and_recreate:
-        print(f"{COLOURS['red']}{COLOURS['bold']}*** IMPORTANT INFORMATION ***{COLOURS['reset']}")
+        print(
+            f"{COLOURS['red']}{COLOURS['bold']}*** IMPORTANT INFORMATION ***{COLOURS['reset']}"
+            )
         print("The files used to create this workspace have been updated")
         print("Please download any files that are in .gitignore and")
         print("recreate this workspace by clicking on the Gitpod button")

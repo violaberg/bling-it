@@ -61,6 +61,7 @@ footer,
 .gemstone-categories,
 .gemstone-container,
 .shopping-bag,
+.bag-p,
 .account-container,
 #faq-section,
 .privacy-policy-container,
@@ -154,6 +155,8 @@ a.category-badge>span.badge:hover {
 }
 
 .btt-link {
+    border-color: #daa520;
+    border-style: groove;
     color: #daa520;
     cursor: pointer;
 }
@@ -234,14 +237,7 @@ a.dropdown-item,
 
 .dropdown-menu,
 .gemstone-categories {
-    border-color: #daa520;
-    border-style: groove;
-    border-color: #daa520;
-    border-style: groove;
-    border-color: #daa520;
-    border-style: groove;
-    border-top: none;
-    border-width: 2px;
+    border: none;
 }
 
 .gemstone-categories {
@@ -426,17 +422,46 @@ footer {
 }
 
 /* Bag */
-.shopping-bag {
-    border-color: #daa520;
-    border-style: groove;
+.table thead th {
+    border: none;
+}
+
+.table thead tr {
+    background: #020c1b;
+    border-bottom: 2px groove #daa520;
+    border-left: 3px groove #daa520;
+    border-right: 3px groove #daa520;
+    border-top: 3px groove #daa520;
+}
+
+.table td {
+    border-top: 1px solid #daa520;
 }
 
 .table thead th {
     text-align: center;
 }
 
+.table-content {
+    border-left: 3px groove #daa520;
+    border-right: 3px groove #daa520;
+}
+
+.table-content-total {
+    border-bottom: 3px groove #daa520;
+    border-left: 3px groove #daa520;
+    border-right: 3px groove #daa520;
+    border-top: 2px groove #daa520;
+}
+
 .remove-item {
     cursor: pointer;
+}
+
+.bag-p {
+    border-color: #daa520;
+    border-style: groove;
+    max-width: 66vw;
 }
 
 /* Allauth styling */
@@ -524,7 +549,7 @@ footer {
 
 @media (min-width: 320px) {
     .nav-link {
-        padding: 0.5rem 0.3rem;
+        padding: 0.15rem;
     }
 }
 
@@ -553,6 +578,27 @@ footer {
     body {
         height: calc(100vh - 100px);
     }
+
+    .navbar {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .nav-link i.fa-lg::before {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .grand-total {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -576,6 +622,18 @@ footer {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: .2rem;
         padding-right: .2rem;
+    }
+
+    .dropdown-menu,
+    .gemstone-categories {
+        border-color: #daa520;
+        border-style: groove;
+        border-color: #daa520;
+        border-style: groove;
+        border-color: #daa520;
+        border-style: groove;
+        border-top: none;
+        border-width: 2px;
     }
 
     #deliver-banner {
@@ -604,6 +662,7 @@ footer {
         padding-bottom: 0.5rem;
         width: 2%;
     }
+
     .error-container {
         width: 66%;
     }
@@ -622,6 +681,7 @@ footer {
     .privacy-policy-container {
         width: 80%;
     }
+
     .error-container {
         width: 50%;
     }

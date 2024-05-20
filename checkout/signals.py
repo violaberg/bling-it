@@ -22,7 +22,7 @@ def delete_on_save(sender, instance, **kwargs):
 
 @receiver(post_save, sender=Order)
 def create_order_status(sender, instance, created, **kwargs):
-    ''' 
+    '''
     Create OrderStatus when Order is created
     '''
     if created:

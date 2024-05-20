@@ -5,7 +5,7 @@ class FAQ(models.Model):
 
     class Meta:
         """
-        Meta class to customize the display name of the category in the admin panel.
+        Customizes the display name of the category in the admin panel.
         """
         verbose_name_plural = 'Frequently Asked Questions'
 

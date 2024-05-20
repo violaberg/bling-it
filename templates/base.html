@@ -39,8 +39,8 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
     <script src="{% static 'js/script.js' %}"></script>
-     <!-- Stripe -->
-     <script src="https://js.stripe.com/v3/"></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -54,7 +54,8 @@
         <header class="container-fluid mb-0 pb-0">
             <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top" class="logo-img">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
+                        class="logo-img">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
                         <span class="logo-font text-gold my-0">Bling It</span>
                     </a>
@@ -165,43 +166,44 @@
 
         {% block content %}
         {% endblock %}
-
-        <footer class="text-gold font-weight-bold width-100 py-3">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-md-4 mt-md-0 pb-2">
-                        <p class="text-center mb-0">
-                            <a href="{% url 'faq' %}" target="_blank" class="footer-link custom-blue text-decoration-none">FAQ</a><br>
-                            <a href="{% url 'privacy_policy' %}" target="_blank" class="footer-link custom-blue text-decoration-none">Privacy Policy</a>
-                        </p>
-                    </div>
-                    <div class="col ml-5 pl-5">
-                        <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> 01 234 5678</p>
-                        <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@example.com</p>
-                    </div>
-                    <div class="col-md-4 mt-2 mt-md-0">
-                        <div class="text-center">
-                            <p class="custom-blue mb-0">All Rights Reserved 2024<span
-                                    class="custom-font custom-gold font-weight-normal pl-2">Bling It</span></p>
-                            <div class="opening-hours font-montserrat custom-white mb-0">
-                                <p class="custom-blue mb-0 pt-2">Created by <span
-                                        class="custom-font custom-gold font-weight-normal pr-2">Viola Bergere</span>
-                                    <a href="https://github.com/violaberg" target="_blank"
-                                        class="ms-2 text-decoration-none"><i
-                                            class="footer-link custom-blue fa-brands fa-github"></i>
-                                    </a>
-                                    <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
-                                        class="ms-2 text-decoration-none"><i
-                                            class="footer-link custom-blue fa-brands fa-linkedin"></i>
-                                    </a>
-                                </p>
-                            </div>
+    </div>
+    <footer class="text-gold font-weight-bold sticky-bottom width-100 py-3">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-4 mt-md-0 pb-2">
+                    <p class="text-center mb-0">
+                        <a href="{% url 'faq' %}" target="_blank"
+                            class="footer-link custom-blue text-decoration-none">FAQ</a><br>
+                        <a href="{% url 'privacy_policy' %}" target="_blank"
+                            class="footer-link custom-blue text-decoration-none">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="col ml-5 pl-5">
+                    <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> 01 234 5678</p>
+                    <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@example.com</p>
+                </div>
+                <div class="col-md-4 mt-2 mt-md-0">
+                    <div class="text-center">
+                        <p class="custom-blue mb-0">All Rights Reserved 2024<span
+                                class="custom-font custom-gold font-weight-normal pl-2">Bling It</span></p>
+                        <div class="opening-hours font-montserrat custom-white mb-0">
+                            <p class="custom-blue mb-0 pt-2">Created by <span
+                                    class="custom-font custom-gold font-weight-normal pr-2">Viola Bergere</span>
+                                <a href="https://github.com/violaberg" target="_blank"
+                                    class="ms-2 text-decoration-none"><i
+                                        class="footer-link custom-blue fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
+                                    class="ms-2 text-decoration-none"><i
+                                        class="footer-link custom-blue fa-brands fa-linkedin"></i>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">

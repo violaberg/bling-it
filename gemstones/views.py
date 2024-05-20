@@ -32,7 +32,7 @@ def all_gemstones(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                gemstones = gemstones.annotate(lower_name=lower('name'))
+                gemstones = gemstones.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -40,7 +40,6 @@ def all_gemstones(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             gemstones = gemstones.order_by(sortkey)
-
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -51,8 +50,10 @@ def all_gemstones(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('gemstones'))
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(
+                    reverse('gemstones'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             gemstones = gemstones.filter(queries)
@@ -82,14 +83,15 @@ def gemstone_detail(request, gemstone_id):
             form = WishlistForm(request.POST)
             if form.is_valid():
                 gemstone_id = form.cleaned_data['gemstone_id']
-                if not Wishlist.objects.filter(user=profile, gemstone=gemstone).exists():
+                if not Wishlist.objects.filter(
+                    user=profile, gemstone=gemstone).exists():
                     wishlist = True
-                    # Add gemstone to the wishlist
+                    # Add gemstone
                     wishlist, created = Wishlist.objects.get_or_create(user=profile)
                     wishlist.gemstone.add(gemstone)
 
-                    # Add a success message
-                    messages.success(request, f'{gemstone.name} added to your wishlist')
+                    messages.success(
+                        request, f'{gemstone.name} added to your wishlist')
                     # Redirect to the same page
                     return redirect('gemstone_detail', gemstone_id=gemstone_id)
             else:
@@ -113,7 +115,9 @@ def gemstone_detail(request, gemstone_id):
 def add_gemstone(request):
     """ Add a gemstone to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        messages.error(
+            request, 'Sorry, only store owners have permission to do that.'
+            )
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -123,7 +127,9 @@ def add_gemstone(request):
             messages.success(request, 'Gemstone added successfully!')
             return redirect(reverse('add_gemstone'))
         else:
-            messages.error(request, 'Failed to add gemstone. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add gemstone. Please ensure the form is valid.'
+                )
     else:
         form = GemstoneForm()
 
@@ -139,7 +145,9 @@ def add_gemstone(request):
 def edit_gemstone(request, gemstone_id):
     """ Edit a gemstone in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        messages.error(
+            request, 'Sorry, only store owners have permission to do that.'
+            )
         return redirect(reverse('home'))
 
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
@@ -150,7 +158,9 @@ def edit_gemstone(request, gemstone_id):
             messages.success(request, 'Gemstone updated successfully!')
             return redirect(reverse('gemstone_detail', args=[gemstone.id]))
         else:
-            messages.error(request, 'Failed to update gemstone. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update gemstone. Please ensure the form is valid.'
+                )
     else:
         form = GemstoneForm(instance=gemstone)
         messages.info(request, f'You are editing {gemstone.name}')
@@ -168,9 +178,10 @@ def edit_gemstone(request, gemstone_id):
 def delete_gemstone(request, gemstone_id):
     """ Delete a gemstone from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners have permission to do that.')
+        messages.error(
+            request, 'Sorry, only store owners have permission to do that.')
         return redirect(reverse('home'))
-        
+
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     gemstone.delete()
     messages.success(request, 'Gemstone deleted!')

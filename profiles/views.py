@@ -19,13 +19,15 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     # Render wishlist template within profile context
-    wishlist_template = render_to_string('profiles/wishlist.html', {'wishlist': wishlist}, request=request)
+    wishlist_template = render_to_string(
+        'profiles/wishlist.html', {'wishlist': wishlist}, request=request)
 
     template = 'profiles/profile.html'
     context = {
@@ -70,7 +72,8 @@ def add_to_wishlist(request, gemstone_id):
 
         # Ensure the user is authenticated before proceeding
         if not request.user.is_authenticated:
-            messages.error(request, 'Please login to add this gemstone to your wishlist.')
+            messages.error(
+                request, 'Please login to add this gemstone to your wishlist.')
             return redirect('login')
 
         # Get or create the wishlist for the user
@@ -79,10 +82,12 @@ def add_to_wishlist(request, gemstone_id):
         # Toggle gemstone addition/removal based on whether it's already in the wishlist
         if gemstone in wishlist.gemstone.all():
             wishlist.gemstone.remove(gemstone)
-            messages.success(request, f'{gemstone.name} removed from your wishlist')
+            messages.success(
+                request, f'{gemstone.name} removed from your wishlist')
         else:
             wishlist.gemstone.add(gemstone)
-            messages.success(request, f'{gemstone.name} added to your wishlist')
+            messages.success(
+                request, f'{gemstone.name} added to your wishlist')
 
         return redirect('gemstone_detail')
 

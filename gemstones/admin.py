@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Gemstone, Category
 
-# Register your models here.
+
 class GemstoneAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -20,6 +20,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Gemstone, GemstoneAdmin)
 admin.site.register(Category, CategoryAdmin)

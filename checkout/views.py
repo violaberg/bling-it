@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404,HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -78,16 +80,19 @@ def checkout(request):
                     return redirect('view_bag')
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
 
         else:
-            messages.error(request, 'There was an error with your form. \
+            messages.error(
+                request, 'There was an error with your form. \
                 Please double check your information.')
 
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, 'Your bag is empty at the moment!')
+            messages.error(
+                request, 'Your bag is empty at the moment!')
             return redirect(reverse('gemstones'))
 
         current_bag = bag_contents(request)
@@ -99,7 +104,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with info the user maintains in profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -132,7 +137,7 @@ def checkout(request):
         'client_secret': intent.client_secret,
     }
 
-    return render (request, template, context)
+    return render(request, template, context)
 
 
 def checkout_success(request, order_number):

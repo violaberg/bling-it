@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from gemstones.models import Gemstone
 
+
 def bag_contents(request):
 
     bag_items = []

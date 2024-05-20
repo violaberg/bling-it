@@ -20,8 +20,8 @@
         <div class="col col-lg-8 mx-auto">
             {% if bag_items %}
             <div class="table-responsive rounded-0 my-3">
-                <table class="table table-sm">
-                    <thead class="text-blue">
+                <table class="custom-blue table table-sm">
+                    <thead class="custom-gold">
                         <tr class="shopping-bag">
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
@@ -30,7 +30,7 @@
                     </thead>
 
                     {% for item in bag_items %}
-                    <tr class="shopping-bag">
+                    <tr class="shopping-bag table-content">
                         <td class="p-3 w-25">
                             {% if item.gemstone.image %}
                             <img class="img-fluid rounded-0" src="{{ item.gemstone.image.url }}"
@@ -51,7 +51,7 @@
                         </td>
                     </tr>
                     {% endfor %}
-                    <tr class="shopping-bag">
+                    <tr class="shopping-bag table-content-total">
                         <td colspan="5" class="pt-3 pr-3 text-right">
                             <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6 class="font-weight-bold">Delivery:<span class="custom-gold pl-2">FREE</span></h6>
@@ -77,13 +77,15 @@
                 </table>
             </div>
             {% else %}
-            <p class="text-white lead mb-5">Your bag is empty!</p>
-            <a href="{% url 'gemstones' %}" class="custom-primary-btn btn rounded-0">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+            <p class="bag-p custom-blue font-weight-bold text-center lead mx-auto py-1 my-3">Your bag is empty!</p>
+            <div class="text-center mb-2">
+                <a href="{% url 'gemstones' %}" class="custom-primary-btn btn rounded-0">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>
