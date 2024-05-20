@@ -28,15 +28,19 @@ Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.her
         - [**Background pattern**](#background-pattern)
         - [**Typography**](#typography)
 * [**Agile Development**](#agile-development)
+* [**Business Model, SEO & Marketing**](#business-model-seo--marketing)
+    - [**Business Model**](#business-model)
+    - [**SEO**](#seo)
+    - [**Marketing**](#marketing)
 * [**Features & Future Development**](#features--future-development)
-        - [**Features**](#features)
-        - [**Future Development**](#future-development)
+    - [**Features**](#features)
+    - [**Future Development**](#future-development)
 * [**Technologies used**](#technologies-used)
 * [**Testing**](#testing)
 * [**Deployment**](#deployment)
 * [**Acknowledgement & Credits**](#acknowledgement--credits)
 * [**Media**](#media)
-        - [**Images**](#images)
+    - [**Images**](#images)
 
 # **User experience (UX)**
 
@@ -309,6 +313,27 @@ Combining Parisienne for decorative elements and headings with Cormorant Garamon
 
 I have included details of agile development in a separate file [AGILE.md](AGILE.md).
 
+# **Business Model, SEO & Marketing**
+
+## **Business Model**
+
+Bling It operates as a B2C (Business-to-Consumer) ecommerce model, an online retail platform for individual clients specializing in high-quality gemstones. Business model revolves around offering a curated selection of exquisite, ethically-sourced gemstones, including rubies, sapphires, emeralds, and diamonds, catering to a discerning clientele seeking luxury, elegance and uniqueness. By maintaining direct relationships with reputable gemstone suppliers and artisans, shop ensures the authenticity and superior quality of the gemstones offered.<br>
+The target audience include affluent individuals, collectors, and connoisseurs of gemstones, typically aged 30 and above, who seek unique and timeless pieces to complement their personal style and celebrate special occasions. We also target professional women and men who appreciate the elegance and craftsmanship of bespoke jewelry, as well as young couples looking for exquisite engagement ring and wedding band gemstones. Additionally, Bling It appeals to gift-givers who desire to present their loved ones with meaningful and luxurious gifts. Audience is geographically diverse, with a strong presence in major metropolitan areas and an appreciation for online shopping convenience and high quality service.
+
+## **SEO**
+
+SEO, or Search Engine Optimization, is the process of improving your website to increase its visibility when people search for products or services related to your business on search engines like Google. The better visibility your pages have in search results, the more likely you are to attract attention and draw prospective and existing customers to your business. All search in Google was done in incognito window.
+For keyword research purposes I used [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) Chrome extension and checked search results directly in Google Tools. I have included a brain dump using keywords and Google to return a list of long and short-tail keywords. All screenshots can be found in [SEO](static/docs/seo) folder. Below I have added tables created so search results are better visible:
+
+<details><summary>Search results</summary><img src="static/docs/seo/search-table.png"></details>
+<details><summary>Search results</summary><img src="static/docs/seo/search-table2.png"></details>
+
+After concluding my research I added descriptive meta tags to the project.
+
+## **Marketing**
+
+For marketing purposes I created custom newsletter and included it on Home page of the project. A newsletter can significantly benefit an e-commerce store by keeping customers engaged and informed about new products, promotions, and exclusive offers. It serves as a direct line of communication, fostering customer loyalty and driving repeat business. By sharing valuable content and personalized recommendations, newsletters enhance the shopping experience and keep your brand top-of-mind. Additionally, they provide insights into customer preferences and behaviors, helping to refine marketing strategies and improve overall customer satisfaction.
+
 # **Features & Future Development**
 
 ## **Features**
@@ -348,14 +373,16 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 
 # **Acknowledgement & Credits**
 
-* [Hero Patterns](https://heropatterns.com/) - background pattern
-* [Google Fonts](https://fonts.google.com/) - fonts
-* [Font Awesome](https://fontawesome.com/) - icons
+* [Hero Patterns](https://heropatterns.com/) used to create background pattern
+* [Google Fonts](https://fonts.google.com/) used to find and implement fonts
+* [Font Awesome](https://fontawesome.com/) used for icons
 * Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project.
 * Choccolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
 * Animation for loader taken from [CSS-tricks](https://css-tricks.com/making-css-animations-feel-natural/)
 * Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)
-* Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)<hr>
+* Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
+* [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) used for some Google searches
+* Search result table generated with [Table Generator](https://www.table-generator.de/)<hr>
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
