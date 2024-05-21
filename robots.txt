@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Sitemap: https://bling-it-242ac659e1b6.herokuapp.com/sitemap.xml
