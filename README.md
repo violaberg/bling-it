@@ -355,7 +355,46 @@ Use related product suggestions, internal linking, clear navigation menus, and a
 
 ## **Marketing**
 
-For marketing purposes I created custom newsletter and included it on Home page of the project. A newsletter can significantly benefit an e-commerce store by keeping customers engaged and informed about new products, promotions, and exclusive offers. It serves as a direct line of communication, fostering customer loyalty and driving repeat business. By sharing valuable content and personalized recommendations, newsletters enhance the shopping experience and keep your brand top-of-mind. Additionally, they provide insights into customer preferences and behaviors, helping to refine marketing strategies and improve overall customer satisfaction.
+I followed the same idea for marketing as with SEO and used questions from CI learning platform to help:
+
+* ***Who are your users?***<br>
+Users are gemstone enthusiasts, jewelry collectors, and individuals looking for unique, high-quality gemstones.
+
+* ***Which online platforms would you find lots of your users?***<br>
+Users can be found on social media platforms (my personal favourite Instagram, Pinterest and Facebook for ads), gemstone forums, and jewelry-related websites.
+
+* ***Would your users use social media? If yes, which platforms do you think you would find them on?***<br>
+Yes, users would likely be active on Instagram, Pinterest, and Facebook due to the visual nature of gemstones.
+
+* ***What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?***<br>
+Users need detailed product information, safe payment option, great customer service, buying guides and care tips, social media updates, and newsletters. 
+    - **Detailed product information** will be included on gemstone detail page.
+    - **Safe payment option** will be achieved by using Stripe and contact form created/ contact details added to ensure outstanding customer service.
+    - **Buying guides** and **care tips** could be delivered through future blog posts (unless there is time left during project to create info page/ blog) and small care tip card added with each order delivered.
+    - **Social media updates** would be handled by shop admin until enough income is created to hire content creator for social media accounts. 
+    - **Custom newsletter** form is visible on Home page of the project. A newsletter can significantly benefit an e-commerce store by keeping customers engaged and informed about new products, promotions, and exclusive offers. It serves as a direct line of communication, fostering customer loyalty and driving repeat business. By sharing valuable content and personalized recommendations, newsletters enhance the shopping experience and keep your brand top-of-mind. Additionally, they provide insights into customer preferences and behaviors, helping to refine marketing strategies and improve overall customer satisfaction.
+
+* ***Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?***<br>
+Yes, our business could run sales and offer discounts in near future. Users would hear about these offers through email newsletters, social media posts, and website banners.
+
+* ***What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?***<br>
+The goals are to increase sales, build brand awareness, and retain customers. Effective marketing strategies include content marketing, social media engagement, email marketing, and possible influencer collaborations.
+
+* ***Would your business have a budget to spend on advertising? Or would it need to work with free or low-cost options to market itself?***<br>
+The business would have a modest budget for advertising but would also utilize free or low-cost options such as social media marketing, SEO, and email campaigns. A lot can be done by owner/ admin at the beginning to help with budget, promoting posts on Instagram isn't as expensive as one might think, limits can be set so to keep control of expenses and be evaluated later to see if more budget can be allocated for paid ads on social media. Incredible option for marketing is sharing posts on Instagram and Facebook and creating reels. To achieve quicker follower growth a small giveaway could be created with certain rules set such as:
+    - ***follow us***
+    - ***like and save post***
+    - ***comment on post***
+    - ***tag x amount of friends***
+    - ***share to your story and tag us***
+
+    Additionally we would use Google Ads which are an amazing way to increase brand awareness and help with SEO. Using Google Ads can also help with the use of long-tail keywords and help with the ranking of the site.
+
+* Facebook page was created during development and screenshots can be found below:
+    <details><summary>Facebook Page</summary><img src="static/docs/marketing/facebook-page.png"></details>
+    <details><summary>Welcome Post</summary><img src="static/docs/marketing/welcome-post.png"></details>
+
+    Page can be accessed following this link, unless it's deleted by Facebook due to not being a real bussiness: [Bling It Facebook Page](https://www.facebook.com/profile.php?id=61559857025144)
 
 # **Features & Future Development**
 
