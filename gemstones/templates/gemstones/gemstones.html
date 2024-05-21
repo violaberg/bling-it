@@ -62,12 +62,12 @@
                         {% if gemstone.image %}
                         <a href="{% url 'gemstone_detail' gemstone.id %}">
                             <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
-                                alt="{{ gemstone.name }}">
+                                alt="An image of {{ gemstone.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'gemstone_detail' gemstone.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ gemstone.name }}">
+                                alt="No image placeholder for {{ gemstone.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">

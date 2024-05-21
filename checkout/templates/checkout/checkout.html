@@ -30,9 +30,9 @@
                 <div class="col-2 mb-1">
                     <a href="{% url 'gemstone_detail' item.gemstone.id %}">
                         {% if item.gemstone.image %}
-                        <img class="checkout-img w-100" src="{{ item.gemstone.image.url }}" alt="{{ gemstone.name }}">
+                        <img class="checkout-img w-100" src="{{ item.gemstone.image.url }}" alt="An image of {{ gemstone.name }}">
                         {% else %}
-                        <img class="checkout-img w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ gemstone.name }}">
+                        <img class="checkout-img w-100" src="{{ MEDIA_URL }}noimage.png" alt="No image placeholder for {{ gemstone.name }}">
                         {% endif %}
                     </a>
                 </div>
@@ -128,7 +128,7 @@
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-diamond">
         <div class="loader bounce-2 icon">
-            <img src="{% static 'images/logo.png' %}" alt="Loading diamond">
+            <img src="{% static 'images/logo.png' %}" alt="Golden diamond as page loader">
         </div>
     </h1>
 </div>

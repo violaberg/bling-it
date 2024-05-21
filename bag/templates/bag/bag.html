@@ -34,10 +34,10 @@
                         <td class="p-3 w-25">
                             {% if item.gemstone.image %}
                             <img class="img-fluid rounded-0" src="{{ item.gemstone.image.url }}"
-                                alt="{{ item.gemstone.name }}">
+                                alt="An image of a {{ item.gemstone.name }}">
                             {% else %}
                             <img class="img-fluid rounded-0" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ item.gemstone.name }}">
+                                alt="An image of a {{ item.gemstone.name }}">
                             {% endif %}
                         </td>
                         <td class="py-3">

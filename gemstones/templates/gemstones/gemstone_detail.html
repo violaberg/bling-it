@@ -12,11 +12,11 @@ Gemstone Details
             <div class="image-container">
                 {% if gemstone.image %}
                 <a href="{{ gemstone.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}" alt="{{ gemstone.name }}">
+                    <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}" alt="An image of {{ gemstone.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ gemstone.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image placeholder for {{ gemstone.name }}">
                 </a>
                 {% endif %}
             </div>
