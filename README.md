@@ -323,7 +323,7 @@ The target audience include affluent individuals, collectors, and connoisseurs o
 ## **SEO**
 
 SEO, or Search Engine Optimization, is the process of improving your website to increase its visibility when people search for products or services related to your business on search engines like Google. The better visibility your pages have in search results, the more likely you are to attract attention and draw prospective and existing customers to your business. All search in Google was done in incognito window.
-For keyword research purposes I used [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) Chrome extension and checked search results directly in Google Tools. I have included a brain dump using keywords and Google to return a list of long and short-tail keywords. All screenshots can be found in [SEO](static/docs/seo) folder. Below I have added tables created so search results are better visible:
+I didn't use [Wordtracker](https://www.wordtracker.com/search) as suggested in lessons as I heard pretty bad reviews about it and wasn't willing to pay to check it myself. For keyword research purposes I used [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) Chrome extension and checked search results directly in Google Tools. I have included a brain dump using keywords and Google to return a list of long and short-tail keywords. All screenshots can be found in [SEO](static/docs/seo) folder. Below I have added tables created so search results are better visible:
 
 <details><summary>Search results</summary><img src="static/docs/seo/search-table.png"></details>
 <details><summary>Search results</summary><img src="static/docs/seo/search-table2.png"></details>
