@@ -330,6 +330,29 @@ I didn't use [Wordtracker](https://www.wordtracker.com/search) as suggested in l
 
 After concluding my research I added descriptive meta tags to the project.
 
+To improve content I used questions from Content Challenge on CI learning platform: 
+
+* ***What do your users need?***<br>
+Users need high-quality gemstones, detailed product information, safe way to pay and reliable customer service.
+
+* ***What information and features can you provide to meet those needs?***<br>
+Provide detailed product descriptions, high-resolution images, user reviews, a secure checkout process, and a comprehensive FAQ section.
+
+* ***How can you make the information easy to understand?***<br>
+Use clear and concise language, bullet points for key information, and visual aids like images and videos.
+
+* ***How can you demonstrate expertise, authoritativeness, and trustworthiness in your content?***<br>
+Include detailed product information, customer testimonials, expert blog posts, and certifications or awards.
+
+* ***Would there be other pages within your own site you could link to from your chosen page?***<br>
+Yes, link to related products, customer reviews, privacy policy, and the FAQ section.
+
+* ***Are there opportunities to link back to external websites that already rank highly on Google?***<br>
+Yes, link to industry authority sites and gemstone certification bodies.
+
+* ***How can you help users discover other relevant parts of your web application?***<br>
+Use related product suggestions, internal linking, clear navigation menus, and a search function.
+
 ## **Marketing**
 
 For marketing purposes I created custom newsletter and included it on Home page of the project. A newsletter can significantly benefit an e-commerce store by keeping customers engaged and informed about new products, promotions, and exclusive offers. It serves as a direct line of communication, fostering customer loyalty and driving repeat business. By sharing valuable content and personalized recommendations, newsletters enhance the shopping experience and keep your brand top-of-mind. Additionally, they provide insights into customer preferences and behaviors, helping to refine marketing strategies and improve overall customer satisfaction.
