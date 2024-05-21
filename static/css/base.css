@@ -355,6 +355,10 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+input#id_email {
+    text-align: center;
+}
+
 .text-gold {
     color: #daa520 !important;
 }

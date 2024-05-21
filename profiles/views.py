@@ -59,14 +59,20 @@ def order_history(request, order_number):
 
 
 @login_required
-def wishlist(request):
+def wishlist(request, pk):
     """ A view to return the wishlist page"""
 
+    profile = get_object_or_404(UserProfile, id=pk)
+    wishlist = Wishlist.objects.filter(user=profile).order_by('-created')
+    wishlist = gemstones_pagination(request, wishlist, 6)
+    context = {
+        'wishlist': wishlist,
+    }
     return render(request, "profiles/wishlist.html")
 
 
 @login_required
-def add_to_wishlist(request, gemstone_id):
+def add_to_wishlist(request, pk):
     if request.method == 'POST':
         gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
 
@@ -77,17 +83,16 @@ def add_to_wishlist(request, gemstone_id):
             return redirect('login')
 
         # Get or create the wishlist for the user
-        wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+        wishlist, created = Wishlist.objects.get_or_create(user=request.user, gemstone=gemstone)
         
-        # Toggle gemstone addition/removal based on whether it's already in the wishlist
-        if gemstone in wishlist.gemstone.all():
-            wishlist.gemstone.remove(gemstone)
-            messages.success(
-                request, f'{gemstone.name} removed from your wishlist')
-        else:
-            wishlist.gemstone.add(gemstone)
+        # Toggle gemstone addition/removal from the wishlist
+        if created:
             messages.success(
                 request, f'{gemstone.name} added to your wishlist')
+        else:
+            wishlist.delete()
+            messages.success(
+                request, f'{gemstone.name} removed from your wishlist')
 
         return redirect('gemstone_detail')
 

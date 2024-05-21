@@ -39,6 +39,8 @@ def subscribe_to_newsletter(request):
             messages.success(
                 request, 'Thank you for subscribing to our newsletter!')
             return redirect('home')
+        else:
+            messages.error(request, 'There was an error with your submission.')
     else:
         form = NewsletterSubscriptionForm()
 
