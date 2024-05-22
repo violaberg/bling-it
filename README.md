@@ -421,8 +421,9 @@ In the second half of development I realized what I won't be able to implement d
 * [Heroku](https://www.heroku.com/)
 * Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
+* jQuery
 * Whitenoise
-* Cloudinary
+* AWS S3 Bucket
 * Summernote
 
 # **Testing**
@@ -444,7 +445,8 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)
 * Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 * [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) used for some Google searches
-* Search result table generated with [Table Generator](https://www.table-generator.de/)<hr>
+* Search result table generated with [Table Generator](https://www.table-generator.de/)
+* Gemstone information in FAQ section was created with ChatGPT<hr>
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
@@ -455,3 +457,4 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 
 ## **Images**
 * [Vecteezy](https://www.vecteezy.com/) - image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
+* Hero image was generated with [Adobe Firefly](https://firefly.adobe.com/)
