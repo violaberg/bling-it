@@ -10,7 +10,7 @@ RATING = (
 )
 
 
-class Review(model. Models):
+class Review(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     review_subject = models.CharField(max_length=100)

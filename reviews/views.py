@@ -5,7 +5,7 @@ from .forms import ReviewForm
 from .models import Review
 
 
-def view_reviews(request):
+def reviews(request):
     reviews = Review.objects.all().order_by('-created_on')
     return render(request, 'reviews.html', {'reviews': reviews})
 
@@ -16,10 +16,11 @@ def submit_review(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Thank you for your review!')
-            return redirect('view_reviews')
+            return redirect('reviews')
+        else:
+            messages.error(
+                    request, 'Something went wrong! Please try again.'
+                )
     else:
-        messages.error(
-                request, 'Something went wrong! Please try again.'
-            )
         form = ReviewForm()
     return render(request, 'submit_review.html', {'form':form})
