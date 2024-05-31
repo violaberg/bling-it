@@ -180,6 +180,7 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | No error message displayed when user tries to add the same gemstone to shoppping bag | No message added to 'add_to_bag' view | Adjusting view with <code>messages.error(request, 'This gemstone is already in your shopping bag.')</code> |
 | <details><summary>Decimal error</summary><img src="static/bugs/decimal-error.png"></details>| Model OrderLineItem field <code>lineitem_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, editable=False)</code> max digits were set as 6, causing error as gemstone price was 20000.00 | Increasing max digits to 10 resolved the issue |
 | <details><summary>Server Error</summary><img src="static/bugs/server-error.png"></details>| Email verification when trying to register as new user | # |
+| <details><summary>Subscribtion Error</summary><img src="static/bugs/subscribtion-error.png"></details>| Email verification for subscribtion letters | Newer version of Django installed and runtime.txt added to root |
 
 
 [Back to Readme](README.md)
