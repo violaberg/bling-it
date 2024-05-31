@@ -567,6 +567,10 @@ footer {
     .small-logo {
         width: 3%;
     }
+
+    input#id_email {
+        max-width: 66%;
+    }
 }
 
 @media (min-width: 768px) {
