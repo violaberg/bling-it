@@ -7,7 +7,7 @@ from .models import Review
 
 def reviews(request):
     reviews = Review.objects.all().order_by('-created_on')
-    return render(request, 'reviews.html', {'reviews': reviews})
+    return render(request, 'reviews/reviews.html', {'reviews': reviews})
 
 
 def submit_review(request):
