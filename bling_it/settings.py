@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 ALLOWED_HOSTS = [
     'bling-it-242ac659e1b6.herokuapp.com', 'localhost',
-    '8000-violaberg-blingit-t6uh0yd2is8.ws-eu114.gitpod.io']
+    '8000-violaberg-blingit-8ylrt9lbn7x.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -207,15 +207,14 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STRIPE_CURRENCY = 'usd'
+STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-DEFAULT_FROM_EMAIL = 'blingit@example.com'
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'blingit@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True

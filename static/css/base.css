@@ -355,10 +355,6 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-input#id_email {
-    text-align: center;
-}
-
 .text-gold {
     color: #daa520 !important;
 }
@@ -469,11 +465,6 @@ footer {
 }
 
 /* Allauth styling */
-.contact-form {
-    border-color: #daa520;
-    border-style: groove;
-}
-
 .allauth-form-inner-content input {
     border-color: #020c1b;
     border-radius: 0;
@@ -508,6 +499,18 @@ footer {
 .form-control {
     border-radius: 0;
     color: #020c1b;
+}
+
+/* Contact page */
+.contact-form {
+    border-color: #daa520;
+    border-style: groove;
+}
+
+.contact-p {
+    background: #020c1b;
+    border: 2px groove #daa520;
+    font-size: 20px;
 }
 
 /* FAQ section */

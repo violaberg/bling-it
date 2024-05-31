@@ -29,7 +29,7 @@
                     </h3>
                     <p class="text-white mx-auto">Subscribe to receive the latest news, special offers and sales
                         notifications</p>
-                    <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+                    <form method="post" action="{% url 'home' %}">
                         {% csrf_token %}
                         <div class="form-group">
                             <label class="text-gold text-muted" for="id_email">Email address</label>

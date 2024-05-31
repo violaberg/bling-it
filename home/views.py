@@ -1,14 +1,34 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail, BadHeaderError
 
 from .forms import NewsletterSubscriptionForm
 from .models import FAQ
 
 
 def index(request):
-    """ A view to return the index page"""
+    """ A view to return the index page with subscription form"""
+    if request.method == 'POST':
+            email = request.POST.get('email')
+            if email:
+                try:
+                    # Send confirmation email
+                    subject = 'Subscription Confirmation'
+                    message = 'Thank you for subscribing to our newsletter!'
+                    from_email = 'viola.bergere@gmail.com'
+                    recipient_list = [email]
 
-    return render(request, "home/index.html")
+                    send_mail(subject, message, from_email, recipient_list)
+
+                    messages.success(request, 'You have successfully subscribed to the newsletter!')
+
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                except Exception as e:
+                    messages.error(request, f'An error occurred: {e}')
+            else:
+                messages.error(request, 'Please enter a valid email address.')
+    return render(request, 'home/index.html')
 
 
 def about(request):
