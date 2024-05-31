@@ -7,27 +7,21 @@ from .models import FAQ
 
 
 def index(request):
-    """ A view to return the index page with subscription form"""
+    """A view to return the index page with subscription form"""
     if request.method == 'POST':
-            email = request.POST.get('email')
-            if email:
-                try:
-                    # Send confirmation email
-                    subject = 'Subscription Confirmation'
-                    message = 'Thank you for subscribing to our newsletter!'
-                    from_email = 'viola.bergere@gmail.com'
-                    recipient_list = [email]
+        email = request.POST.get('email')
+        if email:
+            try:
+                # Call the send_subscription_email function
+                send_subscription_email(email)
+                messages.success(request, 'You have successfully subscribed to the newsletter!')
 
-                    send_mail(subject, message, from_email, recipient_list)
-
-                    messages.success(request, 'You have successfully subscribed to the newsletter!')
-
-                except BadHeaderError:
-                    return HttpResponse('Invalid header found.')
-                except Exception as e:
-                    messages.error(request, f'An error occurred: {e}')
-            else:
-                messages.error(request, 'Please enter a valid email address.')
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            except Exception as e:
+                messages.error(request, f'An error occurred: {e}')
+        else:
+            messages.error(request, 'Please enter a valid email address.')
     return render(request, 'home/index.html')
 
 
@@ -55,14 +49,32 @@ def subscribe_to_newsletter(request):
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
+            email = form.cleaned_data.get('email')
             form.save()
-            messages.success(
-                request, 'Thank you for subscribing to our newsletter!')
-            return redirect('home')
+            # Send confirmation email
+            try:
+                send_subscription_email(email)
+                messages.success(request, 'Thank you for subscribing to our newsletter!')
+            except Exception as e:
+                messages.error(request, f'Thank you for subscribing, but an error occurred when sending the confirmation email: {e}')
         else:
             messages.error(request, 'There was an error with your submission.')
     else:
         form = NewsletterSubscriptionForm()
 
     return render(request, 'index.html', {'form': form})
+
+
+def send_subscription_email(user_email):
+    subject = 'Subscription Confirmation'
+    message = 'Thank you for subscribing to our newsletter!'
+    from_email = 'viola.bergere@gmail.com'
+    recipient_list = [user_email]
+
+    try:
+        send_mail(subject, message, from_email, recipient_list)
+    except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+    except Exception as e:
+        raise Exception(f'An error occurred: {e}')
     
