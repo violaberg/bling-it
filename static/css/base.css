@@ -9,11 +9,6 @@ html {
     scrollbar-width: none;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -507,10 +502,14 @@ footer {
     border-style: groove;
 }
 
-.contact-p {
+.contact-section {
     background: #020c1b;
     border: 2px groove #daa520;
     font-size: 20px;
+}
+
+.contact-container {
+    max-width: 80%;
 }
 
 /* FAQ section */
@@ -577,6 +576,10 @@ footer {
 
     .error-container {
         width: 80%;
+    }
+
+    .contact-container {
+        max-width: 60%;
     }
 }
 
