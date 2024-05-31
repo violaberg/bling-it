@@ -446,11 +446,13 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 * [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) used for some Google searches
 * Search result table generated with [Table Generator](https://www.table-generator.de/)
+* [Stack Overflow](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) used to fix email confirmation error
 * Gemstone information in FAQ section was created with ChatGPT<hr>
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
 * And thank you to [Kim](https://github.com/kimatron) for continuous support during late and long nights and in general for convincing me to take on this course.
+* A big thank you to all Slack community and Code Institute tutors for helping out when I was stuck.
 * And last but not least, thank you to Code Institute for organising hackathons. They have been a tremendous learning opportunity and therefore a great help during my project struggles.
 
 # **Media**
