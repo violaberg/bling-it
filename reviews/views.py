@@ -23,4 +23,4 @@ def submit_review(request):
                 )
     else:
         form = ReviewForm()
-    return render(request, 'submit_review.html', {'form':form})
+    return render(request, 'reviews/reviews.html', {'form':form})

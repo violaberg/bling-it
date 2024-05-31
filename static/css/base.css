@@ -295,15 +295,13 @@ a.dropdown-item,
 /* Buttons */
 .custom-gemstone-btn {
     background-color: #daa520;
-    border-color: #020c1b;
-    border-style: groove;
+    border-color: 2px groove #020c1b;
     font-weight: 700;
 }
 
 .custom-primary-btn {
     background-color: #daa520;
-    border-color: #ffffff;
-    border-style: groove;
+    border: 2px groove #ffffff;
     font-weight: 700;
 }
 
@@ -320,8 +318,7 @@ a.dropdown-item,
 
 .custom-secondary-btn {
     background: #020c1b;
-    border-color: #daa520;
-    border-style: groove;
+    border: 2px groove #daa520;
     color: #ffffff;
 }
 
@@ -329,8 +326,7 @@ a.dropdown-item,
 .custom-secondary-btn:active,
 .custom-secondary-btn:focus {
     background: #daa520;
-    border-color: #020c1b;
-    border-style: groove;
+    border: 2px groove #020c1b;
     color: #ffffff;
 }
 
