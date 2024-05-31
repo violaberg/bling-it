@@ -67,7 +67,9 @@ def subscribe_to_newsletter(request):
 
 def send_subscription_email(user_email):
     subject = 'Subscription Confirmation'
-    message = 'Thank you for subscribing to our newsletter!'
+    message_body = 'Thank you for subscribing to our newsletter!'
+    signature = '\n\nSincerely yours,\nBling It!'
+    message = f"{message_body}{signature}"
     from_email = 'viola.bergere@gmail.com'
     recipient_list = [user_email]
 
