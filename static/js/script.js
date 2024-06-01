@@ -5,8 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
     addToWishlistIcon.addEventListener("click", function() {
         addToWishlist(gemstoneId);
     });
-});
 
+    // Get the modal and delete button elements
+    var deleteReviewLink = document.getElementById("deleteReviewLink");
+    var deleteModal = document.getElementById("myModal");
+    var cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+
+    // Add event listeners to open and close the modal
+    deleteReviewLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        deleteModal.style.display = "block"; // Show the modal
+    });
+
+    cancelDeleteBtn.addEventListener("click", function() {
+        deleteModal.style.display = "none"; // Hide the modal
+    });
+});
 
 function addToWishlist(gemstoneId) {
     var csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
