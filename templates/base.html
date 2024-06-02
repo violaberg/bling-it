@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to Bling It - Your ultimate destination for exquisite gemstones! Explore our stunning collections, find unique pieces and enjoy exceptional quality and service.">
+    <meta name="description"
+        content="Welcome to Bling It - Your ultimate destination for exquisite gemstones! Explore our stunning collections, find unique pieces and enjoy exceptional quality and service.">
     <meta name="keywords"
         content="gemstones, diamond, ruby, emerald, precious stone, natural gemstones, loose gemstones, rare gemstones, clarity, carat">
     {% endblock %}
@@ -164,11 +165,10 @@
         </div>
         {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
+        <main class="mb-3">
+            {% block content %}
+            {% endblock %}
+        </main>
     </div>
     <footer class="text-gold font-weight-bold sticky-bottom width-100 py-3">
         <div class="container-lg">
@@ -189,7 +189,7 @@
                     <div class="text-center">
                         <p class="custom-blue mb-0">All Rights Reserved 2024<span
                                 class="custom-font custom-gold font-weight-normal pl-2">Bling It</span>
-                                <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
+                            <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
                                 class="ms-2 text-decoration-none"><i
                                     class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
                             </a>
