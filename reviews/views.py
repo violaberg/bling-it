@@ -8,7 +8,7 @@ from .models import Review
 
 def reviews(request):
     reviews = Review.objects.all().order_by('-created_on')
-    p = Paginator(reviews, 9)
+    p = Paginator(reviews, 6)
     page_number = request.GET.get('page')
     try:
         page_obj = p.get_page(page_number)

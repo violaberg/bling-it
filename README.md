@@ -446,6 +446,7 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 * [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) used for some Google searches
 * Search result table generated with [Table Generator](https://www.table-generator.de/)
+* Review pagination added using sample from [Geeks for geeks](https://www.geeksforgeeks.org/how-to-add-pagination-in-django-project/)
 * [Stack Overflow](https://stackoverflow.com/questions/77482831/smtp-starttls-got-an-unexpected-keyword-argument-keyfile) used to fix email confirmation error
 * Gemstone information in FAQ section was created with ChatGPT<hr>
 

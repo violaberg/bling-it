@@ -497,16 +497,11 @@ footer {
 span.page-link,
 .page-item.active,
 .page-link {
-    background-color: #daa520 !important;
-    border: 2px groove #ffffff !important;
+    background: #daa520 !important;
     color: #020c1b !important;
     font-family: "Parisienne", cursive;
     font-size: 20px;
     font-weight: 700;
-}
-
-textarea#id_review_body {
-    max-width: 99%;
 }
 
 .card-title {
@@ -524,6 +519,11 @@ textarea#id_review_body {
     font-size: 17px;
     font-weight: 700;
     text-decoration: none;
+}
+
+.crispy-btn {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Contact page */
