@@ -510,7 +510,13 @@ textarea#id_review_body {
 }
 
 .card-title {
+    border-bottom: 1px groove #daa520;
     color: #daa520;
+}
+
+.card-text {
+    border-bottom: 1px groove #daa520;
+    text-align: justify;
 }
 
 .delete-link:hover {

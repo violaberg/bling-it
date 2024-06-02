@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+import random
 from django.core.mail import send_mail, BadHeaderError
 
 from .forms import NewsletterSubscriptionForm
@@ -22,6 +23,7 @@ def index(request):
                 messages.error(request, f'An error occurred: {e}')
         else:
             messages.error(request, 'Please enter a valid email address.')
+
     return render(request, 'home/index.html')
 
 
