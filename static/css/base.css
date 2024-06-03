@@ -54,10 +54,10 @@ a {
 }
 
 header,
-.dropdown-menu,
+ul.dropdown-menu,
 footer,
 .card,
-.gemstone-categories,
+ul.gemstone-submenu.dropdown-menu,
 .gemstone-container,
 .shopping-bag,
 .bag-p,
@@ -235,23 +235,54 @@ a.dropdown-item,
     color: #020c1b;
 }
 
-.dropdown-menu,
-.gemstone-categories {
-    border: none;
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
 }
 
-.gemstone-categories {
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+ul.dropdown-menu {
+    border-bottom: 2px groove #daa520;
+    border-left: 2px groove #daa520;
+    border-radius: 0;
+    border-right: 2px groove #daa520;
+    border-top: none;
     display: none;
-    left: 100%;
-    list-style-type: none;
+    left: 0;
     padding: 10px;
     position: absolute;
-    top: 0;
+    top: 100%;
     z-index: 1000;
 }
 
-.nav-item.dropdown:hover .gemstone-categories,
-.nav-item.dropdown.show .gemstone-categories {
+nav ul li:hover>ul.dropdown-menu,
+nav ul li>ul.dropdown-menu:hover {
+    display: block;
+}
+
+ul.gemstone-submenu.dropdown-menu {
+    border: 2px groove #daa520;
+    border-radius: 0;
+    left: 175px;
+    margin-top: -10px;
+    top: 0;
+}
+
+.dropdown-submenu:hover>ul.dropdown-menu {
     display: block;
 }
 
@@ -673,7 +704,7 @@ span.page-link,
     }
 
     .dropdown-menu,
-    .gemstone-categories {
+    .gemstone-submenu {
         border-color: #daa520;
         border-style: groove;
         border-color: #daa520;
