@@ -19,23 +19,39 @@
                 <a href="{% url 'gemstones' %}?sort=typer&direction+asc" class="dropdown-item gemstone-dropdown-toggle"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">By Type</a>
                 <ul class="gemstone-categories">
-                    <li><a href="{% url 'gemstones' %}?category=amethysts" class="dropdown-item ">Amethysts</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=alexandrites" class="dropdown-item ">Alexandrites</a>
+                    <li><a href="{% url 'gemstones' %}?category=amethyst" class="dropdown-item ">Amethysts</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=alexandrite" class="dropdown-item ">Alexandrites</a>
                     </li>
-                    <li><a href="{% url 'gemstones' %}?category=apatites" class="dropdown-item ">Apatites</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=aquamarines" class="dropdown-item ">Aquamarines</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=diamonds" class="dropdown-item ">Diamonds</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=emeralds" class="dropdown-item ">Emeralds</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=garnets" class="dropdown-item ">Garnets</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=peridots" class="dropdown-item ">Peridots</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=rubies" class="dropdown-item ">Rubies</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=sapphires" class="dropdown-item ">Sapphires</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=spinels" class="dropdown-item ">Spinels</a></li>
-                    <li><a href="{% url 'gemstones' %}?category=tourmalines" class="dropdown-item ">Tourmalines</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=apatite" class="dropdown-item ">Apatites</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=aquamarine" class="dropdown-item ">Aquamarines</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=diamond" class="dropdown-item ">Diamonds</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=emerald" class="dropdown-item ">Emeralds</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=garnet" class="dropdown-item ">Garnets</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=peridot" class="dropdown-item ">Peridots</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=ruby" class="dropdown-item ">Rubies</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=sapphire" class="dropdown-item ">Sapphires</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=spinel" class="dropdown-item ">Spinels</a></li>
+                    <li><a href="{% url 'gemstones' %}?category=tourmaline" class="dropdown-item ">Tourmalines</a></li>
                 </ul>
                 <a href="{% url 'gemstones' %}?sort=price&direction+asc" class="dropdown-item ">By Price</a>
+                <ul class="gemstone-categories">
+                    <li><a href="{% url 'gemstones' %}?price=5000" class="dropdown-item ">Up to 5000</a></li>
+                    <li><a href="{% url 'gemstones' %}?price=10000" class="dropdown-item ">Up to 10 000</a></li>
+                    <li><a href="{% url 'gemstones' %}?price=20000" class="dropdown-item ">Up to 20 000</a></li>
+                    <li><a href="{% url 'gemstones' %}?price=50000" class="dropdown-item ">Up to 50 000</a></li>
+                    <li><a href="{% url 'gemstones' %}?price=100000" class="dropdown-item ">Up to 100 000</a></li>
+                    <li><a href="{% url 'gemstones' %}?price=100001" class="dropdown-item ">Over 100 000</a></li>
+                </ul>
                 <a href="{% url 'gemstones' %}?sort=carats&direction+asc" class="dropdown-item ">By Carats</a>
-                <a href="{% url 'gemstones' %}?category=amethysts,alexandrites,apatites,aquamarines,diamonds,emeralds,garnets,peridots,rubies,sapphires,spinels,tourmalines"
+                <ul class="gemstone-categories">
+                    <li><a href="{% url 'gemstones' %}?carat=1" class="dropdown-item ">Up to 1</a></li>
+                    <li><a href="{% url 'gemstones' %}?carat=2" class="dropdown-item ">2 carats</a></li>
+                    <li><a href="{% url 'gemstones' %}?carat=3" class="dropdown-item ">3 carats</a></li>
+                    <li><a href="{% url 'gemstones' %}?carat=4" class="dropdown-item ">4 carats</a></li>
+                    <li><a href="{% url 'gemstones' %}?carat=5" class="dropdown-item ">5 carats</a></li>
+                    <li><a href="{% url 'gemstones' %}?carat=6" class="dropdown-item ">6 carats and up</a></li>
+                </ul>
+                <a href="{% url 'gemstones' %}?category=amethyst,alexandrite,apatite,aquamarine,diamond,emerald,garnet,peridot,ruby,sapphire,spinel,tourmaline"
                     class="dropdown-item">All Gemstones</a>
             </div>
         </li>
