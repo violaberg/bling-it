@@ -416,6 +416,14 @@ input[name='q']::placeholder {
     text-align: justify;
 }
 
+.card-body {
+    border-top: 1px groove #daa520;
+}
+
+.card-footer.pt-0.border-0.text-left {
+    background: transparent;
+}
+
 thead {
     background-color: #020c1b;
 }
@@ -730,6 +738,10 @@ span.page-link,
 
     .gemstone-detail-container {
         padding-right: 1.5rem;
+    }
+
+    .card-body {
+        padding: 1rem 0 0 0;
     }
 
     #faq-section {
