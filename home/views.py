@@ -47,7 +47,6 @@ def privacy_policy(request):
 
 
 def subscribe_to_newsletter(request):
-    """ A view for newsletter subscription"""
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
@@ -55,7 +54,7 @@ def subscribe_to_newsletter(request):
             form.save()
             # Send confirmation email
             try:
-                send_subscription_email(email)
+                # send_subscription_email(email)  # Assuming this function sends the confirmation email
                 messages.success(request, 'Thank you for subscribing to our newsletter!')
             except Exception as e:
                 messages.error(request, f'Thank you for subscribing, but an error occurred when sending the confirmation email: {e}')
@@ -64,13 +63,13 @@ def subscribe_to_newsletter(request):
     else:
         form = NewsletterSubscriptionForm()
 
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'subscription_confirmation.html', {'form': form})
 
 
 def send_subscription_email(user_email):
     subject = 'Subscription Confirmation'
     message_body = 'Thank you for subscribing to our newsletter!'
-    signature = '\n\nSincerely yours,\nBling It!'
+    signature = '\nSincerely yours,\nBling It!'
     message = f"{message_body}{signature}"
     from_email = 'viola.bergere@gmail.com'
     recipient_list = [user_email]

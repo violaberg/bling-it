@@ -181,6 +181,7 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | <details><summary>Decimal error</summary><img src="static/bugs/decimal-error.png"></details>| Model OrderLineItem field <code>lineitem_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False, editable=False)</code> max digits were set as 6, causing error as gemstone price was 20000.00 | Increasing max digits to 10 resolved the issue |
 | <details><summary>Server Error</summary><img src="static/bugs/server-error.png"></details>| Email verification when trying to register as new user | # |
 | <details><summary>Subscribtion Error</summary><img src="static/bugs/subscribtion-error.png"></details>| Email verification for subscribtion letters | Newer version of Django installed and runtime.txt added to root |
+| <details><summary>Test Error</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
 
 
 [Back to Readme](README.md)
