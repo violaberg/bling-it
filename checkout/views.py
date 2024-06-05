@@ -1,5 +1,5 @@
 from django.shortcuts import (
-    render, redirect, reverse, get_object_or_404, HttpResponse
+    render, redirect, get_object_or_404, HttpResponse
 )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -62,9 +62,9 @@ def checkout(request):
             order.save()
 
             # Process the items in the bag
-            for item_id in bag.keys():
+            for item_id in bag.items():
                 try:
-                    gemstone = get_object_or_404(Gemstone, pk=item_id)
+                    gemstone = Gemstone.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
                         gemstone=gemstone,
@@ -80,20 +80,17 @@ def checkout(request):
                     return redirect('view_bag')
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(
-                reverse('checkout_success', args=[order.order_number]))
-
+            return redirect('checkout_success', order.order_number)
         else:
             messages.error(
                 request, 'There was an error with your form. \
                 Please double check your information.')
-
     else:
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(
                 request, 'Your bag is empty at the moment!')
-            return redirect(reverse('gemstones'))
+            return redirect('gemstones')
 
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
@@ -124,20 +121,16 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
-        order_form = OrderForm()
-
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your enviroment?')
+            Did you forget to set it in your environment?')
 
-    template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
-    return render(request, template, context)
+    return render(request, 'checkout/checkout.html', context)
 
 
 def checkout_success(request, order_number):
@@ -167,7 +160,6 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
@@ -175,9 +167,8 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         del request.session['bag']
 
-    template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
 
-    return render(request, template, context)
+    return render(request, 'checkout/checkout_success.html', context)
