@@ -567,21 +567,6 @@ span.page-link,
     margin: 0 auto;
 }
 
-.modal {
-    height: fit-content;
-    margin: auto;
-    position: relative;
-    width: fit-content;
-}
-
-.modal-header {
-    border-bottom: 1px solid #daa520;
-}
-
-.modal-footer {
-    border-top: 1px solid #daa520;
-}
-
 /* Contact page */
 .contact-form {
     border-color: #daa520;

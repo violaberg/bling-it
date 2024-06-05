@@ -1,21 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the modal and delete button elements
-    var deleteReviewLink = document.getElementById("deleteReviewLink");
-    var deleteModal = document.getElementById("myModal");
-    var cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
-    var confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
-
-    // Add event listeners for the modal
-    deleteReviewLink.addEventListener("click", function(event) {
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteReviewForm = document.getElementById("deleteReviewForm");
+    
+    deleteReviewForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        deleteModal.style.display = "block";
-    });
 
-    cancelDeleteBtn.addEventListener("click", function() {
-        deleteModal.style.display = "none";
-    });
-
-    confirmDeleteBtn.addEventListener("click", function() {
-        deleteModal.style.display = "none";
+        if (confirm("Are you sure you want to delete this review?")) {
+            // If the user confirms, submit the form
+            this.submit();
+        } else {
+            // If the user cancels, do nothing
+            return false;
+        }
     });
 });
