@@ -25,6 +25,7 @@ def all_gemstones(request):
     categories = None
     sort = None
     direction = None
+    prices = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -45,6 +46,18 @@ def all_gemstones(request):
             categories = request.GET['category'].split(',')
             gemstones = gemstones.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'price' in request.GET:
+            max_price = request.GET['price']
+            gemstones = gemstones.filter(price__lte=max_price)
+            price = Gemstones.objects.filter(price__lte=max_price)
+
+        if 'carats' in request.GET:
+            max_carats = request.GET['carats']
+            if max_carats == '6':
+                gemstones = gemstones.filter(carats__gte=6)
+            else:
+                gemstones = gemstones.filter(carats__lte=max_carats)
 
     if request.GET:
         if 'q' in request.GET:

@@ -256,11 +256,7 @@ nav a {
 }
 
 ul.dropdown-menu {
-    border-bottom: 2px groove #daa520;
-    border-left: 2px groove #daa520;
-    border-radius: 0;
-    border-right: 2px groove #daa520;
-    border-top: none;
+    border: none;
     display: none;
     left: 0;
     padding: 10px;
@@ -644,6 +640,10 @@ span.page-link,
     input#id_email {
         max-width: 66%;
     }
+
+    .image-container.mx-auto.pt-4 {
+        width: 66%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -711,7 +711,7 @@ span.page-link,
         padding-right: .2rem;
     }
 
-    .dropdown-menu,
+    ul.dropdown-menu,
     .gemstone-submenu {
         border-color: #daa520;
         border-style: groove;
