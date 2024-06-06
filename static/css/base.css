@@ -644,6 +644,11 @@ span.page-link,
     .contact-container {
         max-width: 60%;
     }
+
+    #delivery {
+        margin: auto;
+        width: 66% !important;
+    }
 }
 
 /* Pad the top a bit when navbar is collapsed on mobile */
@@ -730,8 +735,8 @@ span.page-link,
     }
 
     #faq-section {
-        max-width: 70vw;
         margin: 0 auto;
+        max-width: 70vw;
     }
 
     .small-logo {
@@ -741,6 +746,11 @@ span.page-link,
 
     .error-container {
         width: 66%;
+    }
+
+    .profile-container.my-3 {
+        margin: auto;
+        width: 85%;
     }
 }
 
@@ -761,6 +771,11 @@ span.page-link,
     .error-container {
         width: 50%;
     }
+
+    .profile-container.my-3 {
+        margin: auto;
+        width: 70%;
+    }
 }
 
 @media (min-width: 1500px) {
@@ -771,5 +786,10 @@ span.page-link,
 
     .privacy-policy-container {
         width: 66%;
+    }
+
+    .profile-container.my-3 {
+        margin: auto;
+        width: 50%;
     }
 }

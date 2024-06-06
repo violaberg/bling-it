@@ -6,20 +6,12 @@ from django.db.models.functions import Lower
 
 from .models import Gemstone, Category
 from profiles.views import add_to_wishlist
-from profiles.forms import WishlistForm
+from profiles.models import Wishlist
 from .forms import GemstoneForm
 
 
 def all_gemstones(request):
     """ A view to return all gemstone page """
-    if request.method == 'POST':
-        # Process the form submission
-        form = WishlistForm(request.POST)
-        if form.is_valid():
-            gemstone_id = form.cleaned_data['gemstone_id']
-
-            return redirect('gemstones')
-
     gemstones = Gemstone.objects.all()
     query = None
     categories = None
@@ -46,7 +38,6 @@ def all_gemstones(request):
             gemstones = gemstones.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-    if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -62,7 +53,6 @@ def all_gemstones(request):
 
     context = {
         'gemstones': gemstones,
-        'form': WishlistForm(),
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -75,36 +65,14 @@ def gemstone_detail(request, gemstone_id):
     """ A view to return all individual gemstone page """
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     wishlist = False
-
-    if request.method == 'POST':
-        # Process the form submission
-        if request.user.is_authenticated:
-            profile = request.user.userprofile
-            form = WishlistForm(request.POST)
-            if form.is_valid():
-                gemstone_id = form.cleaned_data['gemstone_id']
-                if not Wishlist.objects.filter(
-                    user=profile, gemstone=gemstone).exists():
-                    wishlist = True
-                    # Add gemstone
-                    wishlist, created = Wishlist.objects.get_or_create(user=profile)
-                    wishlist.gemstone.add(gemstone)
-
-                    messages.success(
-                        request, f'{gemstone.name} added to your wishlist')
-                    # Redirect to the same page
-                    return redirect('gemstone_detail', gemstone_id=gemstone_id)
-            else:
-                # Optionally, you can add an error message here
-                messages.error(request, 'Invalid form submission')
-
-    else:
-        # Initialize the form for rendering
-        form = WishlistForm(initial={'gemstone_id': gemstone_id})
+    if request.user.is_authenticated:
+        profile = request.user.userprofile
+        if Wishlist.objects.filter(
+            user=profile, gemstone=gemstone).exists():
+            wishlist = True
 
     context = {
         'gemstone': gemstone,
-        'form': form,
         'wishlist': wishlist,
     }
 

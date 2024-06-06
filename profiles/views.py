@@ -73,30 +73,17 @@ def wishlist(request, pk):
 
 @login_required
 def add_to_wishlist(request, pk):
-    if request.method == 'POST':
-        gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+    profile = request.user.userprofile
+    gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
+    redirect_url = request.POST.get('redirect_url')
 
-        # Ensure the user is authenticated before proceeding
-        if not request.user.is_authenticated:
-            messages.error(
-                request, 'Please login to add this gemstone to your wishlist.')
-            return redirect('login')
-
-        # Get or create the wishlist for the user
-        wishlist, created = Wishlist.objects.get_or_create(user=request.user, gemstone=gemstone)
-        
-        # Toggle gemstone addition/removal from the wishlist
-        if created:
-            messages.success(
-                request, f'{gemstone.name} added to your wishlist')
-        else:
-            wishlist.delete()
-            messages.success(
-                request, f'{gemstone.name} removed from your wishlist')
-
-        return redirect('gemstone_detail')
-
+    wishlist, created = Wishlist.objects.get_or_create(
+        user=profile, gemstone=gemstone)
+    if created:
+        messages.success(request, f'{gemstone.name} was succesfully added to your wishlist!')
     else:
-        # Handle invalid request method (GET, PUT, etc.)
-        messages.error(request, 'Invalid request method.')
-        return redirect('gemstone_detail')
+        wishlist.delete()
+        messages.success(
+            request, f'{gemstone.name} was removed from your wishlist!')
+
+    return redirect(redirect_url)
