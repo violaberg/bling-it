@@ -54,10 +54,9 @@ a {
 }
 
 header,
-ul.dropdown-menu,
 footer,
 .card,
-ul.gemstone-submenu.dropdown-menu,
+.dropdown-menu,
 .gemstone-container,
 .shopping-bag,
 .bag-p,
@@ -225,6 +224,10 @@ a.category-badge>span.badge:hover {
     color: #020c1b;
 }
 
+li.nav-item {
+    list-style-type: none;
+}
+
 .dropdown-item,
 a.dropdown-item,
 .nav-link:hover {
@@ -257,7 +260,7 @@ nav a {
     text-decoration: none;
 }
 
-ul.dropdown-menu {
+.dropdown-menu {
     border: none;
     display: none;
     left: 0;
@@ -267,24 +270,7 @@ ul.dropdown-menu {
     z-index: 1000;
 }
 
-nav ul li:hover>ul.dropdown-menu,
-nav ul li>ul.dropdown-menu:hover {
-    display: block;
-}
-
-ul.gemstone-submenu.dropdown-menu {
-    border: 2px groove #daa520;
-    border-radius: 0;
-    left: 175px;
-    margin-top: -10px;
-    top: 0;
-}
-
-.dropdown-submenu:hover>ul.dropdown-menu {
-    display: block;
-}
-
-/* Start chocolate */
+/* Chocolate menu*/
 .chocolate {
     display: grid;
     gap: 5px;
@@ -296,8 +282,6 @@ ul.gemstone-submenu.dropdown-menu {
     height: 6px;
     width: 6px;
 }
-
-/* End chocolate */
 
 /* Gemstone Admin Form */
 .btn-file {
@@ -713,8 +697,7 @@ span.page-link,
         padding-right: .2rem;
     }
 
-    ul.dropdown-menu,
-    .gemstone-submenu {
+    .dropdown-menu {
         border-color: #daa520;
         border-style: groove;
         border-color: #daa520;
