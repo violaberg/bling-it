@@ -182,6 +182,7 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | <details><summary>Subscribtion Error</summary><img src="static/bugs/subscribtion-error.png"></details>| Email verification for subscribtion letters | Newer version of Django installed and runtime.txt added to root |
 | <details><summary>Test Error</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
 | <details><summary>Order not going through</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
+| <details><summary>Wishlist Error</summary><img src="static/bugs/wishlist-error.png"></details>| # | # |
 
 
 [Back to Readme](README.md)

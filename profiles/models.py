@@ -48,7 +48,7 @@ def create_or_update_user_profile(
 
 class Wishlist(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    gemstone = models.ManyToManyField(Gemstone)
+    gemstones = models.ManyToManyField(Gemstone)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

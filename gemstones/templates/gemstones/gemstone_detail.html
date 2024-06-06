@@ -12,20 +12,23 @@ Gemstone Details
             <div class="image-container mx-auto pt-4">
                 {% if gemstone.image %}
                 <a href="{{ gemstone.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}" alt="An image of {{ gemstone.name }}">
+                    <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
+                        alt="An image of {{ gemstone.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image placeholder for {{ gemstone.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                        alt="No image placeholder for {{ gemstone.name }}">
                 </a>
                 {% endif %}
             </div>
         </div>
         <div class="col-12 col-md-6">
             <div class="gemstone-detail-container custom-blue mb-4 mt-md-5">
-                <p class="gemstone-name custom-font text-gold mb-0">{{ gemstone.name }}<i id="add-to-wishlist"
-                        data-url="{% url 'add_to_wishlist' %}" data-gemstone-id="{{ gemstone.id }}"
-                        class="custom-blue float-right fa-solid fa-heart"></i></p>
+                <p class="gemstone-name custom-font text-gold mb-0">{{ gemstone.name }}<a href="{% url 'add_to_wishlist' gemstone.id %}">
+                    <i class="custom-blue float-right fa-solid fa-heart"></i>
+                </a>
+                </p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
                 {% if gemstone.category %}
                 <p class="small mt-1 mb-0">

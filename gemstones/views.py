@@ -68,7 +68,7 @@ def gemstone_detail(request, gemstone_id):
     if request.user.is_authenticated:
         profile = request.user.userprofile
         if Wishlist.objects.filter(
-            user=profile, gemstone=gemstone).exists():
+            user=profile.user, gemstones=gemstone).exists():
             wishlist = True
 
     context = {
