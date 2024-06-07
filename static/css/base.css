@@ -182,7 +182,16 @@ a.category-badge>span.badge:hover {
 }
 
 .toast-header {
+    border: none;
     font-size: large;
+}
+
+.toast-body, hr {
+    border-top: 1px solid #daa520;
+}
+
+.toast-body {
+    text-align: justify;
 }
 
 /* Bag notification popup */
@@ -751,6 +760,10 @@ span.page-link,
     .profile-container.my-3 {
         margin: auto;
         width: 85%;
+    }
+
+    .checkout-bg {
+        max-width: 66%;
     }
 }
 

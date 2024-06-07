@@ -22,13 +22,6 @@
   border-top-style: groove;
 }
 
-.order-info-p {
-  background-color: #020c1b;
-  border-color: #daa520;
-  border-style: groove;
-  color: #ffffff;
-}
-
 /* Stripe */
 .StripeElement,
 .stripe-style-input {

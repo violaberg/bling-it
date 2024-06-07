@@ -9,16 +9,16 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mt-5">
-        <div class="col mt-2">
-            <h2 class="page-title custom-font text-white text-center mt-5 mx-auto py-2">Thank You For Shopping With Us
+    <div class="row">
+        <div class="col">
+            <h2 class="page-title custom-font text-white text-center mt-3 mx-auto py-2">Thank You For Shopping With Us
             </h2>
         </div>
-        <p class="order-info-p mx-auto mt-3">Your order information is below. A confirmation email will be sent to
-            <strong class="custom-gold">{{ order.email }}</strong>.</p>
     </div>
     <div class="checkout-bg row py-3 my-3 mx-auto">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 mx-auto">
+            <p class="text-center">Your order information is below. A confirmation email will be sent to
+                <strong class="custom-gold">{{ order.email }}</strong>.</p>
             <div class="order-confirmation-wrapper p-md-2 rounded-0">
                 <div class="text-center row">
                     <div class="col">
@@ -184,7 +184,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-7 text-center mb-3">
+        <div class="col-12 text-center mb-3">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="custom-gemstone-btn btn rounded-0 my-2">
                 <span class="icon mr-2">
