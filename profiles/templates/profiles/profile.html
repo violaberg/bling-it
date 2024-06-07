@@ -56,6 +56,11 @@
                                 </td>
                                 <td>${{ order.grand_total }}</td>
                             </tr>
+                            <tr>
+                                <td colspan="4" class="text-center">
+                                    <strong>Status:</strong> {{ order.get_status_display }}
+                                </td>
+                            </tr>
                             {% endfor %}
                         </tbody>
                     </table>

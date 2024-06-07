@@ -42,6 +42,8 @@ class Order(models.Model):
     stripe_pid = models.CharField(
         max_length=254, null=False, blank=False, default=''
         )
+    status = models.CharField(
+        max_length=20, choices=STATUS, default='in_progress')
 
     def _generate_order_number(self):
         """
@@ -95,13 +97,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.gemstone.sku} on order {self.order.order_number}'
-
-
-class OrderStatus(models.Model):
-    order = models.OneToOneField(Order, on_delete=models.CASCADE)
-    status = models.CharField(
-        max_length=200, null=True, blank=True, choices=STATUS,
-        default=STATUS[0][0])
-
-    def __str__(self):
-        return f'{self.order.order_number} - {self.status}'

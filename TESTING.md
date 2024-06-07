@@ -181,7 +181,7 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | <details><summary>Server Error</summary><img src="static/bugs/server-error.png"></details>| Email verification when trying to register as new user | # |
 | <details><summary>Subscribtion Error</summary><img src="static/bugs/subscribtion-error.png"></details>| Email verification for subscribtion letters | Newer version of Django installed and runtime.txt added to root |
 | <details><summary>Test Error</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
-| <details><summary>Order not going through</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
+| <details><summary>Order not going through</summary><img src="static/bugs/test-error.png"></details>| Incorrect url in checkout | Removed 'checkout' from url <code>path('cache_checkout_data/', views.cache_checkout_data, name='cache_checkout_data'),</code> |
 | <details><summary>Wishlist Error</summary><img src="static/bugs/wishlist-error.png"></details>| # | # |
 
 
