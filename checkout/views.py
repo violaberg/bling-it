@@ -62,7 +62,7 @@ def checkout(request):
             order.save()
 
             # Process the items in the bag
-            for item_id in bag.items():
+            for item_id, item_data in bag.items():
                 try:
                     gemstone = Gemstone.objects.get(id=item_id)
                     order_line_item = OrderLineItem(

@@ -6,6 +6,7 @@
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
+console.log('pub', stripePublicKey, 'sec', clientSecret)
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
@@ -47,6 +48,7 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
+    console.log('stripe_elements form submit')
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
