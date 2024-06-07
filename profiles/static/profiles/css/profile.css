@@ -29,6 +29,14 @@
     font-weight: 700;
 }
 
+.table td {
+    border-top: none;
+}
+
+.order-status {
+    border-bottom: 1px solid #daa520;
+}
+
 /* Style tab container */
 .tab-container {
     background-color: #ffffff;
