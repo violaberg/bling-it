@@ -31,9 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-violaberg-blingit-8ylrt9lbn7x.ws.codeinstitute-ide.net',
-]
+CSRF_TRUSTED_ORIGINS = [os.environ.get('CSRF_TRUSTED_ORIGINS')]
 
 ALLOWED_HOSTS = [
     'bling-it-242ac659e1b6.herokuapp.com', 'localhost',
