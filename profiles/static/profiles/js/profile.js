@@ -1,5 +1,5 @@
-var wishlistEmpty = false; // Set this to true if wishlist is empty 
-var noOrdersPlaced = false; // Set this to true if there are no orders placed
+var wishlistEmpty = false;
+var noOrdersPlaced = false;
 
 
 function openTab(evt, tabName) {

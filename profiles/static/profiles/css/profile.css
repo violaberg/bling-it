@@ -64,3 +64,7 @@
     color: #daa520;
     font-weight: 400;
 }
+
+.wishlist-items {
+    list-style-type: none;
+}

@@ -15,9 +15,12 @@
     <div class="profile-container my-3">
         <div class="tab-container pb-2 mt-3">
             <div class="text-center tab">
-                <button class="tablinks px-3 py-2" onmouseover="openTab(event, 'orders')">Orders</button>
-                <button class="tablinks px-3 py-2" onmouseover="openTab(event, 'delivery')">Delivery Info</button>
-                <button class="tablinks px-3 py-2" onmouseover="openTab(event, 'wishlist')">Wishlist</button>
+                <button id="orders-tab" class="tablinks px-3 py-2"
+                    onmouseover="openTab(event, 'orders')">Orders</button>
+                <button id="delivery-tab" class="tablinks px-3 py-2" onmouseover="openTab(event, 'delivery')">Delivery
+                    Info</button>
+                <button id="wishlist-tab" class="tablinks px-3 py-2"
+                    onmouseover="openTab(event, 'wishlist')">Wishlist</button>
             </div>
 
             <div id="orders" class="tabcontent p-2">
@@ -81,7 +84,40 @@
             <div id="wishlist" class="tabcontent p-2">
                 <!-- Display Wishlist -->
                 <h4 class="custom-font text-center custom-gold pt-2">Wishlist</h4>
-                {% include 'profiles/wishlist.html' %}
+                <div class="wishlist-items table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in wishlist_items %}
+                            <tr>
+                                <td>
+                                    <img src="{{ item.image.url }}" alt="{{ item.name }}"
+                                        class="img-fluid img-thumbnail">
+                                </td>
+                                <td>{{ item.name }}</td>
+                                <td>${{ item.price }}</td>
+                                <td>
+                                    <small><a class="remove-link custom-red"
+                                            href="{% url 'add_to_wishlist' item.id %}">Remove</a></small>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3" class="text-center">Your wishlist is currently empty. Explore our
+                                    stunning gemstones and add your favourites to the wishlist to keep
+                                    track of them!</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
