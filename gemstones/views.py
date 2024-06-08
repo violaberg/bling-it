@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Gemstone, Category
 from profiles.views import add_to_wishlist
@@ -50,6 +51,16 @@ def all_gemstones(request):
             gemstones = gemstones.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
+    # Pagination
+    paginator = Paginator(gemstones, 6)
+    page_number = request.GET.get('page')
+    try:
+        gemstones = paginator.page(page_number)
+    except PageNotAnInteger:
+        gemstones = paginator.page(1)
+    except EmptyPage:
+        gemstones = paginator.page(paginator.num_pages)
 
     context = {
         'gemstones': gemstones,
