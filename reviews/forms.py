@@ -8,6 +8,9 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['name', 'review_subject', 'review_body', 'rating']
+        widgets = {
+            'name': forms.TextInput(attrs={'autocomplete': 'name'})
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

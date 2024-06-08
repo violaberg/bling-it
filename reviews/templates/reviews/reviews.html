@@ -25,14 +25,14 @@
                                     class="fa-regular fa-star fa-2xs pl-1"></i></p>
                             <small>Submitted on {{ review.created_on }}</small>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer mx-auto pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
                                     {% if request.user.is_superuser %}
                                         <form id="deleteReviewForm" action="{% url 'delete_review' review.id %}" method="post">
                                             {% csrf_token %}
                                             <input type="hidden" name="review_id" value="{{ review.id }}">
-                                            <button type="submit" class="delete-link custom-red">Delete</button>
+                                            <button type="submit" class="delete-link text-uppercase custom-red">Delete</button>
                                         </form>
                                     {% endif %}
                                 </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div class="row mx-auto">
-        <div class="col col-sm-10 col-md-8 col-lg-6 mx-auto">
+        <div class="col col-sm-10 col-md-8 col-lg-6 pt-3 mx-auto">
             <h2 class="page-title custom-font text-white text-center mx-auto p-2">Leave a Review</h2>
 
             <form class="review-form p-3 mt-4 mb-3" method="post">

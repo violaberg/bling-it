@@ -533,6 +533,11 @@ span.page-link,
     font-weight: 700;
 }
 
+.page-item.active .page-link {
+    border: 2px solid;
+    border-color: #880101;
+}
+
 .card-title {
     border-bottom: 1px groove #daa520;
     color: #daa520;
@@ -541,6 +546,11 @@ span.page-link,
 .card-text {
     border-bottom: 1px groove #daa520;
     text-align: justify;
+}
+
+.delete-link.custom-red {
+    background: #ffffff;
+    border: 2px solid #880101;
 }
 
 .delete-link:hover {
