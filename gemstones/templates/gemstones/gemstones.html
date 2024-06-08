@@ -88,7 +88,7 @@
                                     {% if request.user.is_superuser %}
                                     <small class="font-weight-bold">
                                         <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}">Edit</a> |
-                                        <a class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}">Delete</a>
+                                        <a id="deleteGemstone" class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}">Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
