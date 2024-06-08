@@ -68,3 +68,32 @@
 .wishlist-items {
     list-style-type: none;
 }
+
+.wishlist-table td {
+    max-width: fit-content;
+}
+
+
+@media (min-width: 400px) {
+    img.wishlish-img.img-fluid {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 576px) {
+    img.wishlish-img.img-fluid {
+        max-width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    img.wishlish-img.img-fluid {
+        max-width: 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    img.wishlish-img.img-fluid {
+        max-width: 20%;
+    }
+}

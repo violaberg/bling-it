@@ -84,8 +84,8 @@
             <div id="wishlist" class="tabcontent p-2">
                 <!-- Display Wishlist -->
                 <h4 class="custom-font text-center custom-gold pt-2">Wishlist</h4>
-                <div class="wishlist-items table-responsive">
-                    <table class="table table-sm">
+                <div class="wishlist-items text-center table-responsive">
+                    <table class="wishlist-table table table-sm">
                         <thead>
                             <tr>
                                 <th>Image</th>
@@ -98,12 +98,13 @@
                             {% for item in wishlist_items %}
                             <tr>
                                 <td>
+                                    <a href="{% url 'gemstone_detail' item.id %}">
                                     <img src="{{ item.image.url }}" alt="{{ item.name }}"
-                                        class="img-fluid img-thumbnail">
+                                        class="wishlish-img img-fluid"></a>
                                 </td>
-                                <td>{{ item.name }}</td>
-                                <td>${{ item.price }}</td>
-                                <td>
+                                <td class="pt-3">{{ item.name }}</td>
+                                <td class="pt-3">${{ item.price }}</td>
+                                <td class="pt-3">
                                     <small><a class="remove-link custom-red"
                                             href="{% url 'add_to_wishlist' item.id %}">Remove</a></small>
                                 </td>
