@@ -530,17 +530,18 @@ footer {
 
 /* Reviews page */
 span.page-link,
-.page-item.active,
 .page-link {
-    background: #daa520 !important;
-    color: #020c1b !important;
+    background-color: #daa520;
+    color: #020c1b;
     font-size: 20px;
     font-weight: 700;
 }
 
 .page-item.active .page-link {
+    background-color: #020c1b;
     border: 2px solid;
-    border-color: #880101;
+    border-color: #daa520;
+    color: #daa520;
 }
 
 .card-title {
