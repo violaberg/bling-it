@@ -7,13 +7,13 @@
 
 {% block inner_content %}
 
-<h2 class="page-title custom-font text-white text-center mx-auto py-2">{% trans "Log In" %}</h2>
+<h1 class="page-title custom-font text-white text-center mx-auto py-2">{% trans "Log In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
 <p class="account-p mx-auto mt-2">{% blocktrans with site.name as site_name %}Please log in with one
-  of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+  of your existing third party accounts. Or, <a class="custom-red" href="{{ signup_url }}">sign up</a>
   for a {{ site_name }} account and log in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
@@ -32,7 +32,7 @@
 <div class="account-container row mx-1 my-4">
   <div class="col">
     <p class="custom-blue font-weight-bold text-center mt-3 py-1">{% blocktrans %}If you have not created an account yet, then please
-      <a href="{{ signup_url }}" class="account-link custom-gold">sign up</a> first.{% endblocktrans %}</p>
+      <a href="{{ signup_url }}" class="account-link custom-red">sign up</a> first.{% endblocktrans %}</p>
     {% endif %}
 
     <form class="custom-blue p-3 mx-2" method="POST" action="{% url 'account_login' %}">
@@ -45,7 +45,7 @@
         <button class="custom-gemstone-btn px-2 py-1" type="submit">{% trans "Log In" %}</button>
       </div>
       <p class="mt-2 text-center">
-        <a class="account-link custom-gold font-weight-bold"
+        <a class="account-link custom-red font-weight-bold"
           href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
       </p>
     </form>

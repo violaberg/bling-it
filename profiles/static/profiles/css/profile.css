@@ -5,6 +5,13 @@
     --white: #ffffff;
 }
 
+html {
+    -ms-overflow-style: none;
+    height: -webkit-fill-available;
+    scrollbar-width: none;
+    width: -webkit-fill-available;
+}
+
 a {
     color: var(--ruby-red);
 }
