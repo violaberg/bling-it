@@ -9,7 +9,7 @@
 <div class="container-fluid py-3">
     <div class="row">
         <div class="col text-center col-md-4 mx-auto mt-2">
-            <h2 class="page-title custom-font text-white mx-auto p-2">My Profile</h2>
+            <h1 class="page-title custom-font text-white mx-auto p-2">My Profile</h1>
         </div>
     </div>
     <div class="profile-container my-3">
@@ -25,7 +25,7 @@
 
             <div id="orders" class="tabcontent p-2">
                 <!-- Display Order History -->
-                <h4 class="custom-font text-center custom-gold pt-2">Orders</h4>
+                <h2 class="profile-tab custom-font text-center custom-red pt-2">Orders</h2>
                 <div class="order-history table-responsive">
                     <table class="table table-sm">
                         <thead>
@@ -76,7 +76,7 @@
             </div>
 
             <div id="delivery" class="custom-blue tabcontent p-2">
-                <h4 class="custom-font text-center custom-gold pt-2">Default Delivery Information</h4>
+                <h2 class="profile-tab custom-font text-center custom-red pt-2">Default Delivery Information</h2>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="delivery-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -88,7 +88,7 @@
 
             <div id="wishlist" class="tabcontent p-2">
                 <!-- Display Wishlist -->
-                <h4 class="custom-font text-center custom-gold pt-2">Wishlist</h4>
+                <h2 class="profile-tab custom-font text-center custom-red pt-2">Wishlist</h2>
                 <div class="wishlist-items text-center table-responsive">
                     <table class="wishlist-table table table-sm">
                         <thead>

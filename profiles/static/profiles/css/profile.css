@@ -5,6 +5,14 @@
     --white: #ffffff;
 }
 
+a {
+    color: var(--ruby-red);
+}
+
+.profile-tab {
+    font-size: 26px;
+}
+
 /* Code for hover tabs taken from https://www.w3schools.com/howto/howto_js_hover_tabs.asp and adjusted to suit the project */
 /* Style the tab */
 .tab {

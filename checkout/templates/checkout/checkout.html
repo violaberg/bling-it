@@ -8,13 +8,13 @@
 {% block extra_title %}Checkout{% endblock %}
 
 {% block content %}
-<div class="container mt-3">
+<div class="container m-3">
     <div class="row">
         <div class="col mt-2">
-            <h2 class="page-title custom-font text-white text-center mx-auto py-2">Checkout</h2>
+            <h1 class="page-title custom-font text-white text-center mx-auto py-2">Checkout</h1>
         </div>
     </div>
-    <div class="checkout-bg row p-3 my-3 mx-auto">
+    <div class="checkout-bg row p-3 my-4 mx-auto">
         <div class="custom-blue col col-lg-6 order-lg-last">
             <p class="font-weight-bold">Order Summary ({{ gemstone_count }})</p>
             <div class="row">
@@ -30,9 +30,11 @@
                 <div class="col-2 mb-1">
                     <a href="{% url 'gemstone_detail' item.gemstone.id %}">
                         {% if item.gemstone.image %}
-                        <img class="checkout-img w-100" src="{{ item.gemstone.image.url }}" alt="An image of {{ gemstone.name }}">
+                        <img class="checkout-img w-100" src="{{ item.gemstone.image.url }}"
+                            alt="An image of {{ gemstone.name }}">
                         {% else %}
-                        <img class="checkout-img w-100" src="{{ MEDIA_URL }}noimage.png" alt="No image placeholder for {{ gemstone.name }}">
+                        <img class="checkout-img w-100" src="{{ MEDIA_URL }}noimage.png"
+                            alt="No image placeholder for {{ gemstone.name }}">
                         {% endif %}
                     </a>
                 </div>
@@ -54,7 +56,7 @@
                 </div>
                 <div class="col-3">
                     <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0"><strong class="custom-gold">FREE</strong></p>
+                    <p class="my-0"><strong class="custom-red">FREE</strong></p>
                     <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
@@ -85,8 +87,10 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="font-weight-bold text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="font-weight-bold text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="font-weight-bold text-info" href="{% url 'account_signup' %}">Create an
+                                account</a> or
+                            <a class="font-weight-bold text-info" href="{% url 'account_login' %}">login</a> to save
+                            this information
                         </label>
                         {% endif %}
                     </div>
@@ -135,8 +139,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

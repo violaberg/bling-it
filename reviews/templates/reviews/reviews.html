@@ -7,7 +7,7 @@
 <div class="container-fluid py-3">
     <div class="row">
         <div class="col text-center mt-2">
-            <h2 class="page-title custom-font text-white mx-auto p-2">Reviews</h2>
+            <h1 class="page-title custom-font text-white mx-auto p-2">Reviews</h1>
         </div>
     </div>
     <div class="row">
@@ -17,11 +17,11 @@
                 <div class="col-12 col-sm-6 col-md-4 my-3 d-flex align-items-stretch">
                     <div class="review-container rounded-0 card p-2" style="width: 24rem;">
                         <div class="card-body">
-                            <h5 class="custom-font text-center card-title pb-2">{{ review.review_subject }}</h5>
+                            <h2 class="custom-font text-center card-title pb-2">{{ review.review_subject }}</h2>
                             <p class="card-text pb-2">{{ review.review_body }}</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Review by <span
-                                    class="custom-font custom-gold">{{ review.name }}</span></h6>
-                            <p class="custom-gold lead mb-0 text-left font-weight-bold">{{ review.rating }}<i
+                            <h3 class="card-subtitle custom-blue mb-2">Review by <span
+                                    class="custom-font custom-red">{{ review.name }}</span></h3>
+                            <p class="custom-red lead mb-0 text-left font-weight-bold">{{ review.rating }}<i
                                     class="fa-regular fa-star fa-2xs pl-1"></i></p>
                             <small>Submitted on {{ review.created_on }}</small>
                         </div>

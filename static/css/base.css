@@ -72,6 +72,7 @@ footer,
 .shopping-bag,
 .bag-p,
 .account-container,
+.email-verification,
 #faq-section,
 .privacy-policy-container,
 .about-p,
@@ -113,9 +114,9 @@ footer,
 }
 
 .dropdown-menu.show {
-    border-bottom: 2px groove #daa520;
-    border-left: 2px groove #daa520;
-    border-right: 2px groove #daa520;
+    border-bottom: 2px groove var(--gold);
+    border-left: 2px groove var(--gold);
+    border-right: 2px groove var(--gold);
     transform: translate3d(-25px, 0px, 0px);
 }
 
@@ -227,7 +228,7 @@ hr {
 }
 
 .bag-total {
-    color: var(--gold);
+    color: var(--dark-blue);
     font-size: large;
 }
 
@@ -348,12 +349,13 @@ nav a {
 .custom-gemstone-btn {
     background-color: var(--gold);
     border: 2px groove var(--dark-blue);
+    color: var(--dark-blue);
     font-weight: 700;
 }
 
 .custom-primary-btn {
     background-color: var(--gold);
-    border: 2px groove #ffffff;
+    border: 2px groove var(--white);
     font-weight: 700;
 }
 
@@ -365,13 +367,13 @@ nav a {
 .custom-gemstone-btn:focus {
     background-color: var(--dark-blue);
     border-color: var(--gold);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .custom-secondary-btn {
     background: var(--dark-blue);
     border: 2px groove var(--gold);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .custom-secondary-btn:hover,
@@ -379,19 +381,19 @@ nav a {
 .custom-secondary-btn:focus {
     background: var(--gold);
     border: 2px groove var(--dark-blue);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .btn-blue {
     background: var(--dark-blue);
-    color: white;
+    color: var(--white);
 }
 
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
     background: var(--gold);
-    color: white;
+    color: var(--white);
 }
 
 input[name='q']::placeholder {
@@ -528,10 +530,16 @@ footer {
 
 .account-p {
     background-color: var(--dark-blue);
-    border-color: var(--gold);
-    border-style: groove;
-    color: #ffffff;
+    border: 2px groove var(--gold);
+    color: var(--white);
     text-align: center;
+}
+
+.email-verification {
+    border: 2px groove var(--gold);
+    color: var(--ruby-red);
+    text-align: justify;
+    max-width: 90%;
 }
 
 .account-btn {
@@ -572,16 +580,22 @@ span.page-link,
 
 .card-title {
     border-bottom: 1px groove var(--gold);
-    color: var(--gold);
+    color: var(--ruby-red);
+    font-size: 22px;
+}
+
+.card-subtitle {
+    font-size: 18px;
 }
 
 .card-text {
     border-bottom: 1px groove var(--gold);
+    color: var(--dark-blue);
     text-align: justify;
 }
 
 .delete-link.custom-red {
-    background: #ffffff;
+    background: var(--white);
     border: 2px solid var(--ruby-red);
 }
 
@@ -641,7 +655,7 @@ span.page-link,
 }
 
 .custom-link {
-    color: var(--gold);
+    color: var(--ruby-red);
     cursor: pointer;
     font-weight: 700;
 }
@@ -649,6 +663,11 @@ span.page-link,
 .custom-link:hover {
     color: var(--dark-blue);
     text-decoration: none;
+}
+
+/* Store Management */
+.manage-gem {
+    font-size: 22px;
 }
 
 /* -------------- */

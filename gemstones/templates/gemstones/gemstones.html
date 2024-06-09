@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="search-results text-gold py-1 pl-2 mt-3 text-center text-md-left">
+                    <p class="search-results custom-red py-1 pl-2 mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'gemstones' %}"
                                 class="gemstones-home float-left pr-2 font-weight-bold">Gemstones Home</a> | </span>
@@ -71,7 +71,7 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="gemstone-name text-center custom-font custom-gold mb-0">{{ gemstone.name }}</p>
+                            <p class="gemstone-name text-center custom-font custom-red mb-0">{{ gemstone.name }}</p>
                         </div>
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
