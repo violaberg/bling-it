@@ -85,7 +85,7 @@ footer,
 }
 
 .grand-total {
-    color: var(--ruby-red);
+    color: var(--dark-blue);
     font-family: "Cormorant Garamond", serif;
 }
 
@@ -105,6 +105,18 @@ footer,
 
 .banner {
     font-family: 'Parisienne';
+    font-size: 24px;
+}
+
+.dropdown-menu.rounded-0.show {
+    transform: translate3d(-25px, 0px, 0px);
+}
+
+.dropdown-menu.show {
+    border-bottom: 2px groove #daa520;
+    border-left: 2px groove #daa520;
+    border-right: 2px groove #daa520;
+    transform: translate3d(-25px, 0px, 0px);
 }
 
 .hero-img,
@@ -253,7 +265,7 @@ li.nav-item {
 .dropdown-item,
 a.dropdown-item,
 .nav-link:hover {
-    color: var(--gold);
+    color: var(--ruby-red);
 }
 
 .dropdown-item:focus,
@@ -445,6 +457,7 @@ thead {
     border-width: 3px;
     border-color: var(--gold);
     border-style: groove;
+    font-size: 24px;
     position: relative;
     top: 0.5rem;
 }
@@ -552,6 +565,11 @@ span.page-link,
     color: var(--gold);
 }
 
+.page-item:hover .page-link:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
 .card-title {
     border-bottom: 1px groove var(--gold);
     color: var(--gold);
@@ -642,13 +660,25 @@ span.page-link,
     }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 400px) {
     .list-inline-item {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .dropdown-menu.rounded-0.show {
+        transform: translate3d(-15px, 0px, 0px);
     }
 }
 
 @media (min-width: 500px) {
+    .list-inline-item {
+        padding: 0 1rem;
+    }
+
+    .dropdown-menu.rounded-0.show {
+        transform: translate3d(-10px, 0px, 0px);
+    }
+
     .page-title {
         max-width: 90%;
     }
@@ -667,8 +697,12 @@ span.page-link,
 }
 
 @media (min-width: 768px) {
+    .dropdown-menu.rounded-0.show {
+        transform: translate3d(5px, 0px, 0px);
+    }
+
     .list-inline-item {
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     .page-title {
@@ -718,6 +752,10 @@ span.page-link,
         z-index: 1030;
     }
 
+    .dropdown-menu.rounded-0.show {
+        transform: translate3d(-20px, 0px, 0px);
+    }
+
     nav.navbar.navbar-expand-lg.mx-auto.width-100 {
         padding-top: 0;
     }
@@ -740,14 +778,8 @@ span.page-link,
     }
 
     .dropdown-menu {
-        border-color: var(--gold);
-        border-style: groove;
-        border-color: var(--gold);
-        border-style: groove;
-        border-color: var(--gold);
-        border-style: groove;
+        border: 2px groove var(--gold);
         border-top: none;
-        border-width: 2px;
     }
 
     #deliver-banner {

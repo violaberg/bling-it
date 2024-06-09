@@ -61,7 +61,7 @@
                     <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
                         class="logo-img">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0">
-                        <span class="logo-font text-gold my-0">Bling It</span>
+                        <span class="logo-font custom-blue my-0">Bling It</span>
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -82,14 +82,14 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="header-item text-gold nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="header-item text-red nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg pb-2"></i></div>
+                                    <div><i class="custom-gold fas fa-user fa-lg pb-2"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0 rounded-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'add_gemstone' %}" class="dropdown-item">Store Management</a>
@@ -142,7 +142,7 @@
             </div>
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-blue text-gold">
-                    <h4 class="banner my-1 pt-1">Free delivery on all orders!</h4>
+                    <h2 class="banner my-1 pt-1">Free delivery on all orders!</h2>
                 </div>
             </div>
         </header>
@@ -170,7 +170,7 @@
             {% endblock %}
         </main>
     </div>
-    <footer class="text-gold font-weight-bold sticky-bottom width-100 py-3">
+    <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
         <div class="container-lg">
             <div class="row">
                 <div class="col-md-4 mt-md-0 pb-2">
@@ -188,7 +188,7 @@
                 <div class="col-md-4 mt-2 mt-md-0">
                     <div class="text-center">
                         <p class="custom-blue mb-0">All Rights Reserved 2024<span
-                                class="custom-font custom-gold font-weight-normal pl-2">Bling It</span>
+                                class="custom-font custom-red font-weight-normal pl-2">Bling It</span>
                             <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
                                 class="ms-2 text-decoration-none"><i
                                     class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
@@ -196,7 +196,7 @@
                         </p>
                         <div class="opening-hours font-montserrat custom-white mb-0">
                             <p class="custom-blue mb-0 pt-2">Created by <span
-                                    class="custom-font custom-gold font-weight-normal pr-2">Viola Bergere</span>
+                                    class="custom-font custom-red font-weight-normal pr-2">Viola Bergere</span>
                                 <a href="https://github.com/violaberg" target="_blank"
                                     class="ms-2 text-decoration-none"><i
                                         class="footer-link custom-blue fa-brands fa-github"></i>
