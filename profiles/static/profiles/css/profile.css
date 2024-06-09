@@ -69,10 +69,11 @@
     list-style-type: none;
 }
 
-.wishlist-table td {
+
+.wishlist-td {
+    border-bottom: 1px solid #daa520;
     max-width: fit-content;
 }
-
 
 @media (min-width: 400px) {
     img.wishlish-img.img-fluid {

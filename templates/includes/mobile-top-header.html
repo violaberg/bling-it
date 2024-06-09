@@ -48,11 +48,11 @@
     <a class="{% if grand_total %}custom-gold font-weight-bold{% else %}text-gold{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
-            <p class="grand-total custom-font my-0">
+            <p class="grand-total my-0">
                 {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                €{{ grand_total|floatformat:2 }}
                 {% else %}
-                    $0.00
+                €0.00
                 {% endif %}
             </p>
         </div>

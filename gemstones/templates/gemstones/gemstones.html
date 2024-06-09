@@ -4,13 +4,13 @@
 {% block extra_title %}All Gemstones{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid pt-3">
     <div class="row">
         <div class="col text-center mt-2">
             <h2 class="page-title custom-font text-white mx-auto p-2">Gemstones</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'gemstones' %}?category={{ c.name }}">
-                <span class="p-2 mt-2 badge badge-blue text-white rounded-0">{{ c.friendly_name }}</span>
+                <span class="p-2 mt-3 badge badge-blue text-white rounded-0">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
         </div>
@@ -76,7 +76,7 @@
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">€{{ gemstone.price }}</p>
                                     {% if gemstone.category %}
                                     <p class="small custom-blue mt-1 mb-0">
                                         <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}"
@@ -117,7 +117,7 @@
         </div>
     </div>
     <!-- Pagination -->
-    <div class="row mt-3">
+    <div class="row my-3">
         <div class="col">
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">

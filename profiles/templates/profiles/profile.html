@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid py-3">
     <div class="row">
         <div class="col text-center col-md-4 mx-auto mt-2">
             <h2 class="page-title custom-font text-white mx-auto p-2">My Profile</h2>
@@ -26,8 +26,6 @@
             <div id="orders" class="tabcontent p-2">
                 <!-- Display Order History -->
                 <h4 class="custom-font text-center custom-gold pt-2">Orders</h4>
-                <p id="order-text" class="text-center text-blue text-justify">No orders placed yet! Start exploring our
-                    exquisite collection to discover your next gemstone!</p>
                 <div class="order-history table-responsive">
                     <table class="table table-sm">
                         <thead>
@@ -57,11 +55,18 @@
                                         {% endfor %}
                                     </ul>
                                 </td>
-                                <td>${{ order.grand_total }}</td>
+                                <td>€{{ order.grand_total }}</td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="order-status text-center">
                                     <strong class="custom-gold">Status:</strong> {{ order.get_status_display }}
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td>
+                                    <p id="order-text" class="text-center text-blue text-justify">No orders placed yet! Start exploring our
+                                        exquisite collection to discover your next gemstone!</p>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -97,14 +102,14 @@
                         <tbody>
                             {% for item in wishlist_items %}
                             <tr>
-                                <td>
+                                <td class="wishlist-td">
                                     <a href="{% url 'gemstone_detail' item.id %}">
                                     <img src="{{ item.image.url }}" alt="{{ item.name }}"
                                         class="wishlish-img img-fluid"></a>
                                 </td>
-                                <td class="pt-3">{{ item.name }}</td>
-                                <td class="pt-3">${{ item.price }}</td>
-                                <td class="pt-3">
+                                <td class="wishlist-td pt-3">{{ item.name }}</td>
+                                <td class="wishlist-td pt-3">€{{ item.price }}</td>
+                                <td class="wishlist-td pt-3">
                                     <small><a class="remove-link custom-red"
                                             href="{% url 'add_to_wishlist' item.id %}">Remove</a></small>
                                 </td>

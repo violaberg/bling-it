@@ -29,7 +29,7 @@ Gemstone Details
                     <i class="custom-blue float-right fa-solid fa-heart"></i>
                 </a>
                 </p>
-                <p class="lead mb-0 text-left font-weight-bold">${{ gemstone.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">€{{ gemstone.price }}</p>
                 {% if gemstone.category %}
                 <p class="small mt-1 mb-0">
                     <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}" class="text-muted"><i
