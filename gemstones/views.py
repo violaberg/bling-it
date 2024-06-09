@@ -18,6 +18,7 @@ def all_gemstones(request):
     categories = None
     sort = None
     direction = None
+    new_arrivals = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -38,6 +39,11 @@ def all_gemstones(request):
             categories = request.GET['category'].split(',')
             gemstones = gemstones.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'new_arrivals' in request.GET:
+            new_arrivals = True
+            one_month_ago = timezone.now() - timedelta(days=30)
+            gemstones = gemstones.filter(created_at__gte=one_month_ago)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -67,6 +73,7 @@ def all_gemstones(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'new_arrivals': new_arrivals,
     }
 
     return render(request, "gemstones/gemstones.html", context)
