@@ -82,12 +82,16 @@
     <div class="row mx-auto">
         <div class="col col-sm-10 col-md-8 col-lg-6 pt-3 mx-auto">
             <h2 class="page-title custom-font text-white text-center mx-auto p-2">Leave a Review</h2>
-
+            {% if user.is_authenticated %}
             <form class="review-form p-3 mt-4 mb-3" method="post">
                 {% csrf_token %}
                 {% crispy form %}
             </form>
         </div>
+        {% else %}
+        <p class="leave-review text-center w-50 mx-auto p-2 mt-4">You need to be <a href="{% url 'account_login' %}"
+                aria-label="Login here" class="review-login custom-red font-weight-bold">logged in</a> to leave a review</p>
+        {% endif %}
     </div>
 </div>
 <div class="btt-button bg-blue shadow-sm rounded-0">
