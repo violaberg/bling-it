@@ -282,9 +282,10 @@ As I didn't use dataset but entered all gemstones manually through admin panel, 
 
 ### **Color Scheme**
 
-For this project I chose 3 colors - White `#ffffff`, Goldenrod `#daa520` and Midnight Blue `#020c1b`. This color palette combines the purity of white with the warmth of goldenrod and the depth of midnight blue, creating a harmonious balance of sophistication and elegance. The colors work together to highlight the beauty of gemstones and create a luxurious, visually engaging and immersive experience for users.
+For this project I chose 4 colors - White `#ffffff`, Goldenrod `#daa520`, Deep Red `#880101` and Midnight Blue `#020c1b`. This color palette combines the purity of white with the warmth of goldenrod and the depth of midnight blue, creating a harmonious balance of sophistication and elegance. The colors work together to highlight the beauty of gemstones and create a luxurious, visually engaging and immersive experience for users.
 * `#ffffff` - White represents purity and elegance. It serves as a clean and neutral backdrop, allowing other design elements to stand out vividly.<br>
 * `#daa520` - Goldenrod is a warm and luxurious yellow-gold color, reminiscent of precious metals and sun-kissed hues. It adds a touch of sophistication and vibrancy.<br>
+* `#880101` - Deep Red is a rich and intense hue that evokes a sense of passion and power. Its deep, ruby-like shade adds a touch of boldness and luxury, enhancing the visual impact and creating a striking contrast against lighter colors.
 * `#020c1b` - Midnight Blue is a deep, rich shade of blue that conveys mystery, elegance, and depth. It provides a striking contrast and a sense of tranquility.<br>
 
 ![Color palette](static/docs/color/color_palette.png)
