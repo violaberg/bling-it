@@ -124,6 +124,15 @@ class OrderLineItem(models.Model):
         null=False, blank=False, editable=False
         )
 
+    def update_gemstone_availability(self):
+        """
+        Update the availability of the gemstone associated with this line item.
+
+        This method sets the availability of the gemstone to False, indicating that it is sold.
+        """
+        self.gemstone.availability = False
+        self.gemstone.save()
+
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the lineitem total and update the order total.
@@ -132,6 +141,7 @@ class OrderLineItem(models.Model):
         and that the order's total is updated accordingly.
         """
         self.lineitem_total = self.gemstone.price
+        self.update_gemstone_availability()
         super().save(*args, **kwargs)
 
     def __str__(self):

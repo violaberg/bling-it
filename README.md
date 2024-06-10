@@ -3,7 +3,7 @@
 ## **Overview**
 
 Bling It is a fictional user-friendly gemstone shop, designed and developed using Django, Python, HTML, CSS and Javascript, born from my personal love for diamonds and rubies.<br>
-It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized by type, cut, color, and clarity to find the perfect piece. Added is a secure checkout process to ensure a safe and smooth transaction. 
+It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized to find the perfect piece. Users can read and, if logged in, leave reviews about their experience with Bling It shop. Added is a secure checkout process to ensure a safe and smooth transaction. 
 <img scr><br>
 
 Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.herokuapp.com/)
@@ -44,7 +44,7 @@ Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.her
 
 # **User experience (UX)**
 
-During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. Due to type of e-commerce app I was planning and natural gemstones always being exclusive items with no two being the same, there won't be an option to increment amount of gemstones in a bag and I decided not to have reviews and ratings for individual gemstones bought as they would be automatically removed from shop after being sold, but instead give user an option to leave a review/ rating for Bling It as a business and their experience as customer, allowing to mention gemstones purchased if wished. As gemstones can be very expensive, not disclosing what each user has bought specifically ensures for additional safety.
+During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. Due to type of e-commerce app I was planning and natural gemstones always being exclusive items with no two being the same, there won't be an option to increment amount of gemstones in a bag and I decided not to have reviews and ratings for individual gemstones bought but instead give user an option to leave a review/ rating for Bling It as a business and their experience as customer, allowing to mention gemstones purchased if wished. As gemstones can be very expensive, not disclosing what each user has bought specifically ensures for additional safety.
 
 ## **Strategy plane**
 

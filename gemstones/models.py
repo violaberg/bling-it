@@ -82,6 +82,7 @@ class Gemstone (models.Model):
         max_length=1024, null=True, blank=True)
     image = models.ImageField(
         null=True, blank=True)
+    availability = models.BooleanField(default=True)
     created_at = models.DateTimeField(
         auto_now_add=True)
 

@@ -84,11 +84,17 @@
                                     {% if gemstone.category %}
                                     <p class="small custom-blue mt-1 mb-0">
                                         <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}"
-                                            class="gemstone-cat custom-blue" aria-label="Brings to certain gemstone category"><i
+                                            class="gemstone-cat custom-blue"
+                                            aria-label="Brings to certain gemstone category"><i
                                                 class="custom-blue fas fa-tag mr-1"></i>{{ gemstone.category.friendly_name }}</a>
                                     </p>
                                     {% endif %}
                                     <p class="mb-0">{{ gemstone.carats }} carats</p>
+                                    {% if gemstone.availability %}
+                                    <p class="custom-red font-weight-bold mb-0">In Stock</p>
+                                    {% else %}
+                                    <p class="custom-red font-weight-bold mb-0">Sold Out</p>
+                                    {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="font-weight-bold">
                                         <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
