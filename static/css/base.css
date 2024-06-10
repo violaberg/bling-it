@@ -109,12 +109,6 @@ footer,
     font-size: 24px;
 }
 
-.dropdown-menu.show {
-    border-bottom: 2px groove var(--gold);
-    border-left: 2px groove var(--gold);
-    border-right: 2px groove var(--gold);
-}
-
 .hero-img,
 .subscribe,
 .search-results,

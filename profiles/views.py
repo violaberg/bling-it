@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.loader import render_to_string
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import UserProfile, Gemstone, Wishlist
 from .forms import UserProfileForm
@@ -34,11 +35,31 @@ def profile(request):
 
     orders = profile.orders.all()
 
+    # Pagination for wishlist
+    paginator = Paginator(wishlist_items, 4)
+    page_number = request.GET.get('page')
+    try:
+        paginated_wishlist_items = paginator.page(page_number)
+    except PageNotAnInteger:
+        paginated_wishlist_items = paginator.page(1)
+    except EmptyPage:
+        paginated_wishlist_items = paginator.page(paginator.num_pages)
+
+    # Pagination for orders
+    orders_paginator = Paginator(orders, 4)
+    orders_page_number = request.GET.get('orders_page')
+    try:
+        paginated_orders = orders_paginator.page(orders_page_number)
+    except PageNotAnInteger:
+        paginated_orders = orders_paginator.page(1)
+    except EmptyPage:
+        paginated_orders = orders_paginator.page(orders_paginator.num_pages)
+
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'orders': orders,
-        'wishlist_items': wishlist_items,
+        'orders': paginated_orders,
+        'wishlist_items': paginated_wishlist_items,
         'on_profile_page': True,
     }
 
