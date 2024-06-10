@@ -17,6 +17,28 @@ STATUS = (
 
 
 class Order(models.Model):
+    """
+    Represents an order placed by a user in the e-commerce system.
+
+    Attributes:
+        order_number (str): A unique identifier for the order.
+        user_profile (UserProfile): The user profile associated with this order.
+        full_name (str): The full name of the person who placed the order.
+        email (str): The email address of the person who placed the order.
+        phone_number (str): The phone number of the person who placed the order.
+        country (CountryField): The country to which the order will be shipped.
+        postcode (str): The postal code for the shipping address.
+        town_or_city (str): The town or city for the shipping address.
+        street_address1 (str): The primary street address.
+        street_address2 (str): The secondary street address (optional).
+        county (str): The county, state, or region for the shipping address (optional).
+        date (datetime): The date and time when the order was placed.
+        total (decimal): The total cost of the order before additional charges.
+        grand_total (decimal): The final total cost of the order, including additional charges.
+        original_bag (str): A JSON representation of the original bag contents.
+        stripe_pid (str): The Stripe Payment Intent ID for the order.
+        status (str): The current status of the order (e.g., in progress, delivered, cancelled).
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL,
@@ -47,13 +69,19 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID
+        Generate a random, unique order number using UUID.
+
+        Returns:
+            str: A unique order number consisting of uppercase hexadecimal digits.
         """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Update grand total each time a line item is added.
+        Update the grand total of the order each time a line item is added or updated.
+
+        This method aggregates the total cost of all associated line items and updates
+        the `total` and `grand_total` fields of the order.
         """
         self.total = self.lineitems.aggregate(
             Sum('lineitem_total')
@@ -63,8 +91,9 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
-        if it hasn't been set already.
+        Override the original save method to set the order number if it hasn't been set already.
+
+        This ensures that every order has a unique identifier before it is saved to the database.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -75,6 +104,14 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Represents an individual line item within an order.
+
+    Attributes:
+        order (Order): The order to which this line item belongs.
+        gemstone (Gemstone): The gemstone associated with this line item.
+        lineitem_total (decimal): The total cost of this line item.
+    """
     order = models.ForeignKey(
         Order, null=False, blank=False,
         on_delete=models.CASCADE, related_name='lineitems'
@@ -89,8 +126,10 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total
-        and update the order total.
+        Override the original save method to set the lineitem total and update the order total.
+
+        This ensures that the cost of the line item is calculated based on the price of the gemstone
+        and that the order's total is updated accordingly.
         """
         self.lineitem_total = self.gemstone.price
         super().save(*args, **kwargs)

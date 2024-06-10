@@ -8,14 +8,20 @@ from .models import FAQ
 
 
 def index(request):
-    """A view to return the index page with subscription form"""
+    """
+    View function for the index page with subscription form.
+    
+    If the request method is POST, it tries to subscribe the user to the newsletter.
+    It displays success or error messages accordingly.
+    """
     if request.method == 'POST':
         email = request.POST.get('email')
         if email:
             try:
                 # Call the send_subscription_email function
                 send_subscription_email(email)
-                messages.success(request, 'You have successfully subscribed to the newsletter!')
+                messages.success(
+                    request, 'You have successfully subscribed to the newsletter!')
 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
@@ -47,6 +53,12 @@ def privacy_policy(request):
 
 
 def subscribe_to_newsletter(request):
+    """
+    View function to handle newsletter subscriptions.
+    
+    If the request method is POST, it validates the form and saves the subscription.
+    It displays success or error messages accordingly.
+    """
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
@@ -54,10 +66,11 @@ def subscribe_to_newsletter(request):
             form.save()
             # Send confirmation email
             try:
-                # send_subscription_email(email)  # Assuming this function sends the confirmation email
-                messages.success(request, 'Thank you for subscribing to our newsletter!')
+                messages.success(
+                    request, 'Thank you for subscribing to our newsletter!')
             except Exception as e:
-                messages.error(request, f'Thank you for subscribing, but an error occurred when sending the confirmation email: {e}')
+                messages.error(
+                    request, f'Thank you for subscribing, but an error occurred when sending the confirmation email: {e}')
         else:
             messages.error(request, 'There was an error with your submission.')
     else:
@@ -67,6 +80,14 @@ def subscribe_to_newsletter(request):
 
 
 def send_subscription_email(user_email):
+    """
+    Function to send subscription confirmation email.
+    
+    Args:
+        user_email (str): The email address of the subscriber.
+    Raises:
+        Exception: If there's an error sending the email.
+    """
     subject = 'Subscription Confirmation'
     message_body = 'Thank you for subscribing to our newsletter!'
     signature = '\nSincerely yours,\nBling It!'

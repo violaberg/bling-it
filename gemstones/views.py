@@ -14,7 +14,19 @@ from .forms import GemstoneForm
 
 
 def all_gemstones(request):
-    """ A view to return all gemstone page """
+    """
+    Render the page displaying all gemstones with optional filtering, sorting, and search.
+
+    If filtering, sorting, or search parameters are provided via GET request, this view applies
+    those parameters to filter, sort, or search for gemstones accordingly. It paginates the
+    resulting gemstones to display a limited number per page.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering the gemstones page.
+    """
     gemstones = Gemstone.objects.all()
     query = None
     categories = None
@@ -82,7 +94,16 @@ def all_gemstones(request):
 
 
 def gemstone_detail(request, gemstone_id):
-    """ A view to return all individual gemstone page """
+    """
+    Render the page displaying details of a specific gemstone.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        gemstone_id (int): The ID of the gemstone to display details for.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering the gemstone detail page.
+    """
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     wishlist = False
     if request.user.is_authenticated:
@@ -101,7 +122,20 @@ def gemstone_detail(request, gemstone_id):
 
 @login_required
 def add_gemstone(request):
-    """ Add a gemstone to the store """
+    """
+    Add a new gemstone to the store.
+
+    This view renders a form to add a new gemstone to the store. Upon successful form submission,
+    the new gemstone is saved to the database.
+
+    Only accessible by superusers.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering the add gemstone page.
+    """
     if not request.user.is_superuser:
         messages.error(
             request, 'Sorry, only store owners have permission to do that.'
@@ -131,7 +165,21 @@ def add_gemstone(request):
 
 @login_required
 def edit_gemstone(request, gemstone_id):
-    """ Edit a gemstone in the store """
+    """
+    Edit an existing gemstone in the store.
+
+    This view renders a form to edit an existing gemstone in the store. Upon successful form submission,
+    the edited gemstone is updated in the database.
+
+    Only accessible by superusers.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        gemstone_id (int): The ID of the gemstone to edit.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering the edit gemstone page.
+    """
     if not request.user.is_superuser:
         messages.error(
             request, 'Sorry, only store owners have permission to do that.'
@@ -164,7 +212,18 @@ def edit_gemstone(request, gemstone_id):
 
 @login_required
 def delete_gemstone(request, gemstone_id):
-    """ Delete a gemstone from the store """
+    """
+    Delete a gemstone from the store.
+
+    Only accessible by superusers.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        gemstone_id (int): The ID of the gemstone to delete.
+
+    Returns:
+        HttpResponse: The HTTP response object redirecting to the gemstones page.
+    """
     if not request.user.is_superuser:
         messages.error(
             request, 'Sorry, only store owners have permission to do that.')

@@ -5,13 +5,29 @@ from gemstones.models import Gemstone
 
 
 def view_bag(request):
-    """ A view that renders the shopping bag contents page"""
+    """
+    Render the shopping bag contents page.
 
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered shopping bag page.
+    """
     return render(request, "bag/bag.html")
 
 
 def add_to_bag(request, item_id):
-    """ Add a specified product to the shopping bag """
+    """
+    Add a specified gemstone to the shopping bag.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        item_id (int): The ID of the gemstone to be added to the bag.
+
+    Returns:
+        HttpResponse: A redirect to the specified URL or gemstone detail page.
+    """
 
     gemstone = get_object_or_404(Gemstone, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
@@ -32,7 +48,16 @@ def add_to_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+    """
+    Remove the specified gemstone from the shopping bag.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        item_id (int): The ID of the gemstone to be removed from the bag.
+
+    Returns:
+        HttpResponse: A status response indicating success or failure.
+    """
 
     try:
         gemstone = get_object_or_404(Gemstone, pk=item_id)
