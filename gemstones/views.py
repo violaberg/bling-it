@@ -8,18 +8,19 @@ from django.utils import timezone
 from datetime import timedelta
 
 from .models import Gemstone, Category
-from profiles.views import add_to_wishlist
 from profiles.models import Wishlist
 from .forms import GemstoneForm
 
 
 def all_gemstones(request):
     """
-    Render the page displaying all gemstones with optional filtering, sorting, and search.
+    Render the page displaying all gemstones with \
+    optional filtering, sorting, and search.
 
-    If filtering, sorting, or search parameters are provided via GET request, this view applies
-    those parameters to filter, sort, or search for gemstones accordingly. It paginates the
-    resulting gemstones to display a limited number per page.
+    If filtering, sorting, or search parameters are provided via GET request, \
+    this view applies
+    those parameters to filter, sort, or search for gemstones accordingly. \
+    It paginates the resulting gemstones to display a limited number per page.
 
     Args:
         request (HttpRequest): The HTTP request object.
@@ -57,7 +58,8 @@ def all_gemstones(request):
         if 'new_arrivals' in request.GET:
             new_arrivals = True
             one_month_ago = timezone.now() - timedelta(days=30)
-            gemstones = gemstones.filter(created_at__gte=one_month_ago).order_by('-created_at')
+            gemstones = gemstones.filter(
+                created_at__gte=one_month_ago).order_by('-created_at')
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -67,7 +69,8 @@ def all_gemstones(request):
                 return redirect(
                     reverse('gemstones'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             gemstones = gemstones.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -102,14 +105,15 @@ def gemstone_detail(request, gemstone_id):
         gemstone_id (int): The ID of the gemstone to display details for.
 
     Returns:
-        HttpResponse: The HTTP response object rendering the gemstone detail page.
+        HttpResponse: The HTTP response object rendering \
+        the gemstone detail page.
     """
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     wishlist = False
     if request.user.is_authenticated:
         profile = request.user.userprofile
         if Wishlist.objects.filter(
-            user=profile.user, gemstones=gemstone).exists():
+                user=profile.user, gemstones=gemstone).exists():
             wishlist = True
 
     context = {
@@ -125,7 +129,8 @@ def add_gemstone(request):
     """
     Add a new gemstone to the store.
 
-    This view renders a form to add a new gemstone to the store. Upon successful form submission,
+    This view renders a form to add a new gemstone to the store. \
+    Upon successful form submission,
     the new gemstone is saved to the database.
 
     Only accessible by superusers.
@@ -150,7 +155,8 @@ def add_gemstone(request):
             return redirect(reverse('add_gemstone'))
         else:
             messages.error(
-                request, 'Failed to add gemstone. Please ensure the form is valid.'
+                request, 'Failed to add gemstone. \
+                    Please ensure the form is valid.'
                 )
     else:
         form = GemstoneForm()
@@ -168,7 +174,8 @@ def edit_gemstone(request, gemstone_id):
     """
     Edit an existing gemstone in the store.
 
-    This view renders a form to edit an existing gemstone in the store. Upon successful form submission,
+    This view renders a form to edit an existing gemstone in the store. \
+    Upon successful form submission,
     the edited gemstone is updated in the database.
 
     Only accessible by superusers.
@@ -178,7 +185,8 @@ def edit_gemstone(request, gemstone_id):
         gemstone_id (int): The ID of the gemstone to edit.
 
     Returns:
-        HttpResponse: The HTTP response object rendering the edit gemstone page.
+        HttpResponse: The HTTP response object rendering \
+        the edit gemstone page.
     """
     if not request.user.is_superuser:
         messages.error(
@@ -195,7 +203,8 @@ def edit_gemstone(request, gemstone_id):
             return redirect(reverse('gemstone_detail', args=[gemstone.id]))
         else:
             messages.error(
-                request, 'Failed to update gemstone. Please ensure the form is valid.'
+                request, 'Failed to update gemstone. \
+                    Please ensure the form is valid.'
                 )
     else:
         form = GemstoneForm(instance=gemstone)
@@ -222,7 +231,8 @@ def delete_gemstone(request, gemstone_id):
         gemstone_id (int): The ID of the gemstone to delete.
 
     Returns:
-        HttpResponse: The HTTP response object redirecting to the gemstones page.
+        HttpResponse: The HTTP response object redirecting \
+        to the gemstones page.
     """
     if not request.user.is_superuser:
         messages.error(

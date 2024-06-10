@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from django.contrib.auth.models import User
 from .models import Review
+
 
 class ReviewsPageTests(TestCase):
     def setUp(self):
@@ -22,8 +22,9 @@ class ReviewsPageTests(TestCase):
             'rating': 5
         }
         response = self.client.post(self.reviews_url, data)
-        self.assertEqual(response.status_code, 302)  # Redirects after successful POST
-        self.assertTrue(Review.objects.filter(review_subject='Test Review').exists())
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(
+            Review.objects.filter(review_subject='Test Review').exists())
 
     def test_delete_review(self):
         review = Review.objects.create(
@@ -35,5 +36,5 @@ class ReviewsPageTests(TestCase):
         )
         delete_url = reverse('delete_review', args=[review.id])
         response = self.client.get(delete_url)
-        self.assertEqual(response.status_code, 302)  # Redirects after successful DELETE
+        self.assertEqual(response.status_code, 302)
         self.assertFalse(Review.objects.filter(id=review.id).exists())

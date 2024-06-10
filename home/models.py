@@ -4,7 +4,7 @@ from django.db import models
 class FAQ(models.Model):
     """
     Model representing Frequently Asked Questions (FAQs).
-    
+
     Attributes:
         question (CharField): The question being asked.
         answer (TextField): The detailed answer to the question.
@@ -26,7 +26,7 @@ class FAQ(models.Model):
 class NewsletterSubscriber(models.Model):
     """
     Model representing Newsletter Subscribers.
-    
+
     Attributes:
         email (EmailField): The email address of the subscriber.
         timestamp (DateTimeField): The timestamp when the subscriber was added.

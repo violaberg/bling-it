@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from . models import Review
+from .models import Review
 
 
 class ReviewForm(forms.ModelForm):
@@ -16,4 +16,9 @@ class ReviewForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', 'Submit', css_class='crispy-btn custom-gemstone-btn btn text-uppercase rounded-0'))
+
+        css_class = (
+            'crispy-btn custom-gemstone-btn btn text-uppercase rounded-0'
+        )
+        submit_button = Submit('submit', 'Submit', css_class=css_class)
+        self.helper.add_input(submit_button)

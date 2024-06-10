@@ -36,7 +36,7 @@ class UserProfile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(
-    sender, instance, created, **kwargs):
+        sender, instance, created, **kwargs):
     """
     Create or update the user profile
     """
@@ -47,9 +47,12 @@ def create_or_update_user_profile(
 
 
 class Wishlist(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    gemstones = models.ManyToManyField(Gemstone, related_name='wishlists')
-    created = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE)
+    gemstones = models.ManyToManyField(
+        Gemstone, related_name='wishlists')
+    created = models.DateTimeField(
+        auto_now_add=True)
 
     def __str__(self):
         return f"Wishlist for {self.user.username}"

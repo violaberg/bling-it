@@ -1,6 +1,4 @@
 from django.db import models
-from decimal import Decimal
-import datetime
 
 
 # Create your models here.
@@ -23,8 +21,10 @@ class Category (models.Model):
         """
         verbose_name_plural = 'Categories'
 
-    name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    name = models.CharField(
+        max_length=254)
+    friendly_name = models.CharField(
+        max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -49,8 +49,10 @@ class Gemstone (models.Model):
         certification (str): The certification authority of the gemstone.
         origin (str): The origin or source of the gemstone.
         price (Decimal): The price of the gemstone.
-        image_url (str): The link to an external image of the gemstone (optional).
-        image (ImageField): The image of the gemstone stored locally (optional).
+        availability (Boolean): Availability of the gemstone.
+        image_url (str): The link to an external image \
+        of the gemstone (optional).
+        image (ImageField): The image of the gemstone stored locally.
 
     Methods:
         __str__: Returns the name of the gemstone as a string representation.

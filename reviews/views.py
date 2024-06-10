@@ -10,11 +10,15 @@ def reviews(request):
     """
     A view to display all reviews, paginated, and handle review submission.
 
-    Retrieves all reviews from the database, orders them by creation date in descending order,
-    and paginates them to display six reviews per page. If the request method is POST,
-    it validates the submitted review form. If the form is valid, it saves the review,
-    displays a success message, and redirects to the reviews page. If the form is invalid,
-    it displays an error message. If the request method is GET, it renders the reviews template
+    Retrieves all reviews from the database, \
+    orders them by creation date in descending order,
+    and paginates them to display six reviews per page. \
+    If the request method is POST,
+    it validates the submitted review form. \
+    If the form is valid, it saves the review,
+    displays a success message, and redirects to the reviews page. \
+    If the form is invalid, it displays an error message. \
+    If the request method is GET, it renders the reviews template
     with the review form and paginated reviews.
 
     Args:
@@ -47,7 +51,7 @@ def reviews(request):
     context = {
         'reviews': reviews,
         'page_obj': page_obj,
-        'form':form,
+        'form': form,
     }
 
     return render(request, 'reviews/reviews.html', context)
@@ -58,7 +62,8 @@ def delete_review(request, review_id):
     A view to delete a review.
 
     Deletes the review with the specified ID from the database.
-    Displays a success message upon successful deletion and redirects to the reviews page.
+    Displays a success message upon successful deletion and \
+    redirects to the reviews page.
 
     Args:
         request (HttpRequest): The HTTP request object.

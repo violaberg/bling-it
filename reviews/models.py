@@ -13,10 +13,12 @@ RATING = (
 class Review(models.Model):
     """
     Model representing a review left by a user.
-    
-    Each review consists of a name, email, subject, body, rating, and creation date.
 
-    def__str__(self): Returns a string representation of the Review object and the name of the reviewer.
+    Each review consists of a \
+    name, email, subject, body, rating, and creation date.
+
+    def__str__(self): Returns a string representation of the Review object \
+    and the name of the reviewer.
     """
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -32,7 +34,7 @@ class Review(models.Model):
     def get_rating_range(self):
         """
         Return range of the review rating.
-        
+
         Returns:
             range: A range representing the rating.
         """

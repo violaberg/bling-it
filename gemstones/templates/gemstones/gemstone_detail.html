@@ -57,8 +57,11 @@ Gemstone Details
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity available: 1</strong></p>
-                                <small class="custom-red">* All our gemstones are one of a kind</small>
+                                {% if gemstone.availability %}
+                                <p class="custom-red font-weight-bold">In Stock</p>
+                                {% else %}
+                                <p class="custom-red font-weight-bold">Sold Out</p>
+                                {% endif %}
                             </div>
                             <div class="col-12 py-2">
                                 {% if request.user.is_superuser %}

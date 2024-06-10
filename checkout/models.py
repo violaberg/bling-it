@@ -2,7 +2,6 @@ import uuid
 
 from django.db import models
 from django.db.models import Sum
-from django.conf import settings
 from django_countries.fields import CountryField
 
 from gemstones.models import Gemstone
@@ -22,45 +21,57 @@ class Order(models.Model):
 
     Attributes:
         order_number (str): A unique identifier for the order.
-        user_profile (UserProfile): The user profile associated with this order.
-        full_name (str): The full name of the person who placed the order.
+        user_profile (UserProfile): User profile associated with this order.
+        full_name (str): Full name of the person who placed the order.
         email (str): The email address of the person who placed the order.
-        phone_number (str): The phone number of the person who placed the order.
-        country (CountryField): The country to which the order will be shipped.
-        postcode (str): The postal code for the shipping address.
-        town_or_city (str): The town or city for the shipping address.
-        street_address1 (str): The primary street address.
-        street_address2 (str): The secondary street address (optional).
-        county (str): The county, state, or region for the shipping address (optional).
+        phone_number (str): Phone number of the person who placed the order.
+        country (CountryField): Country to which the order will be shipped.
+        postcode (str): Postal code for the shipping address.
+        town_or_city (str): Town or city for the shipping address.
+        street_address1 (str): Primary street address.
+        street_address2 (str): Secondary street address (optional).
+        county (str): County, state, or region for the shipping address.
         date (datetime): The date and time when the order was placed.
-        total (decimal): The total cost of the order before additional charges.
-        grand_total (decimal): The final total cost of the order, including additional charges.
+        total (decimal): Total cost of the order before additional charges.
+        grand_total (decimal): The final total cost of the order.
         original_bag (str): A JSON representation of the original bag contents.
         stripe_pid (str): The Stripe Payment Intent ID for the order.
-        status (str): The current status of the order (e.g., in progress, delivered, cancelled).
+        status (str): The current status of the order.
     """
-    order_number = models.CharField(max_length=32, null=False, editable=False)
+    order_number = models.CharField(
+        max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL,
         null=True, blank=True, related_name='orders'
         )
-    full_name = models.CharField(max_length=50, null=False, blank=False)
-    email = models.EmailField(max_length=254, null=False, blank=False)
-    phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = CountryField(blank_label='Country *', null=False, blank=False)
-    postcode = models.CharField(max_length=20, null=True, blank=True)
-    town_or_city = models.CharField(max_length=40, null=False, blank=False)
-    street_address1 = models.CharField(max_length=80, null=False, blank=False)
-    street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    county = models.CharField(max_length=80, null=True, blank=True)
-    date = models.DateTimeField(auto_now_add=True)
+    full_name = models.CharField(
+        max_length=50, null=False, blank=False)
+    email = models.EmailField(
+        max_length=254, null=False, blank=False)
+    phone_number = models.CharField(
+        max_length=20, null=False, blank=False)
+    country = CountryField(
+        blank_label='Country *', null=False, blank=False)
+    postcode = models.CharField(
+        max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(
+        max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(
+        max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(
+        max_length=80, null=True, blank=True)
+    county = models.CharField(
+        max_length=80, null=True, blank=True)
+    date = models.DateTimeField(
+        auto_now_add=True)
     total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
         )
     grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
         )
-    original_bag = models.TextField(null=False, blank=False, default='')
+    original_bag = models.TextField(
+        null=False, blank=False, default='')
     stripe_pid = models.CharField(
         max_length=254, null=False, blank=False, default=''
         )
@@ -72,15 +83,18 @@ class Order(models.Model):
         Generate a random, unique order number using UUID.
 
         Returns:
-            str: A unique order number consisting of uppercase hexadecimal digits.
+            str: A unique order number consisting of \
+            uppercase hexadecimal digits.
         """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Update the grand total of the order each time a line item is added or updated.
+        Update the grand total of the order each time \
+        a line item is added or updated.
 
-        This method aggregates the total cost of all associated line items and updates
+        This method aggregates the total cost \
+        of all associated line items and updates \
         the `total` and `grand_total` fields of the order.
         """
         self.total = self.lineitems.aggregate(
@@ -91,9 +105,11 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number if it hasn't been set already.
+        Override the original save method to set the order number \
+        if it hasn't been set already.
 
-        This ensures that every order has a unique identifier before it is saved to the database.
+        This ensures that every order has a unique identifier \
+        before it is saved to the database.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -111,6 +127,13 @@ class OrderLineItem(models.Model):
         order (Order): The order to which this line item belongs.
         gemstone (Gemstone): The gemstone associated with this line item.
         lineitem_total (decimal): The total cost of this line item.
+
+    Methods:
+        update_gemstone_availability: Update the availability \
+        of the gemstone associated with this line item.
+        save: Override the original save method to set the lineitem total \
+        and update the order total.
+        __str__: Returns a string representation of the line item.
     """
     order = models.ForeignKey(
         Order, null=False, blank=False,
@@ -128,17 +151,20 @@ class OrderLineItem(models.Model):
         """
         Update the availability of the gemstone associated with this line item.
 
-        This method sets the availability of the gemstone to False, indicating that it is sold.
+        This method sets the availability of the gemstone to False, \
+        indicating that it is sold.
         """
         self.gemstone.availability = False
         self.gemstone.save()
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total and update the order total.
+        Override the original save method to set the lineitem total \
+        and update the order total.
 
-        This ensures that the cost of the line item is calculated based on the price of the gemstone
-        and that the order's total is updated accordingly.
+        This ensures that the cost of the line item is calculated \
+        based on the price of the gemstone and that \
+        the order's total is updated accordingly.
         """
         self.lineitem_total = self.gemstone.price
         self.update_gemstone_availability()

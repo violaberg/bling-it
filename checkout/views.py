@@ -4,7 +4,6 @@ from django.shortcuts import (
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from decimal import Decimal
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -74,7 +73,7 @@ def checkout(request):
 
                 except Gemstone.DoesNotExist:
                     messages.error(
-                        request, "Gemstone in your shopping bag was not found. \
+                        request, "Gemstone in your bag was not found. \
                                 Please contact us for further assistance!")
                     order.delete()
                     return redirect('view_bag')
