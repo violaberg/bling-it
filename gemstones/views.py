@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.utils import timezone
+from datetime import timedelta
 
 from .models import Gemstone, Category
 from profiles.views import add_to_wishlist
@@ -43,7 +45,7 @@ def all_gemstones(request):
         if 'new_arrivals' in request.GET:
             new_arrivals = True
             one_month_ago = timezone.now() - timedelta(days=30)
-            gemstones = gemstones.filter(created_at__gte=one_month_ago)
+            gemstones = gemstones.filter(created_at__gte=one_month_ago).order_by('-created_at')
 
         if 'q' in request.GET:
             query = request.GET['q']

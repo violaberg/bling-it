@@ -6,78 +6,86 @@ Gemstone Details
 {% endblock %}
 
 {% block content %}
-<div class="gemstone-container container-fluid mx-auto mx-3 my-4">
+<div class="container-fluid py-3">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-f">
-            <div class="image-container mx-auto pt-4">
-                {% if gemstone.image %}
-                <a href="{{ gemstone.image.url }}" target="_blank" aria-label="Opens gemstone image in a new tab">
-                    <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
-                        alt="An image of {{ gemstone.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                        alt="No image placeholder for {{ gemstone.name }}">
-                </a>
-                {% endif %}
-            </div>
+        <div class="col-12 text-center mx-auto pb-2">
+            <h1 class="page-title custom-font text-white mx-auto p-2">Gemstone's Details</h1>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="gemstone-detail-container custom-blue mb-4 mt-md-5">
-                <p class="gemstone-name custom-font custom-red mb-0">{{ gemstone.name }}<a
-                        href="{% url 'add_to_wishlist' gemstone.id %}" aria-label="Adds gemstone to wishlist">
-                        <i class="custom-blue float-right fa-solid fa-heart"></i>
+    </div>
+    <div class="gemstone-container mx-auto mx-3 my-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-f">
+                <div class="image-container mx-auto pt-4">
+                    {% if gemstone.image %}
+                    <a href="{{ gemstone.image.url }}" target="_blank" aria-label="Opens gemstone image in a new tab">
+                        <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
+                            alt="An image of {{ gemstone.name }}">
                     </a>
-                </p>
-                <p class="lead mb-0 text-left font-weight-bold">€{{ gemstone.price }}</p>
-                {% if gemstone.category %}
-                <p class="small mt-1 mb-0">
-                    <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}" class="text-muted"
-                        aria-labelledby="Brings to specific gemstone category"><i
-                            class="custom-blue fas fa-tag mr-1"></i>{{ gemstones.category.friendly_name }}</a>
-                </p>
-                {% endif %}
-                <p class="mt-3">{{ gemstone.description }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Color:</span> {{ gemstone.color }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Cut:</span> {{ gemstone.cut }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Clarity:</span> {{ gemstone.clarity }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Carats:</span> {{ gemstone.carats }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Treatment:</span> {{ gemstone.treatment }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Origin:</span> {{ gemstone.origin }}</p>
-                <p class="mt-3"><span class="font-weight-bold">Certification:</span> {{ gemstone.certification }}</p>
-                <form class="form" action="{% url 'add_to_bag' gemstone.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12">
-                            <p class="mt-3"><strong>Quantity available: 1</strong></p>
-                            <small class="custom-red">* All our gemstones are one of a kind</small>
-                        </div>
-                        <div class="col-12 py-2">
-                            {% if request.user.is_superuser %}
-                            <small class="font-weight-bold">
-                                <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
-                                    aria-labelledby="Brings to Edit gemstone page">Edit</a> |
-                                <a class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}"
-                                    aria-labelledby="Deletes gemstone">Delete</a>
-                            </small>
-                            {% endif %}
-                        </div>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                            alt="No image placeholder for {{ gemstone.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="gemstone-detail-container custom-blue mb-4 mt-md-5">
+                    <p class="gemstone-name custom-font custom-red mb-0">{{ gemstone.name }}<a
+                            href="{% url 'add_to_wishlist' gemstone.id %}" aria-label="Adds gemstone to wishlist">
+                            <i class="custom-blue float-right fa-solid fa-heart"></i>
+                        </a>
+                    </p>
+                    <p class="lead mb-0 text-left font-weight-bold">€{{ gemstone.price }}</p>
+                    {% if gemstone.category %}
+                    <p class="small mt-1 mb-0">
+                        <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}" class="text-muted"
+                            aria-labelledby="Brings to specific gemstone category"><i
+                                class="custom-blue fas fa-tag mr-1"></i>{{ gemstones.category.friendly_name }}</a>
+                    </p>
+                    {% endif %}
+                    <p class="mt-3">{{ gemstone.description }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Color:</span> {{ gemstone.color }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Cut:</span> {{ gemstone.cut }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Clarity:</span> {{ gemstone.clarity }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Carats:</span> {{ gemstone.carats }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Treatment:</span> {{ gemstone.treatment }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Origin:</span> {{ gemstone.origin }}</p>
+                    <p class="mt-3"><span class="font-weight-bold">Certification:</span> {{ gemstone.certification }}
+                    </p>
+                    <form class="form" action="{% url 'add_to_bag' gemstone.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity available: 1</strong></p>
+                                <small class="custom-red">* All our gemstones are one of a kind</small>
+                            </div>
+                            <div class="col-12 py-2">
+                                {% if request.user.is_superuser %}
+                                <small class="font-weight-bold">
+                                    <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
+                                        aria-labelledby="Brings to Edit gemstone page">Edit</a> |
+                                    <a class="custom-red" href="{% url 'delete_gemstone' gemstone.id %}"
+                                        aria-labelledby="Deletes gemstone">Delete</a>
+                                </small>
+                                {% endif %}
+                            </div>
 
-                        <div class="text-center col-12">
-                            <a href="{% url 'gemstones' %}" class="custom-secondary-btn btn rounded-0 mt-2 py-2"
-                                aria-label="Button that brings you back to all gemstones to keep shopping">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <input type="submit" class="custom-gemstone-btn btn rounded-0 text-uppercase mt-2"
-                                value="Add to Bag">
+                            <div class="text-center col-12">
+                                <a href="{% url 'gemstones' %}" class="custom-secondary-btn btn rounded-0 mt-2 py-2"
+                                    aria-label="Button that brings you back to all gemstones to keep shopping">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="custom-gemstone-btn btn rounded-0 text-uppercase mt-2"
+                                    value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

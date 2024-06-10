@@ -84,7 +84,7 @@
                                     {% if gemstone.category %}
                                     <p class="small custom-blue mt-1 mb-0">
                                         <a href="{% url 'gemstones' %}?category={{ gemstones.category.name }}"
-                                            class="custom-blue" aria-label="Brings to certain gemstone category"><i
+                                            class="gemstone-cat custom-blue" aria-label="Brings to certain gemstone category"><i
                                                 class="custom-blue fas fa-tag mr-1"></i>{{ gemstone.category.friendly_name }}</a>
                                     </p>
                                     {% endif %}

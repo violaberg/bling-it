@@ -169,6 +169,11 @@ a#deleteGemstone:hover {
     color: var(--dark-blue);
 }
 
+a.gemstone-cat:hover {
+    color: var(--ruby-red);
+    text-decoration: none;
+}
+
 /* Back to top */
 .btt-button {
     bottom: 10px;
