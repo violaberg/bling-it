@@ -8,11 +8,11 @@ This project was created using Agile Methodology to split it in smaller tasks. T
 
 In Agile tasks/user stories can be broken down into EPICS or Milestones. It's a helpful way to segment user stories based on needs/requests of end-users while working towards a fully functional project.<br>
 
-I edited due dates few times as I learned in proccess how long time certain tasks take or for example, made different design choices, as sometimes when all is added together, changes are needed.
+I started project with setting due dates but as I had to edit those few times due to family life and health issues, I decided not to use due dates. While I had approximate idea when I should be done with certain features, I had to adjust to other duties so some days I could spend 10 hours for project when others only 1 or none. I very soon realised I would be either past due date or constantly changing those, so for this project there wasn't a real benefit for such.
 
 #### **EPIC 1**
 
-I struggled with starting to create database schema as I'm still slightly confused about it but once started, it went surprisingly fast and wasn't as ard as I remember from project 4. Wireframes was one of the first things I did during planning phase, while some changes might occur during development, they show great base for this project.
+I struggled at the start but once started, it went surprisingly fast and wasn't as hard as I remember from project 4. Wireframes was one of the first things I did during planning phase, while some changes might occur during development, they show great base for this project.
 
 <details><summary>EPIC 1</summary>
 <img src="static/docs/agile/epic_1.png">
