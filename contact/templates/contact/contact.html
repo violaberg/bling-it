@@ -14,7 +14,8 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="account-btn mb-2">
-                    <button class="custom-gemstone-btn rounded-0 px-2 py-1" type="submit">Submit</button>
+                    <button class="custom-gemstone-btn rounded-0 px-2 py-1" type="submit"
+                        aria-label="Submit button">Submit</button>
                 </div>
             </form>
         </div>

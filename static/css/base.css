@@ -39,8 +39,8 @@ body {
     font-family: "Parisienne", cursive;
 }
 
-a {
-    color: var(--gold);
+span.icon {
+    color: var(--white);
 }
 
 /* Colors */
@@ -109,15 +109,10 @@ footer,
     font-size: 24px;
 }
 
-.dropdown-menu.rounded-0.show {
-    transform: translate3d(-25px, 0px, 0px);
-}
-
 .dropdown-menu.show {
     border-bottom: 2px groove var(--gold);
     border-left: 2px groove var(--gold);
     border-right: 2px groove var(--gold);
-    transform: translate3d(-25px, 0px, 0px);
 }
 
 .hero-img,
@@ -168,6 +163,10 @@ a.category-badge>span.badge:hover {
 .gemstones-home:hover {
     color: var(--gold);
     text-decoration: none;
+}
+
+a#deleteGemstone:hover {
+    color: var(--dark-blue);
 }
 
 /* Back to top */
@@ -227,9 +226,10 @@ hr {
     overflow-y: auto;
 }
 
-.bag-total {
+.bag-total,
+.bag-delivery-info {
     color: var(--dark-blue);
-    font-size: large;
+    font-size: 16px;
 }
 
 /* Error pages */

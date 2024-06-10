@@ -186,13 +186,13 @@
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="custom-gemstone-btn btn rounded-0 my-2">
                 <span class="icon mr-2">
-                    <i class="fas fa-angle-left"></i>
+                    <i class="fas fa-angle-left" aria-label="Brings back to Profile Page"></i>
                 </span>
                 <span class="text-uppercase">Back to Profile</span>
             </a>
             {% else %}
             <a href="{% url 'gemstones' %}?category=new_arrivals" class="custom-primary-btn btn rounded-0 my-2">
-                <span class="icon mr-2">
+                <span class="icon mr-2" aria-label="New arrival link">
                     <i class="fas fa-gifts"></i>
                 </span>
                 <span class="font-weight-bold text-uppercase">Now check out the latest gemstones!</span>

@@ -28,7 +28,8 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'gemstone_detail' item.gemstone.id %}">
+                    <a href="{% url 'gemstone_detail' item.gemstone.id %}"
+                        aria-label="Brings to individual gemstone page">
                         {% if item.gemstone.image %}
                         <img class="checkout-img w-100" src="{{ item.gemstone.image.url }}"
                             alt="An image of {{ gemstone.name }}">
@@ -106,13 +107,15 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'view_bag' %}" class="custom-secondary-btn btn rounded-0">
+                    <a href="{% url 'view_bag' %}" class="custom-secondary-btn btn rounded-0"
+                        aria-label="View bag to adjust">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="font-weight-bold">Adjust Bag</span>
                     </a>
-                    <button id="submit-button" class="custom-gemstone-btn btn rounded-0">
+                    <button id="submit-button" class="custom-gemstone-btn btn rounded-0"
+                        aria-labelledby="Submit order button">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
@@ -131,7 +134,7 @@
 </div>
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-diamond">
-        <div class="loader bounce-2 icon">
+        <div class="loader bounce-2 icon" aria-label="Golden diamond as page loader">
             <img src="{% static 'images/logo.png' %}" alt="Golden diamond as page loader">
         </div>
     </h1>

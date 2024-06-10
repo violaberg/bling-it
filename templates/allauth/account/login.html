@@ -13,7 +13,7 @@
 
 {% if socialaccount_providers %}
 <p class="account-p mx-auto mt-2">{% blocktrans with site.name as site_name %}Please log in with one
-  of your existing third party accounts. Or, <a class="custom-red" href="{{ signup_url }}">sign up</a>
+  of your existing third party accounts. Or, <a class="custom-red" href="{{ signup_url }}" aria-labelledby="Link to sign up">sign up</a>
   for a {{ site_name }} account and log in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
@@ -32,7 +32,7 @@
 <div class="account-container row mx-1 my-4">
   <div class="col">
     <p class="custom-blue font-weight-bold text-center mt-3 py-1">{% blocktrans %}If you have not created an account yet, then please
-      <a href="{{ signup_url }}" class="account-link custom-red">sign up</a> first.{% endblocktrans %}</p>
+      <a href="{{ signup_url }}" class="account-link custom-red" aria-labelledby="Link to sign up">sign up</a> first.{% endblocktrans %}</p>
     {% endif %}
 
     <form class="custom-blue p-3 mx-2" method="POST" action="{% url 'account_login' %}">
@@ -46,13 +46,13 @@
       </div>
       <p class="mt-2 text-center">
         <a class="account-link custom-red font-weight-bold"
-          href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          href="{% url 'account_reset_password' %}" aria-labelledby="Link to reset password">{% trans "Forgot Password?" %}</a>
       </p>
     </form>
   </div>
 </div>
 <div class="account-btn mb-2">
-  <a class="custom-primary-btn btn rounded-0" href="{% url 'home' %}">Home</a>
+  <a class="custom-primary-btn btn rounded-0" href="{% url 'home' %}" aria-labelledby="Link that brings back to Home Page">Home</a>
 </div>
 
 {% endblock %}

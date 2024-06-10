@@ -29,11 +29,13 @@
                             <div class="row">
                                 <div class="col">
                                     {% if request.user.is_superuser %}
-                                        <form id="deleteReviewForm" action="{% url 'delete_review' review.id %}" method="post">
-                                            {% csrf_token %}
-                                            <input type="hidden" name="review_id" value="{{ review.id }}">
-                                            <button type="submit" class="delete-link text-uppercase custom-red">Delete</button>
-                                        </form>
+                                    <form id="deleteReviewForm" action="{% url 'delete_review' review.id %}"
+                                        method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="review_id" value="{{ review.id }}">
+                                        <button type="submit"
+                                            class="delete-link text-uppercase custom-red">Delete</button>
+                                    </form>
                                     {% endif %}
                                 </div>
                             </div>

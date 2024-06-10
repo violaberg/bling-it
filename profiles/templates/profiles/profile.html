@@ -15,12 +15,13 @@
     <div class="profile-container my-3">
         <div class="tab-container pb-2 mt-3">
             <div class="text-center tab">
-                <button id="orders-tab" class="tablinks px-3 py-2"
-                    onmouseover="openTab(event, 'orders')">Orders</button>
-                <button id="delivery-tab" class="tablinks px-3 py-2 active" onmouseover="openTab(event, 'delivery')">Delivery
+                <button id="orders-tab" class="tablinks px-3 py-2" onmouseover="openTab(event, 'orders')"
+                    aria-labelledby="Opens order history tab">Orders</button>
+                <button id="delivery-tab" class="tablinks px-3 py-2 active" onmouseover="openTab(event, 'delivery')"
+                    aria-labelledby="Opens delivery address tab">Delivery
                     Info</button>
-                <button id="wishlist-tab" class="tablinks px-3 py-2"
-                    onmouseover="openTab(event, 'wishlist')">Wishlist</button>
+                <button id="wishlist-tab" class="tablinks px-3 py-2" onmouseover="openTab(event, 'wishlist')"
+                    aria-labelledby="Opens wishlist tab">Wishlist</button>
             </div>
 
             <div id="orders" class="tabcontent p-2">
@@ -41,7 +42,7 @@
                             <tr>
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
+                                        title="{{ order.order_number }}" aria-label="Order history">
                                         {{ order.order_number|truncatechars:6 }}
                                     </a>
                                 </td>
@@ -65,7 +66,8 @@
                             {% empty %}
                             <tr>
                                 <td>
-                                    <p id="order-text" class="text-center text-blue text-justify">No orders placed yet! Start exploring our
+                                    <p id="order-text" class="text-center text-blue text-justify">No orders placed yet!
+                                        Start exploring our
                                         exquisite collection to discover your next gemstone!</p>
                                 </td>
                             </tr>
@@ -81,7 +83,8 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-center">
-                        <button class="custom-gemstone-btn btn rounded-0">Update Information</button>
+                        <button class="custom-gemstone-btn btn rounded-0"
+                            aria-label="Button to update information">Update Information</button>
                     </div>
                 </form>
             </div>
@@ -103,15 +106,16 @@
                             {% for item in wishlist_items %}
                             <tr>
                                 <td class="wishlist-td">
-                                    <a href="{% url 'gemstone_detail' item.id %}">
-                                    <img src="{{ item.image.url }}" alt="{{ item.name }}"
-                                        class="wishlish-img img-fluid"></a>
+                                    <a href="{% url 'gemstone_detail' item.id %}"
+                                        aria-label="Brings to individual gemstome page">
+                                        <img src="{{ item.image.url }}" alt="{{ item.name }}"
+                                            class="wishlish-img img-fluid"></a>
                                 </td>
                                 <td class="wishlist-td pt-3">{{ item.name }}</td>
                                 <td class="wishlist-td pt-3">€{{ item.price }}</td>
                                 <td class="wishlist-td pt-3">
-                                    <small><a class="remove-link custom-red"
-                                            href="{% url 'add_to_wishlist' item.id %}">Remove</a></small>
+                                    <small><a class="remove-link custom-red" href="{% url 'add_to_wishlist' item.id %}"
+                                            aria-labelledby="Link to remove gemstone from wishlist">Remove</a></small>
                                 </td>
                             </tr>
                             {% empty %}

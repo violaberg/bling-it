@@ -36,16 +36,20 @@
         {% endfor %}
 
         <div class="buttonHolder">
-          <button class="custom-gemstone-btn secondaryAction" type="submit" name="action_primary">{% trans 'Make Primary' %}</button>
-          <button class="custom-gemstone-btn secondaryAction" type="submit" name="action_send">{% trans 'Re-send Verification' %}</button>
-          <button class="custom-secondary-btn primaryAction" type="submit" name="action_remove">{% trans 'Remove' %}</button>
+          <button class="custom-gemstone-btn secondaryAction" type="submit"
+            name="action_primary">{% trans 'Make Primary' %}</button>
+          <button class="custom-gemstone-btn secondaryAction" type="submit"
+            name="action_send">{% trans 'Re-send Verification' %}</button>
+          <button class="custom-secondary-btn primaryAction" type="submit"
+            name="action_remove">{% trans 'Remove' %}</button>
         </div>
 
       </fieldset>
     </form>
 
     {% else %}
-    <p class="custom-blue font-weight-bold text-center mt-3 py-1"><strong class="custom-red">{% trans 'Warning:'%}</strong>
+    <p class="custom-blue font-weight-bold text-center mt-3 py-1"><strong
+        class="custom-red">{% trans 'Warning:'%}</strong>
       {% trans "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc." %}
     </p>
   </div>
@@ -62,7 +66,8 @@
       {% csrf_token %}
       {{ form|cripsy }}
       <div class="account-btn mb-2">
-        <button class="custom-gemstone-btn" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+        <button class="custom-gemstone-btn" name="action_add" type="submit"
+          aria-labelledby="Add Email button">{% trans "Add E-mail" %}</button>
       </div>
     </form>
   </div>
