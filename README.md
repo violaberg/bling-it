@@ -288,7 +288,7 @@ For this project I chose 4 colors - White `#ffffff`, Goldenrod `#daa520`, Deep R
 * `#880101` - Deep Red is a rich and intense hue that evokes a sense of passion and power. Its deep, ruby-like shade adds a touch of boldness and luxury, enhancing the visual impact and creating a striking contrast against lighter colors.
 * `#020c1b` - Midnight Blue is a deep, rich shade of blue that conveys mystery, elegance, and depth. It provides a striking contrast and a sense of tranquility.<br>
 
-![Color palette](static/docs/color/color_palette.png)
+![Color palette](static/docs/color/color-palette.png)
 
 ### **Background pattern**
 
