@@ -157,6 +157,8 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a developer, I can create a new Github repository to store my project files online|
 |                           |  | As a developer, I can create a new workspace on Gitpod, install Django and postgress database|
 |                           |  | As a developer, I can create a Heroku app and deploy project early to confirm funcionality|
+|                           |  | As a developer I can design a responsive app so that I can ensure it's easy to use on any device |
+|                           |  | As a user I can see user-friendly error pages so that I can safely get back to home page |
 |                           |  ||
 
 <br>
@@ -165,7 +167,8 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |:--------------------------|--|:---------------|
 |VIEWING AND NAVIGATING     |  ||
 |                           |  | As a user I can view a list of products so that I can select some to purchase if I like|
-|                           |  | As a user I can individual product detail page so that I can identify price, description, product rating, product image and available size/ weight|
+|                           |  | As a user I can individual product detail page so that I can identify price, description, product image and any other additional information |
+|                           |  | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later |
 |                           |  | As a user I can quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase|
 |                           |  | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later|
 |                           |  | As a user I can easily view the total of my purchase at any time so that I can avoid spending too much|
@@ -173,6 +176,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a user I can register on site so that I can save my personal information and wishlist|
 |                           |  | As a user I can login/ logout so that I can access my personal account information|
 |                           |  | As a user I can easily recover my password in case I forget it so that I can recover access to my account|
+|                           |  | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful |
 |                           |  | As a user I can have a personalized user profile so that I can view my personal order history and order confirmation, and save my payment information|
 |                           |  | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful|
 |ADMIN & STORE MANAGEMENT   |  ||
@@ -187,9 +191,10 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a user I can sort multiple gemstones simultaneously so that I can search through several gemstones I like at the same time to choose the best option|
 |PURCHASING & CHECKOUT      |  ||
 |                           |  | As a user I can view items in my bag to be purchased so that I can identify the total cost of my purchase and all items I will receive|
-|                           |  | As a user I can adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout|
+|                           |  | As a user I can remove individual items from my bag so that I can easily make changes to my purchase before checkout|
 |                           |  | As a user I can easily enter my payment information so that I can check out quickly and with no hassle|
 |                           |  | As a user I can feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase|
+|                           |  | As a user I can check my order status so that I can know when to expect it |
 |                           |  | As a user I can view an order confirmation after checkout so that I can verify that I haven't made any mistakes|
 |                           |  | As a user I can receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records|
 |REVIEWS & RATINGS                   |  ||
@@ -197,6 +202,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a user I can leave a review so that I can contribute to the community and help others to make informed decisions|
 |                           |  | As a user I can edit/ update my review so that I can update and refine my contributions, ensuring accuracy and relevance|
 |                           |  | As a user I can delete my review so that I can have control over the content associated with myself|
+|                           |  | As an admin I can delete review so that I can ensure appropriate content on app |
 |CONTACT                    |  ||
 |                           |  | As a user I can easily locate contact details so that I can contact shop if I need|
 |                           |  | As a user I can contact someone at Bling It so that I can receive any additional information needed|
@@ -210,7 +216,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 ### **Wireframes**
 
-Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be seen below:
+Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be seen below. Please keep in mind that some changes were made during development but basis for project were designed in these wireframes:
 
 #### **Desktop wireframes:**
 
@@ -236,7 +242,7 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Privacy Policy Page</summary><img src="static/docs/wireframes/Privacy_Policy_desktop.png"></details>
 
-<details><summary>Wishlist</summary><img src="static/docs/wireframes/"></details>
+<details><summary>Profile Page</summary><img src="static/docs/wireframes/"></details>
 
 #### **Mobile wireframes:**
 
@@ -262,7 +268,7 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Privacy Policy Page</summary><img src="static/docs/wireframes/Privacy_Policy_mobile.png"></details>
 
-<details><summary>Wishlist</summary><img src="static/docs/wireframes/"></details>
+<details><summary>Profile Page</summary><img src="static/docs/wireframes/"></details>
 
 ### **Database schema**
 

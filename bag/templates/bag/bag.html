@@ -49,31 +49,31 @@
                         <td class="py-3 text-center">
                             <p class="my-0">${{ item.gemstone.price }}</p><br>
                             <a class="remove-item custom-red" id="remove_{{ item.item_id }}"
-                                aria-labelledby="A link to remove gemstone from bag"><small
+                                aria-label="A link to remove gemstone from bag"><small
                                     class="text-right">Remove</small></a>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr class="shopping-bag table-content-total">
-                        <td colspan="5" class="pt-3 pr-3 text-right">
-                            <h2 class="bag-total"><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                <h2 class="bag-delivery-info font-weight-bold">Delivery:<span
-                                        class="custom-red pl-2">FREE</span></h6>
-                                    <h3 class="bag-grand-total mt-4"><strong>Grand Total:
-                                            ${{ grand_total|floatformat:2 }}</strong></h4>
+                        <td colspan="3" class="pt-3 pr-3 text-right">
+                            <h2 class="bag-total"><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h2>
+                            <h2 class="bag-delivery-info font-weight-bold">Delivery:<span
+                                    class="custom-red pl-2">FREE</span></h2>
+                            <h3 class="bag-grand-total mt-4"><strong>Grand Total:
+                                    ${{ grand_total|floatformat:2 }}</strong></h3>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
+                        <td colspan="3" class="text-right">
                             <a href="{% url 'gemstones' %}" class="custom-secondary-btn btn rounded-0 mt-3"
-                                aria-labelledby="A button that brings to all gemstones page to keep shopping">
+                                aria-label="A button that brings to all gemstones page to keep shopping">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <a href="{% url 'checkout' %}" class="custom-primary-btn btn rounded-0 mt-3"
-                                aria-labelledby="A button for secure checkout">
+                                aria-label="A button for secure checkout">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -87,7 +87,7 @@
             <p class="bag-p custom-blue font-weight-bold text-center lead mx-auto py-1 my-3">Your bag is empty!</p>
             <div class="text-center mb-2">
                 <a href="{% url 'gemstones' %}" class="custom-primary-btn btn rounded-0"
-                    aria-labelledby="Button that brings back to gemstones page to keep shopping">
+                    aria-label="Button that brings back to gemstones page to keep shopping">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
@@ -102,7 +102,7 @@
 
 {% block postloadjs %}
 
-<script type="text/javascript">
+<script>
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
         // Prevent default link behavior

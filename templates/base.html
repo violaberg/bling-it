@@ -61,7 +61,7 @@
                     <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
                         class="logo-img">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0"
-                        aria-labelledby="Bling It logo as link for home page">
+                        aria-label="Bling It logo as link for home page">
                         <span class="logo-font custom-blue my-0">Bling It</span>
                     </a>
                 </div>
@@ -95,19 +95,17 @@
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'add_gemstone' %}" class="dropdown-item"
-                                    aria-labelledby="Store Management">Store Management</a>
+                                    aria-label="Store Management">Store Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item" aria-labelledby="My Profile">My
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile">My
                                     Profile</a>
-                                <a href="{% url 'profile' %}" class="dropdown-item"
-                                    aria-labelledby="Wishlist">Wishlist</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Wishlist">Wishlist</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item"
-                                    aria-labelledby="Logout">Logout</a>
+                                    aria-label="Logout">Logout</a>
                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item"
-                                    aria-labelledby="Register">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item"
-                                    aria-labelledby="Login">Login</a>
+                                    aria-label="Register">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
                                 {% endif %}
                             </div>
                         </li>
@@ -173,63 +171,63 @@
         </div>
         {% endif %}
 
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
-    </div>
-    <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-md-4 mt-md-0 pb-2">
-                    <p class="text-center mb-0">
-                        <a href="{% url 'faq' %}" target="_blank" class="footer-link custom-blue text-decoration-none"
-                            aria-labelledby="Link to Frequently Asked Questions, opens in a new tab">FAQ</a><br>
-                        <a href="{% url 'privacy_policy' %}" target="_blank"
-                            class="footer-link custom-blue text-decoration-none"
-                            aria-labelledby="Link to Privacy Policy, opens in a tab">Privacy Policy</a>
-                    </p>
-                </div>
-                <div class="col text-center">
-                    <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> +353 1 234 5678</p>
-                    <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@blingit.com</p>
-                </div>
-                <div class="col-md-4 mt-2 mt-md-0">
-                    <div class="text-center">
-                        <p class="custom-blue mb-0">All Rights Reserved 2024<span
-                                class="custom-font custom-red font-weight-normal pl-2">Bling It</span>
-                            <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
-                                class="ms-2 text-decoration-none" aria-label="Link to Facebook, opens in a new tab"><i
-                                    class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
-                            </a>
+        {% block content %}
+        {% endblock %}
+        <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-md-4 mt-md-0 pb-2">
+                        <p class="text-center mb-0">
+                            <a href="{% url 'faq' %}" target="_blank"
+                                class="footer-link custom-blue text-decoration-none"
+                                aria-label="Link to Frequently Asked Questions, opens in a new tab">FAQ</a><br>
+                            <a href="{% url 'privacy_policy' %}" target="_blank"
+                                class="footer-link custom-blue text-decoration-none"
+                                aria-label="Link to Privacy Policy, opens in a tab">Privacy Policy</a>
                         </p>
-                        <div class="opening-hours font-montserrat custom-white mb-0">
-                            <p class="custom-blue mb-0 pt-2">Created by <span
-                                    class="custom-font custom-red font-weight-normal pr-2">Viola Bergere</span>
-                                <a href="https://github.com/violaberg" target="_blank" class="ms-2 text-decoration-none"
-                                    aria-label="Link to Github, opens in a new tab"><i
-                                        class="footer-link custom-blue fa-brands fa-github"></i>
-                                </a>
-                                <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
+                    </div>
+                    <div class="col text-center">
+                        <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> +353 1 234 5678</p>
+                        <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@blingit.com</p>
+                    </div>
+                    <div class="col-md-4 mt-2 mt-md-0">
+                        <div class="text-center">
+                            <p class="custom-blue mb-0">All Rights Reserved 2024<span
+                                    class="custom-font custom-red font-weight-normal pl-2">Bling It</span>
+                                <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
                                     class="ms-2 text-decoration-none"
-                                    aria-label="Link to Linkedin, opens in a new tab"><i
-                                        class="footer-link custom-blue fa-brands fa-linkedin"></i>
+                                    aria-label="Link to Facebook, opens in a new tab"><i
+                                        class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
                                 </a>
                             </p>
+                            <div class="opening-hours font-montserrat custom-white mb-0">
+                                <p class="custom-blue mb-0 pt-2">Created by <span
+                                        class="custom-font custom-red font-weight-normal pr-2">Viola Bergere</span>
+                                    <a href="https://github.com/violaberg" target="_blank"
+                                        class="ms-2 text-decoration-none"
+                                        aria-label="Link to Github, opens in a new tab"><i
+                                            class="footer-link custom-blue fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
+                                        class="ms-2 text-decoration-none"
+                                        aria-label="Link to Linkedin, opens in a new tab"><i
+                                            class="footer-link custom-blue fa-brands fa-linkedin"></i>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
+        {% block postloadjs %}
+        <script>
+            $('.toast').toast('show');
+        </script>
+        {% endblock %}
 
-    <script src="https://kit.fontawesome.com/284fde1047.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/284fde1047.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

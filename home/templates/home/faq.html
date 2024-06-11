@@ -10,7 +10,7 @@
             <h1 class="page-title custom-font text-white mx-auto mb-4 p-2">Frequently Asked Questions</h1>
         </div>
 
-        <div class="col">
+        <div class="col mb-3">
             <div id="faq-section">
                 <div class="accordion" id="faqAccordion">
                     {% for faq in faqs %}
@@ -19,17 +19,15 @@
                     <div class="card">
                         <div class="card-header" id="faqHeading{{ faq.id }}" data-toggle="collapse"
                             data-target="#faqCollapse{{ faq.id }}" aria-expanded="true"
-                            aria-controls="faqCollapse{{ faq.id }}">
-                            <h2 class="mb-0 d-flex justify-content-between align-items-center">
-                                <button class="faq-link btn" type="button">
+                            aria-controls="faqCollapse{{ faq.id }}" role="button">
+                            <h2 class="mb-0 d-flex justify-content-between align-items-center faq-link btn">
                                     {{ faq.question }}
-                                </button>
                                 <small><i class="fa-solid fa-chevron-down"></i></small>
                             </h2>
                         </div>
                         <div id="faqCollapse{{ faq.id }}" class="collapse" aria-labelledby="faqHeading{{ faq.id }}"
                             data-parent="#faqAccordion">
-                            <div class="card-body">
+                            <div class="card-body pb-2 pl-2">
                                 {{ faq.answer }}
                             </div>
                         </div>
@@ -43,7 +41,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         var faqLink = document.querySelector(".faq-link");
 

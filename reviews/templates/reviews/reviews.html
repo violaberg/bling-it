@@ -29,8 +29,8 @@
                             <div class="row">
                                 <div class="col">
                                     {% if request.user.is_superuser %}
-                                    <form id="deleteReviewForm" action="{% url 'delete_review' review.id %}"
-                                        method="post">
+                                    <form id="deleteReviewForm{{ review.id }}"
+                                        action="{% url 'delete_review' review.id %}" method="post">
                                         {% csrf_token %}
                                         <input type="hidden" name="review_id" value="{{ review.id }}">
                                         <button type="submit"
@@ -90,7 +90,8 @@
         </div>
         {% else %}
         <p class="leave-review text-center w-50 mx-auto p-2 mt-4">You need to be <a href="{% url 'account_login' %}"
-                aria-label="Login here" class="review-login custom-red font-weight-bold">logged in</a> to leave a review</p>
+                aria-label="Login here" class="review-login custom-red font-weight-bold">logged in</a> to leave a review
+        </p>
         {% endif %}
     </div>
 </div>

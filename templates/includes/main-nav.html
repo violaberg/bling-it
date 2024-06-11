@@ -1,39 +1,44 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-page-link" aria-labelledby="Home Page link">
+            <a class="font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-page-link"
+                aria-label="Home Page link">
                 Home
             </a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'about' %}" aria-labelledby="About Page link">
+            <a class="font-weight-bold nav-link mr-5" href="{% url 'about' %}" aria-label="About Page link">
                 About Us
             </a>
         </li>
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link custom-blue mr-5" href="#" id="all-gemstones-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-labelledby="All Gemstones dropdown menu">
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                aria-label="All Gemstones dropdown menu">
                 All Gemstones
             </a>
             <div class="dropdown-menu rounded-0" aria-labelledby="all-gemstones-link">
-                <a href="{% url 'gemstones' %}?sort=price&direction+asc" class="dropdown-item " aria-labelledby="Sort gemstones by price link">By Price</a>
-                <a href="{% url 'gemstones' %}?sort=carats&direction+asc" class="dropdown-item " aria-labelledby="Sort gemstones by carats link">By Carats</a>
-                <a href="{% url 'gemstones' %}?new_arrivals" class="dropdown-item " aria-labelledby="Gemstones new arrivals link">New Arrivals</a>
+                <a href="{% url 'gemstones' %}?sort=price&direction+asc" class="dropdown-item "
+                    aria-label="Sort gemstones by price link">By Price</a>
+                <a href="{% url 'gemstones' %}?sort=carats&direction+asc" class="dropdown-item "
+                    aria-label="Sort gemstones by carats link">By Carats</a>
+                <a href="{% url 'gemstones' %}?new_arrivals" class="dropdown-item "
+                    aria-label="Gemstones new arrivals link">New Arrivals</a>
                 <a href="{% url 'gemstones' %}?category=amethyst,alexandrite,aquamarine,citrine,diamond,emerald,garnet,morganite,peridot,ruby,sapphire,topaz"
-                    class="dropdown-item" aria-labelledby="All Gemstones page link">All Gemstones</a>
+                    class="dropdown-item" aria-label="All Gemstones page link">All Gemstones</a>
             </div>
         </li>
-    </ul>
-    </li>
-    <li class="nav-item">
-        <a class="font-weight-bold nav-link custom-blue mr-5" href="{% url 'reviews' %}" aria-labelledby="Review page link">
-            Reviews
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="font-weight-bold nav-link custom-blue mr-5" href="{% url 'contact' %}" aria-labelledby="Contact us page link">
-            Contact Us
-        </a>
-    </li>
+        <li class="nav-item">
+            <a class="font-weight-bold nav-link custom-blue mr-5" href="{% url 'reviews' %}"
+                aria-label="Review page link">
+                Reviews
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="font-weight-bold nav-link custom-blue mr-5" href="{% url 'contact' %}"
+                aria-label="Contact us page link">
+                Contact Us
+            </a>
+        </li>
     </ul>
 </div>
