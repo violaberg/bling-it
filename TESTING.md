@@ -181,5 +181,8 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | <details><summary>Subscribtion Error</summary><img src="static/bugs/subscribtion-error.png"></details>| Email verification for subscribtion letters | Newer version of Django installed and runtime.txt added to root |
 | <details><summary>Test Error</summary><img src="static/bugs/test-error.png"></details>| Still connected to postgres | Commented out postgres in settings to use sqlite |
 | <details><summary>Order not going through</summary><img src="static/bugs/test-error.png"></details>| Incorrect url in checkout | Removed 'checkout' from url <code>path('cache_checkout_data/', views.cache_checkout_data, name='cache_checkout_data'),</code> |
+| <details><summary>Order not going through</summary><img src="static/bugs/webhook-fail.png"></details>| Typo in webhooks.py | Replaced failed with succeeded 'checkout' from url <code>'payment_intent.succeeded': (
+            handler.handle_payment_intent_succeeded
+        ),</code> |
 
 [Back to Readme](README.md)

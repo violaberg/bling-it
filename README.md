@@ -407,8 +407,10 @@ The business would have a modest budget for advertising but would also utilize f
 
 ## **Future Development**
 
-In the second half of development I realized what I won't be able to implement due to dealine fast approaching. I decided to leave following features for future development:
-* 
+In the second half of development I realized what I won't be able to implement due to dealine fast approaching. Some of the features I decided to leave for future development can be seen below:
+* Ability for user to edit or delete their review. At the moment only admin can delete it.
+* Option to sort multiple category gemstones, for example, if someone would like to look at rubies and diamonds at the same time but filter the other gemstones out.
+* Knowledge blog where users could educate themselves about gemstones, find out their history and read latest news or trends.
 
 # **Technologies used**
 
@@ -443,6 +445,7 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * Choccolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
 * Animation for loader taken from [CSS-tricks](https://css-tricks.com/making-css-animations-feel-natural/)
 * Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)
+* Compressed images with [Tinify](https://tinypng.com/)
 * Privacy Policy generated with [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 * [Keyword Surfer](https://surferseo.com/keyword-surfer-extension/) used for some Google searches
 * Search result table generated with [Table Generator](https://www.table-generator.de/)
