@@ -8,6 +8,7 @@ class GemstoneAdmin(admin.ModelAdmin):
         'name',
         'category',
         'cut',
+        'clarity',
         'price',
         'image',
     )
