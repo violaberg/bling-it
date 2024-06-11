@@ -420,12 +420,11 @@ In the second half of development I realized what I won't be able to implement d
 * Django allAuth
 * Bootstrap
 * [Heroku](https://www.heroku.com/)
-* Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
+* [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
 * jQuery
 * Whitenoise
 * AWS S3 Bucket
-* Summernote
 
 # **Testing**
 
@@ -462,3 +461,4 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 ## **Images**
 * [Vecteezy](https://www.vecteezy.com/) - image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
 * Hero image was generated with [Adobe Firefly](https://firefly.adobe.com/)
+* Few gemstone images were generated with [Adobe Firefly](https://firefly.adobe.com/), the rest taken from [Kaggle](https://www.kaggle.com/datasets/fransell/gemstones-images-expanded/data)

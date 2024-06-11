@@ -64,7 +64,7 @@ def subscribe_to_newsletter(request):
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
-            email = form.cleaned_data.get('email')
+            form.cleaned_data.get('email')
             form.save()
             # Send confirmation email
             try:
