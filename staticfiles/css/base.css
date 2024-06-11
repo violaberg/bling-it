@@ -161,8 +161,10 @@ a.category-badge>span.badge:hover {
     text-decoration: none;
 }
 
-a#deleteGemstone:hover {
+a#deleteGemstone:hover,
+.edit-gemstone-btn:hover {
     color: var(--dark-blue);
+    text-decoration: none;
 }
 
 a.gemstone-cat:hover {
