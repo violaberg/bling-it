@@ -93,12 +93,12 @@
                                     {% if gemstone.availability %}
                                     <p class="custom-red font-weight-bold mb-0">In Stock</p>
                                     {% else %}
-                                    <p class="custom-red font-weight-bold mb-0">Sold Out</p>
+                                    <p class="custom-red font-weight-bold mb-0">Out of Stock</p>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="font-weight-bold">
-                                        <a class="custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
-                                            aria-label="Bring to Edit gemstone page">Edit</a> |
+                                        <a class="edit-gemstone-btn custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
+                                            aria-label="Brings to Edit gemstone page">Edit</a> |
                                         <a id="deleteGemstone" class="custom-red"
                                             href="{% url 'delete_gemstone' gemstone.id %}"
                                             aria-labelledby="Deletes gemstone">Delete</a>

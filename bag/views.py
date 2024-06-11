@@ -32,6 +32,13 @@ def add_to_bag(request, item_id):
     gemstone = get_object_or_404(Gemstone, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
 
+    if not gemstone.availability:
+        messages.error(
+            request, f'Sorry, {gemstone.name} is out of stock \
+                       and cannot be added to the bag.'
+        )
+        return redirect('gemstone_detail', gemstone_id=item_id)
+
     bag = request.session.get('bag', {})
     if item_id in bag:
         # If gemstone already exists in the bag, display error message
