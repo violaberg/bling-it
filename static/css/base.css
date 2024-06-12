@@ -161,7 +161,7 @@ a.category-badge>span.badge:hover {
     text-decoration: none;
 }
 
-a#deleteGemstone:hover,
+.delete-gemstone-btn:hover,
 .edit-gemstone-btn:hover {
     color: var(--dark-blue);
     text-decoration: none;
@@ -465,6 +465,10 @@ thead {
     font-size: 24px;
     position: relative;
     top: 0.5rem;
+}
+
+.card-img-top {
+    width: 50%;
 }
 
 /* Footer */

@@ -18,7 +18,11 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = ['name', 'review_subject', 'review_body', 'rating']
         widgets = {
-            'name': forms.TextInput(attrs={'autocomplete': 'name'})
+            'name': forms.TextInput(attrs={'autocomplete': 'name'}),
+            'rating': forms.Select(attrs={
+                'class': 'rounded-0',
+                'style': 'color: var(--gold);'
+            })
         }
 
     def __init__(self, *args, **kwargs):

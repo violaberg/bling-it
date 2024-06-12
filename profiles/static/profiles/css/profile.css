@@ -88,6 +88,11 @@ a {
     font-weight: 400;
 }
 
+/* Wishlist tab */
+td.wishlist-td {
+    width: 33%;
+}
+
 .wishlist-items {
     list-style-type: none;
 }

@@ -60,11 +60,11 @@
             <div class="row">
                 {% for gemstone in gemstones %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="gemstone-container rounded-0 card h-100">
+                    <div class="gemstone-container text-center rounded-0 card h-100">
                         {% if gemstone.image %}
                         <a href="{% url 'gemstone_detail' gemstone.id %}"
                             aria-label="Brings to individual gemstones page">
-                            <img class="card-img-top img-fluid" src="{{ gemstone.image.url }}"
+                            <img class="card-img-top py-2 img-fluid" src="{{ gemstone.image.url }}"
                                 alt="An image of {{ gemstone.name }}">
                         </a>
                         {% else %}
@@ -100,7 +100,7 @@
                                         <a class="edit-gemstone-btn custom-gold"
                                             href="{% url 'edit_gemstone' gemstone.id %}"
                                             aria-label="Brings to Edit gemstone page">Edit</a> |
-                                        <a id="deleteGemstone{{gemstone.id}}" class="custom-red"
+                                        <a id="deleteGemstone{{gemstone.id}}" class="delete-gemstone-btn custom-red"
                                             href="{% url 'delete_gemstone' gemstone.id %}"
                                             aria-label="Deletes gemstone">Delete</a>
                                     </small>
@@ -176,8 +176,8 @@
     $(document).ready(function () {
             $(".btt-link").on('click', function () {
                 $(function () {
-                    document.body.scrollTop = 0; // For Safari
-                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                 });
             });
         });

@@ -34,7 +34,7 @@
                                         {% csrf_token %}
                                         <input type="hidden" name="review_id" value="{{ review.id }}">
                                         <button type="submit"
-                                            class="delete-link text-uppercase custom-red">Delete</button>
+                                            class="delete-link text-uppercase custom-red mt-2">Delete</button>
                                     </form>
                                     {% endif %}
                                 </div>
@@ -103,3 +103,17 @@
 {% endblock %}
 
 <script src="{% static 'js/script.js' %}"></script>
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $(document).ready(function () {
+            $(".btt-link").on('click', function () {
+                $(function () {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                });
+            });
+        });
+</script>
+{% endblock %}
