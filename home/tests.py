@@ -5,6 +5,12 @@ from .views import send_subscription_email
 
 
 class HomeViewsTestCase(TestCase):
+    """
+    Test sending subscription confirmation email.
+
+    This method tests the functionality of sending \
+    a subscription confirmation email.
+    """
     def setUp(self):
         self.client = Client()
         self.index_url = reverse('home')

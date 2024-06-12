@@ -38,7 +38,16 @@ class UserProfile(models.Model):
 def create_or_update_user_profile(
         sender, instance, created, **kwargs):
     """
-    Create or update the user profile
+    Signal receiver function to create or update the user profile.
+
+    If a new user is created, create a corresponding UserProfile instance.
+    For existing users, save the UserProfile instance.
+
+    Args:
+        sender (Model): The model class that sent the signal.
+        instance (User): The instance of the User model.
+        created (bool): A boolean indicating if the user is newly created.
+        **kwargs: Additional keyword arguments.
     """
     if created:
         UserProfile.objects.create(user=instance)
@@ -47,6 +56,11 @@ def create_or_update_user_profile(
 
 
 class Wishlist(models.Model):
+    """
+    Model for user wishlists.
+
+    Each user can have multiple gemstones in their wishlist.
+    """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     gemstones = models.ManyToManyField(

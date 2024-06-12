@@ -33,20 +33,36 @@
 
 ### **HTML**
 
-All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/).
+All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/)
 
 |   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
 |--------------------------------------------|-----------------------------------------------------------|-------------|
-| Home Page                                  |<details><summary>Home Page</summary><img src=""></details>| <mark></mark> |
-| About Page                                 |<details><summary>About Page</summary><img src=""></details>| <mark></mark> |
-| Gallery Page                               |<details><summary>Gallery</summary><img src=""></details>| <mark></mark> |
-| Book a Tour                                |<details><summary>Book a Tour</summary><img src=""></details>| <mark></mark> |
-| Contact Page                               |<details><summary>Contact Page</summary><img src=""></details>| <mark></mark> |
-| Sign up Page                               |<details><summary>Sign up Page</summary><img src=""></details>| <mark></mark> |
-| Login Page                                 |<details><summary>Login Page</summary><img src=""></details>| <mark></mark> |
-| Logout Page                                |<details><summary>Logout Page</summary><img src=""></details>| <mark></mark> |
+| Home Page                                  |<details><summary>Home Page</summary><img src="static/docs/validators/home-page-w3.png"></details>| <mark>PASS</mark> |
+| About Page                                 |<details><summary>About Page</summary><img src="static/docs/validators/about-page-w3.png"></details>| <mark>PASS</mark> |
+| All Gemstones Page                         |<details><summary>All Gemstones Page</summary><img src="static/docs/validators/all-gemstones-w3.png"></details>| <mark>PASS</mark> |
+| Gemstones Detail Page                      |<details><summary>Gemstones Detail Page</summary><img src="static/docs/validators/gemstone-detail-w3.png"></details>| <mark>PASS</mark> |
+| Reviews Page                               |<details><summary>Reviews Page</summary><img src="static/docs/validators/"></details>| <mark></mark> |
+| Contact Page                               |<details><summary>Contact Page</summary><img src="static/docs/validators/contact-page-w3.png"></details>| <mark>PASS</mark> |
+| FAQ Page                                   |<details><summary>FAQ Page</summary><img src="static/docs/validators/faq-page-w3.png"></details>| <mark>PASS</mark> |
+| Privacy Policy Page                        |<details><summary>Privacy Policy Page</summary><img src="static/docs/validators/privacy-policy-w3.png"></details>| <mark>PASS</mark> |
+| Bag Page                                   |<details><summary>Bag Page</summary><img src="static/docs/validators/bag-w3.png"></details>| <mark>PASS</mark> |
+| Checkout Page                              |<details><summary>Checkout Page</summary><img src="static/docs/validators/checkout-w3.png"></details>| <mark>PASS</mark> |
+| Checkout Success Page                      |<details><summary>Checkout Success Page</summary><img src="static/docs/validators/checkout-success-w3.png"></details>| <mark>PASS</mark> |
+| Profile Page                               |<details><summary>Profile Page</summary><img src="static/docs/validators/profile-w3.png"></details>| <mark>PASS</mark> |
+| Login Page                                 |<details><summary>Login Page</summary><img src="static/docs/validators/"></details>| <mark>PASS</mark> |
+| Logout Page                                |<details><summary>Logout Page</summary><img src="static/docs/validators"></details>| <mark>PASS</mark> |
+| Error 403 Page                             |<details><summary>Error 403 Page</summary><img src="static/docs/validators/error-403-w3.PNG"></details>| <mark>PASS</mark> |
+| Error 404 Page                             |<details><summary>Error 404 Page</summary><img src="static/docs/validators/error-404-w3.PNG"></details>| <mark>PASS</mark> |
 
 ### **CSS**
+
+All CSS pages were validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+|   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
+|--------------------------------------------|-----------------------------------------------------------|-------------|
+| Base.css                                   |<details><summary>Base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
+| Checkout.css                               |<details><summary>Checkout.css</summary><img src="static/docs/validators/checkout.css-w3.png"></details>| <mark>PASS</mark> |
+| Profile.css                                |<details><summary>Profile.css</summary><img src="static/docs/validators/profile.css-w3.png"></details>| <mark>PASS</mark> |
 
 ### **JavaScript**
 

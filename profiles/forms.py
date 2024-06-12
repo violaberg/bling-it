@@ -3,6 +3,11 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """
+    Form for updating user profile information.
+
+    This form is used to update the user's default delivery information.
+    """
     class Meta:
         model = UserProfile
         exclude = ('user',)
@@ -37,4 +42,9 @@ class UserProfileForm(forms.ModelForm):
 
 
 class WishlistForm(forms.Form):
+    """
+    Form for adding gemstones to the user's wishlist.
+
+    This form is used to add gemstones to the user's wishlist.
+    """
     gemstone_id = forms.IntegerField(widget=forms.HiddenInput())

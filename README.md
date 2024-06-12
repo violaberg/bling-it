@@ -242,8 +242,6 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Privacy Policy Page</summary><img src="static/docs/wireframes/Privacy_Policy_desktop.png"></details>
 
-<details><summary>Profile Page</summary><img src="static/docs/wireframes/"></details>
-
 #### **Mobile wireframes:**
 
 <details><summary>Home Page</summary><img src="static/docs/wireframes/Home_mobile.png"></details>
@@ -268,13 +266,13 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Privacy Policy Page</summary><img src="static/docs/wireframes/Privacy_Policy_mobile.png"></details>
 
-<details><summary>Profile Page</summary><img src="static/docs/wireframes/"></details>
-
 ### **Database schema**
 
-I created database schema to design the structure and organization of a database to efficiently store, manage, and retrieve data. This was crucial part when creating models and try and escape unneccesary migration complications.
+I created database schema to design the structure and organization of a database to efficiently store, manage, and retrieve data. This was crucial part when creating models and try and escape unneccesary migration complications. I still find it a little hard to create these but it has definitely become easier. Original and updated database schema can be found below:
 
-![Database schema](static/docs/database.png)
+![Original database schema](static/docs/database.png)
+
+![Updated database schema](static/docs/blingit_models.png)
 
 ### **Stock keeping units**
 
@@ -447,8 +445,9 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Hero Patterns](https://heropatterns.com/) used to create background pattern
 * [Google Fonts](https://fonts.google.com/) used to find and implement fonts
 * [Font Awesome](https://fontawesome.com/) used for icons
-* Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project.
-* Choccolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
+* Database schemas created using [DB diagram](https://dbdiagram.io/home) and [Graphviz](https://graphviz.org/)
+* Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project
+* Chocolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)
 * Animation for loader taken from [CSS-tricks](https://css-tricks.com/making-css-animations-feel-natural/)
 * Hover tabs for profile page taken from [W3schools](https://www.w3schools.com/howto/howto_js_hover_tabs.asp)
 * Compressed images with [Tinify](https://tinypng.com/) and [Compressor](https://compressor.io/)

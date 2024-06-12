@@ -18,6 +18,15 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    A view function that handles caching checkout data \
+    for Stripe PaymentIntents.
+    It retrieves data from a POST request, modifies the PaymentIntent metadata,
+    and returns an HTTP response with a status code of 200 if successful.
+    If an exception occurs, it adds an error message \
+    to the Django messages framework and returns an HTTP response \
+    with a status code of 400.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -34,6 +43,12 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    A view function that handles the checkout process. It processes form data
+    submitted by the user, saves order details, and displays error messages
+    if the form is invalid. If successful, \
+    it redirects to the checkout success page.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -134,7 +149,11 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    A view function called upon successful completion of the checkout process.
+    It retrieves order details, associates the order with the user's profile
+    if authenticated, saves user information \
+    if the "save info" option was selected during checkout, \
+    and displays a success message confirming the order's success.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)

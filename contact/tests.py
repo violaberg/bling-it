@@ -4,6 +4,9 @@ from .models import Contact
 
 
 class ContactPageTests(TestCase):
+    """
+    Test cases for the contact page and form submission.
+    """
     def setUp(self):
         self.client = Client()
         self.contact_url = reverse('contact')

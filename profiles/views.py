@@ -10,7 +10,17 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """
+    Display the user's profile, including their orders and wishlist.
+
+    If the request method is POST, update the user's profile information.
+
+    Args:
+        request (HttpRequest): The request object containing user information.
+
+    Returns:
+        HttpResponse: The rendered profile template.
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     # Retrieve the wishlist for the current user
@@ -67,6 +77,16 @@ def profile(request):
 
 @login_required
 def order_history(request, order_number):
+    """
+    Display the details of a past order.
+
+    Args:
+        request (HttpRequest): The request object containing user information.
+        order_number (str): The order number to display.
+
+    Returns:
+        HttpResponse: The rendered order history template.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -85,7 +105,16 @@ def order_history(request, order_number):
 
 @login_required
 def wishlist(request, pk):
-    """ A view to return the wishlist page"""
+    """
+    Display the wishlist for a user.
+
+    Args:
+        request (HttpRequest): The request object containing user information.
+        pk (int): The primary key of the user's profile.
+
+    Returns:
+        HttpResponse: The rendered wishlist section in profile template.
+    """
     profile = get_object_or_404(UserProfile, id=pk)
     wishlist_items = Wishlist.objects.filter(user=profile).order_by('-created')
     paginator = Paginator(wishlist_items, 6)
@@ -100,6 +129,17 @@ def wishlist(request, pk):
 
 @login_required
 def add_to_wishlist(request, gemstone_id):
+    """
+    Add a gemstone to the user's wishlist.
+
+    Args:
+        request (HttpRequest): The request object containing user information.
+        gemstone_id (int): The primary key of the gemstone to add.
+
+    Returns:
+        HttpResponseRedirect: Redirects to the gemstone detail page \
+        after adding/removing.
+    """
     gemstone = get_object_or_404(Gemstone, pk=gemstone_id)
     profile = request.user.userprofile
     wishlist, created = Wishlist.objects.get_or_create(user=profile.user)

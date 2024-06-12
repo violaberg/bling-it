@@ -3,6 +3,17 @@ from gemstones.models import Gemstone
 
 
 def bag_contents(request):
+    """
+    Retrieves bag contents from the session and calculates totals.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        dict: A dictionary containing bag contents, total price, \
+        gemstone count, and grand total.
+
+    """
 
     bag_items = []
     total = 0
