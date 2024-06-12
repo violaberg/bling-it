@@ -3,8 +3,9 @@
 ## **Overview**
 
 Bling It is a fictional user-friendly gemstone shop, designed and developed using Django, Python, HTML, CSS and Javascript, born from my personal love for diamonds and rubies.<br>
-It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized to find the perfect piece. Users can read and, if logged in, leave reviews about their experience with Bling It shop. Added is a secure checkout process to ensure a safe and smooth transaction. 
-<img scr><br>
+It offers a chance to explore a curated collection of exquisite gemstones and discover diamonds, rubies, sapphires, emeralds, and more, meticulously categorized for easy browsing. Each gemstone page has an image, detailed specifications and pricing, as well as option to add gemstone to wishlist. Search can be customized to find the perfect piece. Users can read and, if logged in, leave reviews about their experience with Bling It shop. Added is a secure checkout process to ensure a safe and smooth transaction.
+ 
+![Home page](static/docs/screenshots/Macbook-Air-home.png)<br>
 
 Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.herokuapp.com/)
 
@@ -530,3 +531,7 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Vecteezy](https://www.vecteezy.com/) - image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
 * Hero image was generated with [Adobe Firefly](https://firefly.adobe.com/)
 * Few gemstone images were generated with [Adobe Firefly](https://firefly.adobe.com/), the rest taken from [Kaggle](https://www.kaggle.com/datasets/fransell/gemstones-images-expanded/data)
+
+# **Conclusion**
+
+Now when I look back at rather stressful and extremely busy time while developing this project (I'm pretty sure my family has forgotten about my existence), I can see many positives and negatives. I'm glad I took my mentor's advice to spend a week planning to have smoother development. And while I had many bumps, I think it really helped me achieve the end result and submit on time. I will keep practising Agile and try and set sprints for my next project that has been slowly developing for months in my head. Overall, I really enjoyed this project and now looking at it I can justify many sleepless nights. I take every project as a new lesson in something or reminder of skills I have. This one was for Stripe and AWS, still rather puzzled how many features and options there are in both but will go back and dive deeper into those. Can't wait to develop the next one!

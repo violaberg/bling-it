@@ -77,12 +77,46 @@ All JavaScript was validated using (JS Hint)[https://jshint.com/]
 
 | FILE    | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Models   | <details><summary>Models</summary><img src=""></details>     | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src=""></details>       | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src=""></details>       | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src=""></details>      | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src=""></details>       | <mark>PASS</mark> |
-| Settings | <details><summary>Settings</summary><img src=""></details> | <mark>PASS</mark> |
+| ***blingit*** |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators/project-views-plinton.png"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators/project-urls-plinton.png"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/home-models-plinter.png"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| ***home*** |
+| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
+
 
 ## **Browser Testing**
 
