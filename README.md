@@ -413,6 +413,7 @@ The business would have a modest budget for advertising but would also utilize f
 
 In the second half of development I realized what I won't be able to implement due to dealine fast approaching. Some of the features I decided to leave for future development can be seen below:
 * Ability for user to edit or delete their review. At the moment only admin can delete it.
+* Confirmation modal before deletion of reviews and gemstones.
 * Option to sort multiple category gemstones, for example, if someone would like to look at rubies and diamonds at the same time but filter the other gemstones out.
 * Knowledge blog where users could educate themselves about gemstones, find out their history and read latest news or trends.
 

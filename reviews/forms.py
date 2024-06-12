@@ -5,6 +5,15 @@ from .models import Review
 
 
 class ReviewForm(forms.ModelForm):
+    """
+    Form for submitting a review.
+
+    Attributes:
+        name (CharField): The name of the reviewer.
+        review_subject (CharField): The subject of the review.
+        review_body (TextField): The body of the review.
+        rating (IntegerField): The rating given by the reviewer.
+    """
     class Meta:
         model = Review
         fields = ['name', 'review_subject', 'review_body', 'rating']

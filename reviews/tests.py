@@ -4,6 +4,17 @@ from .models import Review
 
 
 class ReviewsPageTests(TestCase):
+    """
+    Test cases for the Reviews page functionality.
+
+    Methods:
+        setUp(self): Set up the test environment.
+        test_reviews_page_loads_properly(self): \
+        Test if the reviews page loads properly.
+        test_reviews_post_method(self): \
+        Test the POST method for submitting reviews.
+        test_delete_review(self): Test deleting a review.
+    """
     def setUp(self):
         self.client = Client()
         self.reviews_url = reverse('reviews')
