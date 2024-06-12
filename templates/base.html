@@ -54,179 +54,171 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="container-fluid pt-3 mb-0 pb-0">
-            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
-                        class="logo-img">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0"
-                        aria-label="Bling It logo as link for home page">
-                        <span class="logo-font custom-blue my-0">Bling It</span>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <form method="GET" action="{% url 'gemstones' %}">
-                        <div class="input-group w-100">
-                            <input class="form-control border border-blue rounded-0" type="text" name="q"
-                                placeholder="Search our site" aria-label="Search our site">
-                            <div class="input-group-append">
-                                <button class="btn btn-blue border border-blue rounded-0" type="submit"
-                                    aria-label="search">
-                                    <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </button>
-                            </div>
+    <header class="container-fluid pt-3 mb-0 pb-0">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
+                    class="logo-img">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0"
+                    aria-label="Bling It logo as link for home page">
+                    <span class="logo-font custom-blue my-0">Bling It</span>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="{% url 'gemstones' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-blue rounded-0" type="text" name="q"
+                            placeholder="Search our site" aria-label="Search our site">
+                        <div class="input-group-append">
+                            <button class="btn btn-blue border border-blue rounded-0" type="submit" aria-label="search">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
                         </div>
-                    </form>
-                </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
-                        <li class="list-inline-item dropdown">
-                            <a class="header-item text-red nav-link" href="#" id="user-options" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
-                                    <div><i class="custom-gold fas fa-user fa-lg pb-2"></i></div>
-                                    <p class="my-0">My Account</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_gemstone' %}" class="dropdown-item"
-                                    aria-label="Store Management">Store Management</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile">My
-                                    Profile</a>
-                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Wishlist">Wishlist</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item"
-                                    aria-label="Logout">Logout</a>
-                                {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item"
-                                    aria-label="Register">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
-                                {% endif %}
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="header-item text-red nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="custom-gold fas fa-user fa-lg pb-2"></i></div>
+                                <p class="my-0">My Account</p>
                             </div>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link"
-                                href="{% url 'view_bag' %}" aria-label="Shopping bag">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
-                                    <p class="grand-total my-0">
-                                        {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                        €0.00
-                                        {% endif %}
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="custom-nav row">
-                <nav class="navbar navbar-expand-lg mx-auto width-100">
-                    <button class="chocolate navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    {% include 'includes/mobile-top-header.html' %}
-                    {% include 'includes/main-nav.html' %}
-                </nav>
-            </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-blue text-gold">
-                    <h2 class="banner my-1 pt-1">Free delivery on all orders!</h2>
-                </div>
-            </div>
-        </header>
-
-        {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-            {% with message.level as level %}
-            {% if level == 40 %}
-            {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-            {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-            {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-            {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
-            {% endwith %}
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        {% block content %}
-        {% endblock %}
-        <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-md-4 mt-md-0 pb-2">
-                        <p class="text-center mb-0">
-                            <a href="{% url 'faq' %}" target="_blank"
-                                class="footer-link custom-blue text-decoration-none"
-                                aria-label="Link to Frequently Asked Questions, opens in a new tab">FAQ</a><br>
-                            <a href="{% url 'privacy_policy' %}" target="_blank"
-                                class="footer-link custom-blue text-decoration-none"
-                                aria-label="Link to Privacy Policy, opens in a tab">Privacy Policy</a>
-                        </p>
-                    </div>
-                    <div class="col text-center">
-                        <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> +353 1 234 5678</p>
-                        <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@blingit.com</p>
-                    </div>
-                    <div class="col-md-4 mt-2 mt-md-0">
-                        <div class="text-center">
-                            <p class="custom-blue mb-0">All Rights Reserved 2024<span
-                                    class="custom-font custom-red font-weight-normal pl-2">Bling It</span>
-                                <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
-                                    class="ms-2 text-decoration-none"
-                                    aria-label="Link to Facebook, opens in a new tab"><i
-                                        class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
-                                </a>
-                            </p>
-                            <div class="opening-hours font-montserrat custom-white mb-0">
-                                <p class="custom-blue mb-0 pt-2">Created by <span
-                                        class="custom-font custom-red font-weight-normal pr-2">Viola Bergere</span>
-                                    <a href="https://github.com/violaberg" target="_blank"
-                                        class="ms-2 text-decoration-none"
-                                        aria-label="Link to Github, opens in a new tab"><i
-                                            class="footer-link custom-blue fa-brands fa-github"></i>
-                                    </a>
-                                    <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
-                                        class="ms-2 text-decoration-none"
-                                        aria-label="Link to Linkedin, opens in a new tab"><i
-                                            class="footer-link custom-blue fa-brands fa-linkedin"></i>
-                                    </a>
+                        </a>
+                        <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_gemstone' %}" class="dropdown-item" aria-label="Store Management">Store
+                                Management</a>
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile">My
+                                Profile</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Wishlist">Wishlist</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item"
+                                aria-label="Register">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link"
+                            href="{% url 'view_bag' %}" aria-label="Shopping bag">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
+                                <p class="grand-total my-0">
+                                    {% if grand_total %}
+                                    €{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    €0.00
+                                    {% endif %}
                                 </p>
                             </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="custom-nav row">
+            <nav class="navbar navbar-expand-lg mx-auto width-100">
+                <button class="chocolate navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-blue text-gold">
+                <h2 class="banner my-1 pt-1">Free delivery on all orders!</h2>
+            </div>
+        </div>
+    </header>
+
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-4 mt-md-0 pb-2">
+                    <p class="text-center mb-0">
+                        <a href="{% url 'faq' %}" target="_blank" class="footer-link custom-blue text-decoration-none"
+                            aria-label="Link to Frequently Asked Questions, opens in a new tab">FAQ</a><br>
+                        <a href="{% url 'privacy_policy' %}" target="_blank"
+                            class="footer-link custom-blue text-decoration-none"
+                            aria-label="Link to Privacy Policy, opens in a tab">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="col text-center">
+                    <p class="mb-0"><i class="custom-blue fa-solid fa-phone"></i> +353 1 234 5678</p>
+                    <p class="mb-0"><i class="custom-blue fa-solid fa-envelope"></i> blingit@blingit.com</p>
+                </div>
+                <div class="col-md-4 mt-2 mt-md-0">
+                    <div class="text-center">
+                        <p class="custom-blue mb-0">All Rights Reserved 2024<span
+                                class="custom-font custom-red font-weight-normal pl-2">Bling It</span>
+                            <a href="https://www.facebook.com/profile.php?id=61559857025144" target="_blank"
+                                class="ms-2 text-decoration-none" aria-label="Link to Facebook, opens in a new tab"><i
+                                    class="footer-link custom-blue ml-1 fa-brands fa-facebook"></i>
+                            </a>
+                        </p>
+                        <div class="opening-hours font-montserrat custom-white mb-0">
+                            <p class="custom-blue mb-0 pt-2">Created by <span
+                                    class="custom-font custom-red font-weight-normal pr-2">Viola Bergere</span>
+                                <a href="https://github.com/violaberg" target="_blank" class="ms-2 text-decoration-none"
+                                    aria-label="Link to Github, opens in a new tab"><i
+                                        class="footer-link custom-blue fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank"
+                                    class="ms-2 text-decoration-none"
+                                    aria-label="Link to Linkedin, opens in a new tab"><i
+                                        class="footer-link custom-blue fa-brands fa-linkedin"></i>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        {% block postloadjs %}
-        <script>
-            $('.toast').toast('show');
-        </script>
-        {% endblock %}
-    </div>
+    {% block postloadjs %}
+    <script>
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
     <script src="https://kit.fontawesome.com/284fde1047.js" crossorigin="anonymous"></script>
 </body>
 

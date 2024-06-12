@@ -66,6 +66,12 @@ All CSS pages were validated using [W3C CSS Validator](https://jigsaw.w3.org/css
 
 ### **JavaScript**
 
+All JavaScript was validated using (JS Hint)[https://jshint.com/]
+
+|   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
+|--------------------------------------------|-----------------------------------------------------------|-------------|
+| Gemstones js                               |<details><summary>Base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
+
 ### **Python**
 
 | FILE    | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |

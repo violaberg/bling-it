@@ -97,7 +97,8 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="font-weight-bold">
-                                        <a class="edit-gemstone-btn custom-gold" href="{% url 'edit_gemstone' gemstone.id %}"
+                                        <a class="edit-gemstone-btn custom-gold"
+                                            href="{% url 'edit_gemstone' gemstone.id %}"
                                             aria-label="Brings to Edit gemstone page">Edit</a> |
                                         <a id="deleteGemstone{{gemstone.id}}" class="custom-red"
                                             href="{% url 'delete_gemstone' gemstone.id %}"
@@ -172,9 +173,14 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
+    $(document).ready(function () {
+            $(".btt-link").on('click', function () {
+                $(function () {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                });
+            });
+        });
 </script>
 
 <script>
@@ -197,6 +203,6 @@
 
             window.location.replace(currentUrl);
         }
-    })
+    });
 </script>
 {% endblock %}
