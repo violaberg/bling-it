@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'reviews',
     'crispy_forms',
     'storages',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [

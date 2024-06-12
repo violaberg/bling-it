@@ -77,12 +77,12 @@ All JavaScript was validated using (JS Hint)[https://jshint.com/]
 
 | FILE    | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Models   | <details><summary>Models</summary><img src=""></details>     | <mark></mark> |
-| Views    | <details><summary>Views</summary><img src=""></details>       | <mark></mark> |
-| Forms    | <details><summary>Forms</summary><img src=""></details>       | <mark></mark> |
-| Urls     | <details><summary>Urls</summary><img src=""></details>      | <mark></mark> |
-| Admin    | <details><summary>Admin</summary><img src=""></details>       | <mark></mark> |
-| Settings | <details><summary>Settings</summary><img src=""></details> | <mark></mark> |
+| Models   | <details><summary>Models</summary><img src=""></details>     | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src=""></details>       | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src=""></details>       | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src=""></details>      | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src=""></details>       | <mark>PASS</mark> |
+| Settings | <details><summary>Settings</summary><img src=""></details> | <mark>PASS</mark> |
 
 ## **Browser Testing**
 
