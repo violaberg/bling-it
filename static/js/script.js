@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const deleteReviewForm = document.getElementById("deleteReviewForm");
-    const deleteGemstone = document.getElementById("deleteGemstone")
+    const deleteGemstone = document.getElementById("deleteGemstone");
     
     if (deleteReviewForm) {
         deleteReviewForm.addEventListener("submit", function(event) {

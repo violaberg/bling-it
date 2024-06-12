@@ -41,8 +41,8 @@
             <a href="{% url 'profile' %}" class="custom-font dropdown-item" aria-label="Wishlist menu link">Wishlist</a>
             <a href="{% url 'account_logout' %}" class="custom-font dropdown-item" aria-label="Logout menu link">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="custom-font dropdown-item" aria-labelledby="Register menu link">Register</a>
-            <a href="{% url 'account_login' %}" class="custom-font dropdown-item" aria-labelledby="Login menu link">Login</a>
+            <a href="{% url 'account_signup' %}" class="custom-font dropdown-item" aria-label="Register menu link">Register</a>
+            <a href="{% url 'account_login' %}" class="custom-font dropdown-item" aria-label="Login menu link">Login</a>
             {% endif %}
         </div>
     </li>

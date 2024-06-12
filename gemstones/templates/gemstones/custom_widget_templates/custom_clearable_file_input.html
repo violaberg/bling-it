@@ -1,7 +1,7 @@
 {% if widget.is_initial %}
     <p>{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
-        <img width="96" height="96" class="rounded-0" src="{{ widget.value.url }}">
+        <img width="96" height="96" class="rounded-0" src="{{ widget.value.url }}" alt="Gemstone Image">
     </a>
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
@@ -14,4 +14,4 @@
 <span class="custom-secondary-btn btn rounded-0 btn-file">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
-<strong><p class="custom-red" id="filename"></p></strong>
+<strong><span class="custom-red" id="filename"></span></strong>
