@@ -67,7 +67,7 @@ Site goal is to give any gem lover/ collector a chance to jump into extraordinar
 
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
-Newsletter list | 3 | 5
+Newsletter | 3 | 5
 User register/login | 5 | 5
 User profile | 5 | 5
 User reviews | 3 | 4
@@ -82,7 +82,7 @@ Order confirmation by email | 5 | 5
 Option to safely pay for order with Stripe | 5 | 5
 Delivery information | 4 | 4
 Order history in profile | 3 | 3
-Special offers | 5 | 5
+Special offers | 1 | 3
 About page | 5 | 5
 Contact form | 5 | 5
 Social media links | 3 | 5
@@ -92,11 +92,11 @@ Privacy Policy | 3 | 3
 FAQ | 2 | 2
 Gemstone blog | 1 | 1
 ---|---|---
-Total |100|105
+Total |96|103
 
 ## **Scope plane**
 
-Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development. During development some features might be added/ discarded and some design changes are possible.
+Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development. During development some features might be added/ discarded and some design changes are possible. My MoSCoW method planning can be seen below:
 
 * Must Have:
     + Admin login
@@ -115,9 +115,9 @@ Due to a incredible amount of new knowledge and deadline for this project as for
     + Contact details
 
 * Should Have:
+    + Gemstone category
     + Personalized profile
     + Adjust bag items
-    + Specials
     + Sorting list
     + Product search
     + Search results
@@ -126,13 +126,10 @@ Due to a incredible amount of new knowledge and deadline for this project as for
     + Privacy Policy
 
 * Could Have:
-    + Sorting multiples
-    + Gemstone type
     + Wishlist
     + Rating
     + Leave a review
-    + Edit/update review
-    + Delete a review
+    + Delete a review for admin
     + Email confirmation after registration
     + Password recovery
     + Subscription
@@ -140,77 +137,81 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 * Won't Have:
     + Bling It blog
+    + Sorting multiples
+    + Edit/update review
+    + Delete a review for user
 
 ## **Structure plane**
 
 ### **Developer Tasks & User Stories**
 
-|   EPIC                    |ID|    Task        |
-|:--------------------------|--|:---------------|
-|PLANNING                   |  ||
-|                           |  | As a developer I can create a flowchart so that I can clearly see the logic of the site|
-|                           |  | As a developer I can create ERD so that I can clearly see my project's schema|
-|                           |  | As a developer I can create wireframes so that I can clearly see the planned site layout|
-|                           |  | As a developer I can choose color palette and style of the site so that I can have a clear vision of end result|
-|                           |  | As a developer I can choose fonts so that I can create a sophisticated site|
-|SET UP & DEPLOYMENT        |  ||
-|                           |  | As a developer, I can create a new Github repository to store my project files online|
-|                           |  | As a developer, I can create a new workspace on Gitpod, install Django and postgress database|
-|                           |  | As a developer, I can create a Heroku app and deploy project early to confirm funcionality|
-|                           |  | As a developer I can design a responsive app so that I can ensure it's easy to use on any device |
-|                           |  | As a user I can see user-friendly error pages so that I can safely get back to home page |
-|                           |  ||
+|   EPIC                    |    Task        |
+|:--------------------------|:---------------|
+|PLANNING                   ||
+|                           | As a developer I can create a flowchart so that I can clearly see the logic of the site|
+|                           | As a developer I can create ERD so that I can clearly see my project's schema|
+|                           | As a developer I can create wireframes so that I can clearly see the planned site layout|
+|                           | As a developer I can choose color palette and style of the site so that I can have a clear vision of end result|
+|                           | As a developer I can choose fonts so that I can create a sophisticated site|
+|SET UP & DEPLOYMENT        ||
+|                           | As a developer, I can create a new Github repository to store my project files online|
+|                           | As a developer, I can create a new workspace on Gitpod, install Django and postgress database|
+|                           | As a developer, I can create a Heroku app and deploy project early to confirm funcionality|
+|                           | As a developer I can design a responsive app so that I can ensure it's easy to use on any device |
+|                           | As a developer I can create user-friendly error pages so that I can guide user safely back to home page |
+|                           ||
 
 <br>
 
-|   EPIC                    |ID|    User Story  |
-|:--------------------------|--|:---------------|
-|VIEWING AND NAVIGATING     |  ||
-|                           |  | As a user I can view a list of products so that I can select some to purchase if I like|
-|                           |  | As a user I can individual product detail page so that I can identify price, description, product image and any other additional information |
-|                           |  | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later |
-|                           |  | As a user I can quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase|
-|                           |  | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later|
-|                           |  | As a user I can easily view the total of my purchase at any time so that I can avoid spending too much|
-|REGISTRATION & USER ACCOUNTS  |  ||
-|                           |  | As a user I can register on site so that I can save my personal information and wishlist|
-|                           |  | As a user I can login/ logout so that I can access my personal account information|
-|                           |  | As a user I can easily recover my password in case I forget it so that I can recover access to my account|
-|                           |  | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful |
-|                           |  | As a user I can have a personalized user profile so that I can view my personal order history and order confirmation, and save my payment information|
-|                           |  | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful|
-|ADMIN & STORE MANAGEMENT   |  ||
-|                           |  | As an admin I can easily login so that I can update site when needed|
-|                           |  | As an admin I can add a product so that I can add new items to store|
-|                           |  | As an admin I can edit/ update a product so that I can change product prices, descriptions, images and other product criteria|
-|                           |  | As an admin I can delete a product so that I can remove items that are no longer for sale|
-|SORTING & SEARCHING        |  ||
-|                           |  | As a user I can search for a product by name or a description so that I can find a specific product I'd like to purchase|
-|                           |  | As a user I can easily see what I've searched for and the number of results so that I can quickly see whether the product I want is available and decide if I want to purchase it|
-|                           |  | As a user I can sort the list of available products so that I can easily identify the best priced products|
-|                           |  | As a user I can sort multiple gemstones simultaneously so that I can search through several gemstones I like at the same time to choose the best option|
-|PURCHASING & CHECKOUT      |  ||
-|                           |  | As a user I can view items in my bag to be purchased so that I can identify the total cost of my purchase and all items I will receive|
-|                           |  | As a user I can remove individual items from my bag so that I can easily make changes to my purchase before checkout|
-|                           |  | As a user I can easily enter my payment information so that I can check out quickly and with no hassle|
-|                           |  | As a user I can feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase|
-|                           |  | As a user I can check my order status so that I can know when to expect it |
-|                           |  | As a user I can view an order confirmation after checkout so that I can verify that I haven't made any mistakes|
-|                           |  | As a user I can receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records|
-|REVIEWS & RATINGS                   |  ||
-|                           |  | As a user I can leave a rating for the site so that I can let others know of my experience with shop|
-|                           |  | As a user I can leave a review so that I can contribute to the community and help others to make informed decisions|
-|                           |  | As a user I can edit/ update my review so that I can update and refine my contributions, ensuring accuracy and relevance|
-|                           |  | As a user I can delete my review so that I can have control over the content associated with myself|
-|                           |  | As an admin I can delete review so that I can ensure appropriate content on app |
-|CONTACT                    |  ||
-|                           |  | As a user I can easily locate contact details so that I can contact shop if I need|
-|                           |  | As a user I can contact someone at Bling It so that I can receive any additional information needed|
-|                           |  | As a user I can subscribe to newsletters so that I can receive the latest news, special offers and sales notifications|
-|FAQ & PRIVACY POLICY       |  ||
-|                           |  | As an admin I can create/edit a list of FAQ so that I can offer users instant answers to their questions|
-|                           |  | As a user I can read through FAQ so that I can find answers to my questions without contacting shop|
-|                           |  | As a user I can read Privacy Policy so that I can see how my personal information, data will be used and what rights I have|
+|   EPIC                    |  User Story  |
+|:--------------------------|:-------------|
+|VIEWING AND NAVIGATING     ||
+|                           | As a user I can view a list of products so that I can select some to purchase if I like|
+|                           | As a user I can individual product detail page so that I can identify price, description, product image and any other additional information |
+|                           | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later |
+|                           | As a user I can quickly identify deals, clearance items and special offers so that I can take advantage of special savings on products I'd like to purchase|
+|                           | As a user I can add items I like to my wishlist so that I can find them easily if I decide to purchase later|
+|                           | As a user I can easily view the total of my purchase at any time so that I can avoid spending too much|
+|REGISTRATION & USER ACCOUNTS  ||
+|                           | As a user I can register on site so that I can save my personal information and wishlist|
+|                           | As a user I can login/ logout so that I can access my personal account information|
+|                           | As a user I can easily recover my password in case I forget it so that I can recover access to my account|
+|                           | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful |
+|                           | As a user I can have a personalized user profile so that I can view my personal order history and order confirmation, and save my payment information|
+|                           | As a user I can receive an email confirmation after registration so that I can verify that my account registration has been successful|
+|ADMIN & STORE MANAGEMENT   ||
+|                           | As an admin I can easily login so that I can update site when needed|
+|                           | As an admin I can add a product so that I can add new items to store|
+|                           | As an admin I can edit/ update a product so that I can change product prices, descriptions, images and other product criteria|
+|                           | As an admin I can delete a product so that I can remove items that are no longer for sale|
+|SORTING & SEARCHING        ||
+|                           | As a user I can search for a product by name or a description so that I can find a specific product I'd like to purchase|
+|                           | As a user I can easily see what I've searched for and the number of results so that I can quickly see whether the product I want is available and decide if I want to purchase it|
+|                           | As a user I can sort the list of available products so that I can easily identify the best priced products|
+|                           | As a user I can sort multiple gemstones simultaneously so that I can search through several gemstones I like at the same time to choose the best option|
+|PURCHASING & CHECKOUT      ||
+|                           | As a user I can view items in my bag to be purchased so that I can identify the total cost of my purchase and all items I will receive|
+|                           | As a user I can remove individual items from my bag so that I can easily make changes to my purchase before checkout|
+|                           | As a user I can easily enter my payment information so that I can check out quickly and with no hassle|
+|                           | As a user I can feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase|
+|                           | As a user I can check my order status so that I can know when to expect it |
+|                           | As a user I can view an order confirmation after checkout so that I can verify that I haven't made any mistakes|
+|                           | As a user I can receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records|
+|REVIEWS & RATINGS          ||
+|                           | As a user I can leave a rating for the site so that I can let others know of my experience with shop|
+|                           | As a user I can leave a review so that I can contribute to the community and help others to make informed decisions|
+|                           | As a user I can edit/ update my review so that I can update and refine my contributions, ensuring accuracy and relevance|
+|                           | As a user I can delete my review so that I can have control over the content associated with myself|
+|                           | As an admin I can delete review so that I can ensure appropriate content on app |
+|CONTACT                    ||
+|                           | As a user I can easily locate contact details so that I can contact shop if I need|
+|                           | As a user I can contact someone at Bling It so that I can receive any additional information needed|
+|                           | As a user I can subscribe to newsletters so that I can receive the latest news, special offers and sales notifications|
+|FAQ & PRIVACY POLICY       ||
+|                           | As an admin I can create/edit a list of FAQ so that I can offer users instant answers to their questions|
+|                           | As a user I can read through FAQ so that I can find answers to my questions without contacting shop|
+|                           | As a user I can read Privacy Policy so that I can see how my personal information, data will be used and what rights I have|
+|                           ||
 
 ## **Skeleton plane**
 
@@ -232,12 +233,6 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Contact Confirmation Page</summary><img src="static/docs/wireframes/Thank_You_Page_desktop.png"></details>
 
-<details><summary>Login Page</summary><img src="static/docs/wireframes/"></details>
-
-<details><summary>Logout Page</summary><img src="static/docs/wireframes/"></details>
-
-<details><summary>Register Page</summary><img src="static/docs/wireframes/"></details>
-
 <details><summary>FAQ Page</summary><img src="static/docs/wireframes/FAQ_desktop.png"></details>
 
 <details><summary>Privacy Policy Page</summary><img src="static/docs/wireframes/Privacy_Policy_desktop.png"></details>
@@ -255,12 +250,6 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 <details><summary>Contact Page</summary><img src="static/docs/wireframes/Contact_Us_mobile.png"></details>
 
 <details><summary>Contact Confirmation Page</summary><img src="static/docs/wireframes/Thank_You_Page_mobile.png"></details>
-
-<details><summary>Login Page</summary><img src="static/docs/wireframes/"></details>
-
-<details><summary>Logout Page</summary><img src="static/docs/wireframes/"></details>
-
-<details><summary>Register Page</summary><img src="static/docs/wireframes/"></details>
 
 <details><summary>FAQ Page</summary><img src="static/docs/wireframes/FAQ_mobile.png"></details>
 
@@ -405,9 +394,77 @@ The business would have a modest budget for advertising but would also utilize f
 
 ## **Features**
 
-* Logo created using [Vecteezy](https://www.vecteezy.com/) - original image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
+* Favicon<br>
 
-* Favicon created using [Favicon Generator](https://www.favicongenerator.com/)
+    ![Favicon](static/images/favicon.ico)
+
+* Brand name with logo<br>
+
+    ![Brand name with logo](static/images/features/logo-and-name.png)
+
+* Navigation<br>
+
+    ![Navigation](static/images/features/nav-desktop.png)
+
+* Menu<br>
+
+    ![Menu](static/images/features/menu-desktop.png)
+
+* Toast<br>
+
+    ![Toast](static/images/features/toast.png)
+
+* Sign up<br>
+
+    ![Sign up](static/images/features/sign-up-form-desktop.png)
+
+* Login<br>
+
+    ![Login](static/images/features/login-form-desktop.png)
+
+* Subscription form<br>
+
+    ![Subscription form](static/images/features/subscription-form-desktop.png)
+
+* Contact form<br>
+
+    ![Contact form](static/images/features/contact-form-desktop.png)
+
+* FAQ page<br>
+
+    ![FAQ page](static/images/features/faq-page-desktop.png)
+
+* Footer<br>
+
+    ![Footer](static/images/features/footer-desktop.png)
+
+* Gemstone card<br>
+
+    ![Gemstone card](static/images/features/gemstone-card.png)
+
+* Gemstone detail card<br>
+
+    ![Gemstone detail card](static/images/features/gemstone-detail-card-desktop.png)
+
+* Profile - orders tab<br>
+
+    ![Orders tab](static/images/features/orders-desktop.png)
+
+* Profile - delivery tab<br>
+
+    ![Profile](static/images/features/profile-page-desktop.png)
+
+* Profile - wishlist tab<br>
+
+    ![Wishlist tab](static/images/features/wishlist.png)
+
+* Review<br>
+
+    ![Review](static/images/features/review.png)
+
+* Review form<br>
+
+    ![Review form](static/images/features/review-form-desktop.png)
 
 ## **Future Development**
 
@@ -446,6 +503,8 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Hero Patterns](https://heropatterns.com/) used to create background pattern
 * [Google Fonts](https://fonts.google.com/) used to find and implement fonts
 * [Font Awesome](https://fontawesome.com/) used for icons
+* Logo created using [Vecteezy](https://www.vecteezy.com/) - original image by joko sutrisno, available at this [link](https://www.vecteezy.com/vector-art/6552384-diamond-abstract-logo)
+* Favicon created using [Favicon Generator](https://www.favicongenerator.com/)
 * Database schemas created using [DB diagram](https://dbdiagram.io/home) and [Graphviz](https://graphviz.org/)
 * Walkthrough Boutique Ado from Code Institute course used to set up my project, styled and adjusted to suit my own project
 * Chocolate menu taken from [Codepen](https://codepen.io/Kechicheb/pen/WNyZqYJ)

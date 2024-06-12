@@ -70,7 +70,7 @@
                         {% else %}
                         <a href="{% url 'gemstone_detail' gemstone.id %}"
                             aria-label="Brings to individual gemstones page">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                            <img class="card-img-top custom-blue img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="No image placeholder for {{ gemstone.name }}">
                         </a>
                         {% endif %}
@@ -174,13 +174,13 @@
 {{ block.super }}
 <script>
     $(document).ready(function () {
-            $(".btt-link").on('click', function () {
-                $(function () {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                });
+        $(".btt-link").on('click', function () {
+            $(function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             });
         });
+    });
 </script>
 
 <script>
