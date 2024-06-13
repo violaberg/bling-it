@@ -306,7 +306,7 @@ All HTML pages were validated using [W3C HTML Validator](https://validator.w3.or
 | About Page                                 |<details><summary>About Page</summary><img src="static/docs/validators/about-page-w3.png"></details>| <mark>PASS</mark> |
 | All Gemstones Page                         |<details><summary>All Gemstones Page</summary><img src="static/docs/validators/all-gemstones-w3.png"></details>| <mark>PASS</mark> |
 | Gemstones Detail Page                      |<details><summary>Gemstones Detail Page</summary><img src="static/docs/validators/gemstone-detail-w3.png"></details>| <mark>PASS</mark> |
-| Reviews Page                               |<details><summary>Reviews Page</summary><img src="static/docs/validators/"></details>| <mark></mark> |
+| Reviews Page                               |<details><summary>Reviews Page</summary><img src="static/docs/validators/reviews-page-w3.png"></details>| <mark></mark> |
 | Contact Page                               |<details><summary>Contact Page</summary><img src="static/docs/validators/contact-page-w3.png"></details>| <mark>PASS</mark> |
 | FAQ Page                                   |<details><summary>FAQ Page</summary><img src="static/docs/validators/faq-page-w3.png"></details>| <mark>PASS</mark> |
 | Privacy Policy Page                        |<details><summary>Privacy Policy Page</summary><img src="static/docs/validators/privacy-policy-w3.png"></details>| <mark>PASS</mark> |
@@ -339,6 +339,8 @@ All JavaScript was validated using (JS Hint)[https://jshint.com/]
 | scroll-to-top btn                          |<details><summary>reviews.html</summary><img src="static/docs/validators/scroll-to-top-jshint.PNG"></details>| <mark>PASS</mark> |
 
 ### **Python**
+
+All Python was validated using (CI Python Linter)[https://pep8ci.herokuapp.com/]
 
 | FILE     | VALIDATOR SCREENSHOT                                                                                    | RESULT            |
 | -------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
