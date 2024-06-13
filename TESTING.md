@@ -25,9 +25,274 @@
 
 ## **User Story Testing**
 
-|   USER STORY                                     |   TEST                |   RESULT      |
-|--------------------------------------------------|-----------------------|---------------|
-| As a user, I want to navigate through site easily|                       | <mark></mark> |
+For the following, I will leave out the type of user, ***As a developer/admin/user, I can…***, and only list the latter part of the story as a heading.
+
+### **EPIC 1 - Planning:**
+
+**...create wireframes so that I can clearly see the planned site layout** |passed |
+|:---:|:---|
+Wireframes created for desktop |&check;|
+Wireframes created for mobile |&check;|
+|||
+
+**...choose fonts so that I can create a sophisticated site** |passed |
+|:---:|:---|
+Main, easy to read, Google font chosen |&check;|
+Heading and special text Google font chosen |&check;|
+Both fonts suit the style of app |&check;|
+|||
+
+**...choose color palette and style of the site so that I can have a clear vision of end result** |passed |
+|:---:|:---|
+Colours chosen keeping in mind project style |&check;|
+Colours are pleasant to an eye and create a good contrast |&check;|
+Logo and background chosen to suit the style and colors |&check;|
+Color palette created once colors have been chosen |&check;|
+|||
+
+**... create ERD so that I can clearly see my project's schema** |passed |
+|:---:|:---|
+ERD created and uploaded to project's folder |&check;|
+|||
+
+### **EPIC 2 - Setup and Deployment:**
+
+**...create Github repository so that I can store my project's files online** |passed |
+|:---:|:---|
+Github repository created |&check;|
+Kanban board using MoSCoW method created |&check;|
+Project set to Public |&check;|
+|||
+
+**...create new workspace so that I can start working on project** |passed |
+|:---:|:---|
+Workspace on Gitpod using CI Gitpod full template created |&check;|
+Django installed |&check;|
+README, TESTING, DEPLOYMENT and AGILE |&check;|
+New Heroku app created and deployed early so to can confirm functionality |&check;|
+Databse connected |&check;|
+|||
+
+**...design a responsive app so that I can ensure it's easy to use on any device** |passed |
+|:---:|:---|
+Project designed and developed with mobile first approach |&check;|
+Bootstrap and media queries used for responsiveness |&check;|
+|||
+
+**... create user-friendly error pages so that I can guide user safely back to home page** |passed |
+|:---:|:---|
+403, 404, 500 error pages created |&check;|
+Customize to project's style |&check;|
+'Back to home page' button added |&check;|
+|||
+
+### **EPIC 3 - Admin and Store Management:**
+
+**...easily login so that I can update site when needed** |passed |
+|:---:|:---|
+Access to only authenticated admin |&check;|
+User friendly admin panel |&check;|
+|||
+
+**...add a product so that I can add new items to store** |passed |
+|:---:|:---|
+User friendly form in admin panel to add products |&check;|
+|||
+
+**...edit/ update a product so that I can change product prices, descriptions, images and other product criteria** |passed |
+|:---:|:---|
+User friendly form in admin panel to edit/ update products |&check;|
+|||
+
+**... create ERD so that I can clearly see my project's schema** |passed |
+|:---:|:---|
+delete a product so that I can remove items that are no longer for sale |&check;|
+User friendly form on admin panel to delete a product |&check;|
+Alert message confirming deletion |left for future dev|
+|||
+
+### **EPIC 4 - Viewing and Navigating:**
+
+**...view a list of products so that I can select some to purchase if I like** |passed |
+|:---:|:---|
+User friendly product list with images (or default image) and price |&check;|
+|||
+
+**...check individual product detail page so that I can identify price, description, product image and any other additional information** |passed |
+|:---:|:---|
+User friendly product page created |&check;|
+Easy to read description written |&check;|
+All necessary information clearly visible |&check;|
+|||
+
+**...choose a gemstone so that I can quickly find products I'm interested in and don't have to search through all** |passed |
+|:---:|:---|
+Option to choose a certain gemstone type |&check;|
+|||
+
+**...easily view the total of my purchase at any time so that I can avoid spending too much** |passed |
+|:---:|:---|
+Clearly visible total at the top of the page beside cart icon |&check;|
+|||
+
+**...add items I like to my wishlist so that I can find them easily if I decide to purchase later** |passed |
+|:---:|:---|
+Easily visible 'heart' for option to add item to wishlist |&check;|
+Wishlist accessible on top of the page |&check;|
+|||
+
+### **EPIC 5 - Sorting and Searching:**
+
+**...search for a product by name or a description so that I can find a specific product I'd like to purchase** |passed |
+|:---:|:---|
+Clearly visible search bar at the top of the page |&check;|
+|||
+
+**...easily see what I've searched for and the number of results so that I can quickly see whether the product I want is available and decide if I want to purchase it** |passed |
+|:---:|:---|
+Clearly visible search results |&check;|
+|||
+
+**...sort the list of available products so that I can easily identify the best priced products** |passed |
+|:---:|:---|
+Easy to sort items |&check;|
+Option to sort A-Z/ Z-A |&check;|
+By price |&check;|
+By carat size |&check;|
+|||
+
+### **EPIC 6 - Registration and User Accounts:**
+
+**...register on site so that I can save my personal information and wishlist** |passed |
+|:---:|:---|
+User friendly sign up form |&check;|
+User data stored and processed securely |&check;|
+Validation for user input |&check;|
+|||
+
+**...login/ logout so that I can access my personal account information** |passed |
+|:---:|:---|
+User friendly form for login |&check;|
+Clearly visible logout button |&check;|
+Confirmation before and after logging out |&check;|
+|||
+
+**...receive an email confirmation after registration so that I can verify that my account registration has been successful** |passed |
+|:---:|:---|
+Email confirmation sent successfully |&check;|
+|||
+
+**...easily recover my password in case I forget it so that I can recover access to my account** |passed |
+|:---:|:---|
+Easily visible and user friendly way to recover password |&check;|
+|||
+
+**...have a personalized user profile so that I can view my personal order history and order confirmation, and save my payment information** |passed |
+|:---:|:---|
+User friendly profile with personal information easily accessible |&check;|
+|||
+
+### **EPIC 7 - Purchasing and Checkout:**
+
+**...view items in my bag to be purchased so that I can identify the total cost of my purchase and all items I will receive** |passed |
+|:---:|:---|
+User friendly checkout bag |&check;|
+Clearly visible items in bag with prices beside each |&check;|
+Clearly visible total amount of purchase |&check;|
+|||
+
+**...remove individual items from my bag so that I can easily make changes to my purchase before checkout** |passed |
+|:---:|:---|
+Easy to remove items before checkout |&check;|
+Immediate changes in bag after removal |&check;|
+|||
+
+**...feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase** |passed |
+|:---:|:---|
+All safety features implemented |&check;|
+|||
+
+**...easily enter my payment information so that I can check out quickly and with no hassle** |passed |
+|:---:|:---|
+User friendly form to fill in payment details |&check;|
+Payment detail verification |&check;|
+|||
+
+**... view an order confirmation after checkout so that I can verify that I haven't made any mistakes** |passed |
+|:---:|:---|
+Clearly visible order confirmation with items and total included |&check;|
+|||
+
+**...receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records** |passed |
+|:---:|:---|
+Email sent successfully |&check;|
+|||
+
+**...check my order status so that I can know when to expect it** |passed |
+|:---:|:---|
+Clearly visible order status in user profile |&check;|
+Order stages - In Progress, Delivered, Cancelled |&check;|
+|||
+
+### **EPIC 8 - Contact:**
+
+**...easily locate contact details so that I can contact shop if I need** |passed |
+|:---:|:---|
+Easily visible contact details in footer visible on every page |&check;|
+|||
+
+**...contact someone at Bling It so that I can receive any additional information needed** |passed |
+|:---:|:---|
+Responsive and easy to use contact form with necessary fields |&check;|
+Site should prominently display contact information, including phone number, a contact form and/or email address |&check;|
+Email confirmation page after message has been sent successfully |&check;|
+|||
+
+**...subscribe to newsletters so that I can receive the latest news, special offers and sales notifications** |passed |
+|:---:|:---|
+Clearly visible subscription form on home page |&check;|
+|||
+
+### **EPIC 9 - FAQ and Privacy Policy:**
+
+**...create/edit a list of FAQ so that I can offer users instant answers to their questions** |passed |
+|:---:|:---|
+User friendly option to write FAQ through admin panel |&check;|
+Option to edit questions |&check;|
+|||
+
+**...read through FAQ so that I can find answers to my questions without contacting shop** |passed |
+|:---:|:---|
+Easy to locate FAQ page |&check;|
+Clearly written questions and answers |&check;|
+|||
+
+**...read Privacy Policy so that I can see how my personal information, data will be used and what rights I have** |passed |
+|:---:|:---|
+Clearly written policy |&check;|
+Easy to access Policy page |&check;|
+|||
+
+
+### **EPIC 10 - Reviews and Ratings:**
+
+**...leave a review so that I can contribute to the community and help others to make informed decisions** |passed |
+|:---:|:---|
+The review submission form should include fields for the user to enter a title and written content |&check;|
+User friendly form |&check;|
+Character limit should be set |&check;|
+|||
+
+**...leave a rating for the site so that I can let others know of my experience with shop** |passed |
+|:---:|:---|
+Clearly visible location to leave a rating for site |&check;|
+|||
+
+**...delete review so that I can ensure appropriate content on app** |passed |
+|:---:|:---|
+Delete button/ link |&check;|
+Modal to confirm deletion |&check;|
+|||
 
 ## **Code Validation**
 
@@ -60,9 +325,9 @@ All CSS pages were validated using [W3C CSS Validator](https://jigsaw.w3.org/css
 
 |   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
 |--------------------------------------------|-----------------------------------------------------------|-------------|
-| Base.css                                   |<details><summary>Base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
-| Checkout.css                               |<details><summary>Checkout.css</summary><img src="static/docs/validators/checkout.css-w3.png"></details>| <mark>PASS</mark> |
-| Profile.css                                |<details><summary>Profile.css</summary><img src="static/docs/validators/profile.css-w3.png"></details>| <mark>PASS</mark> |
+| base.css                                   |<details><summary>base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
+| checkout.css                               |<details><summary>checkout.css</summary><img src="static/docs/validators/checkout.css-w3.png"></details>| <mark>PASS</mark> |
+| profile.css                                |<details><summary>profile.css</summary><img src="static/docs/validators/profile.css-w3.png"></details>| <mark>PASS</mark> |
 
 ### **JavaScript**
 
@@ -70,53 +335,69 @@ All JavaScript was validated using (JS Hint)[https://jshint.com/]
 
 |   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
 |--------------------------------------------|-----------------------------------------------------------|-------------|
-| Gemstones js                               |<details><summary>Base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
-| Gemstones js                               |<details><summary>Base.css</summary><img src="static/docs/validators/base.css-w3.png"></details>| <mark>PASS</mark> |
+| gemstones.html                             |<details><summary>gemstones.html</summary><img src="static/docs/validators/gemstones-jshint.PNG"></details>| <mark>PASS</mark> |
+| scroll-to-top btn                          |<details><summary>reviews.html</summary><img src="static/docs/validators/scroll-to-top-jshint.PNG"></details>| <mark>PASS</mark> |
 
 ### **Python**
 
-| FILE    | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
-| -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| FILE     | VALIDATOR SCREENSHOT                                                                                    | RESULT            |
+| -------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
 | ***blingit*** |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators/project-views-plinton.png"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators/project-urls-plinton.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/project-views-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/project-urls-plinter.png"></details> | <mark>PASS</mark> |
+| settings.py | <details><summary>Settings</summary><img src="static/docs/validators/settings-plinter.png"></details> | <mark>few errors but these can't be split for better functionality</mark> |
 | ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/home-models-plinter.png"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| ***home*** |
-| Models   | <details><summary>Models</summary><img src="static/docs/validators/p"></details> | <mark>PASS</mark> |
-| Views    | <details><summary>Views</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Forms    | <details><summary>Forms</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Urls     | <details><summary>Urls</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-| Admin    | <details><summary>Admin</summary><img src="static/docs/validators"></details> | <mark>PASS</mark> |
-
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/home-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/home-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/home-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/home-urls-plinter.png"></details> | <mark>PASS</mark> |
+| admin.py    | <details><summary>Admin</summary><img src="static/docs/validators/home-admin-plinter.png"></details> | <mark>PASS</mark> |
+| apps.py     | <details><summary>Apps</summary><img src="static/docs/validators/home-apps-plinter.png"></details> | <mark>PASS</mark> |
+| tests.py    | <details><summary>Tests</summary><img src="static/docs/validators/home-tests-plinter.png"></details> | <mark>PASS</mark> |
+| ***bag*** |
+| apps.py     | <details><summary>Models</summary><img src="static/docs/validators/bag-apps-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/bag-views-plinter.png"></details> | <mark>PASS</mark> |
+| contexts.py | <details><summary>Contexts</summary><img src="static/docs/validators/bag-contexts-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/bag-urls-plinter.png"></details> | <mark>PASS</mark> |
+| ***checkout*** |
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/checkout-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/checkout-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/checkout-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/checkout-urls-plinter.png"></details> | <mark>PASS</mark> |
+| admin.py    | <details><summary>Admin</summary><img src="static/docs/validators/checkout-admin-plinter.png"></details> | <mark>PASS</mark> |
+| signals.py  | <details><summary>Signals</summary><img src="static/docs/validators/checkout-signals-plinter.png"></details> | <mark>PASS</mark> |
+| webhooks.py  | <details><summary>Webhook</summary><img src="static/docs/validators/checkout-webhook-plinter.png"></details> | <mark>PASS</mark> |
+| webhook_handlers.py | <details><summary>Webhook Handler</summary><img src="static/docs/validators/checkout-webhookhandler-plinter.png"></details> | <mark>PASS</mark> |
+| ***contact*** |
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/contact-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/contact-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/contact-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/contact-urls-plinter.png"></details> | <mark>PASS</mark> |
+| tests.py    | <details><summary>Tests</summary><img src="static/docs/validators/contact-tests-plinter.png"></details> | <mark>PASS</mark> |
+| apps.py     | <details><summary>Apps</summary><img src="static/docs/validators/contact-apps-plinter.png"></details> | <mark>PASS</mark> |
+| ***gemstones*** |
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/gemstones-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/gemstones-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/gemstones-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/gemstones-urls-plinter.png"></details> | <mark>PASS</mark> |
+| admin.py    | <details><summary>Admin</summary><img src="static/docs/validators/gemstones-admin-plinter.png"></details> | <mark>PASS</mark> |
+| widgets.py  | <details><summary>Widgets</summary><img src="static/docs/validators/gemstones-widgets-plinter.png"></details> | <mark>PASS</mark> |
+| apps.py     | <details><summary>Apps</summary><img src="static/docs/validators/gemstones-apps-plinter.png"></details> | <mark>PASS</mark> |
+| ***profiles*** |
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/profiles-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/profiles-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/profiles-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/project-urls-plinter.png"></details> | <mark>PASS</mark> |
+| apps.py     | <details><summary>Apps</summary><img src="static/docs/validators/profiles-apps-plinter.png"></details> | <mark>PASS</mark> |
+| ***reviews*** |
+| models.py   | <details><summary>Models</summary><img src="static/docs/validators/reviews-models-plinter.png"></details> | <mark>PASS</mark> |
+| views.py    | <details><summary>Views</summary><img src="static/docs/validators/reviews-views-plinter.png"></details> | <mark>PASS</mark> |
+| forms.py    | <details><summary>Forms</summary><img src="static/docs/validators/reviews-forms-plinter.png"></details> | <mark>PASS</mark> |
+| urls.py     | <details><summary>Urls</summary><img src="static/docs/validators/reviews-urls-plinter.png"></details> | <mark>PASS</mark> |
+| admin.py    | <details><summary>Admin</summary><img src="static/docs/validators/reviews-admin-plinter.png"></details> | <mark>PASS</mark> |
+| apps.py     | <details><summary>Apps</summary><img src="static/docs/validators/reviews-apps-plinter.png"></details> | <mark>PASS</mark> |
+| tests.py    | <details><summary>Tests</summary><img src="static/docs/validators/reviews-tests-plinter.png"></details> | <mark>PASS</mark> |
+|  |  |  |
 
 ## **Browser Testing**
 
