@@ -53,123 +53,129 @@
     <title>Bling It {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
-    <header class="container-fluid pt-3 mb-0 pb-0">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
-                    class="logo-img">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0"
-                    aria-label="Bling It logo as link for home page">
-                    <span class="logo-font custom-blue my-0">Bling It</span>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'gemstones' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-blue rounded-0" type="text" name="q"
-                            placeholder="Search our site" aria-label="Search our site">
-                        <div class="input-group-append">
-                            <button class="btn btn-blue border border-blue rounded-0" type="submit" aria-label="search">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="header-item text-red nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="custom-gold fas fa-user fa-lg pb-2"></i></div>
-                                <p class="my-0">My Account</p>
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+        <header class="container-fluid pt-3 mb-0 pb-0">
+            <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo of Blint It, golden diamond with sparkle on top"
+                        class="logo-img">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link pt-0"
+                        aria-label="Bling It logo as link for home page">
+                        <span class="logo-font custom-blue my-0">Bling It</span>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'gemstones' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-blue rounded-0" type="text" name="q"
+                                placeholder="Search our site" aria-label="Search our site">
+                            <div class="input-group-append">
+                                <button class="btn btn-blue border border-blue rounded-0" type="submit"
+                                    aria-label="search">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                        <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_gemstone' %}" class="dropdown-item" aria-label="Store Management">Store
-                                Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile">My
-                                Profile</a>
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Wishlist">Wishlist</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item"
-                                aria-label="Register">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link"
-                            href="{% url 'view_bag' %}" aria-label="Shopping bag">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
-                                <p class="grand-total my-0">
-                                    {% if grand_total %}
-                                    €{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    €0.00
-                                    {% endif %}
-                                </p>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="custom-font list-inline list-unstyled text-center text-xl-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="header-item text-red nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="custom-gold fas fa-user fa-lg pb-2"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_gemstone' %}" class="dropdown-item"
+                                    aria-label="Store Management">Store
+                                    Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile">My
+                                    Profile</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Wishlist">Wishlist</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item"
+                                    aria-label="Logout">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item"
+                                    aria-label="Register">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}header-item text-gold{% endif %} nav-link"
+                                href="{% url 'view_bag' %}" aria-label="Shopping bag">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
+                                    <p class="grand-total my-0">
+                                        {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="custom-nav row">
-            <nav class="navbar navbar-expand-lg mx-auto width-100">
-                <button class="chocolate navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-blue text-gold">
-                <h2 class="banner my-1 pt-1">Free delivery on all orders!</h2>
+            <div class="custom-nav row">
+                <nav class="navbar navbar-expand-lg mx-auto width-100">
+                    <button class="chocolate navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
-        </div>
-    </header>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-blue text-gold">
+                    <h2 class="banner my-1 pt-1">Free delivery on all orders!</h2>
+                </div>
+            </div>
+        </header>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
         {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
-    {% block content %}
-    {% endblock %}
-    <footer class="custom-red font-weight-bold sticky-bottom width-100 py-3">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="custom-red font-weight-bold width-100 py-3">
         <div class="container-lg">
             <div class="row mx-auto">
                 <div class="col-md-4 mt-md-0 pb-2">
