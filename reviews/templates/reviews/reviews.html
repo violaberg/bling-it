@@ -85,7 +85,11 @@
             {% if user.is_authenticated %}
             <form class="review-form custom-blue p-3 mt-4 mb-3" method="post">
                 {% csrf_token %}
-                {% crispy form %}
+                {{form|crispy}}
+                <div class="account-btn mb-2">
+                    <button class="custom-gemstone-btn rounded-0 px-2 py-1" type="submit"
+                        aria-label="Submit button">Submit</button>
+                </div>
             </form>
             {% else %}
             <div class="leave-review text-center w-50 mx-auto p-2 mt-4">

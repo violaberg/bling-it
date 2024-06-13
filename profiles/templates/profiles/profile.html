@@ -160,41 +160,45 @@
                                     track of them!</td>
                             </tr>
                             {% endfor %}
+                            <!-- Pagination -->
+                            <div class="row my-3">
+                                <div class="col">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-center">
+                                            {% if wishlist_items.has_previous %}
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                    href="?page={{ wishlist_items.previous_page_number }}"
+                                                    aria-label="Previous page">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            {% endif %}
+                                            {% for num in wishlist_items.paginator.page_range %}
+                                            {% if wishlist_items.number == num %}
+                                            <li class="page-item active"><span
+                                                    class="page-link rounded-0">{{ num }}</span></li>
+                                            {% elif num > wishlist_items.number|add:'-3' and num < wishlist_items.number|add:'3' %}
+                                            <li class="page-item px-2"><a class="page-link"
+                                                    href="?page={{ num }}">{{ num }}</a>
+                                            </li>
+                                            {% endif %}
+                                            {% endfor %}
+                                            {% if wishlist_items.has_next %}
+                                            <li class="page-item rounded-0">
+                                                <a class="page-link rounded-0"
+                                                    href="?page={{ wishlist_items.next_page_number }}"
+                                                    aria-label="Next page">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                            {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </tbody>
                     </table>
-                </div>
-                <!-- Pagination -->
-                <div class="row my-3">
-                    <div class="col">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center">
-                                {% if wishlist_items.has_previous %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{ wishlist_items.previous_page_number }}"
-                                        aria-label="Previous page">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% for num in wishlist_items.paginator.page_range %}
-                                {% if wishlist_items.number == num %}
-                                <li class="page-item active"><span class="page-link rounded-0">{{ num }}</span></li>
-                                {% elif num > wishlist_items.number|add:'-3' and num < wishlist_items.number|add:'3' %}
-                                <li class="page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                                </li>
-                                {% endif %}
-                                {% endfor %}
-                                {% if wishlist_items.has_next %}
-                                <li class="page-item rounded-0">
-                                    <a class="page-link rounded-0" href="?page={{ wishlist_items.next_page_number }}"
-                                        aria-label="Next page">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
             </div>
         </div>

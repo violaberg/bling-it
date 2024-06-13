@@ -42,6 +42,7 @@ Deployed project can be found here: [Bling It](https://bling-it-242ac659e1b6.her
 * [**Acknowledgement & Credits**](#acknowledgement--credits)
 * [**Media**](#media)
     - [**Images**](#images)
+* [**Conclusion**](#conclusion)
 
 # **User experience (UX)**
 

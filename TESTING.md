@@ -1,25 +1,33 @@
 # **TESTING**
 
 ## **Table of Contents**
-* [**User Story Testing**]()
-* [**Code Validation**]()
-    + [**HTML**]()
-    + [**CSS**]()
-    + [**JavaScript**]()
-    + [**Python**]()
-* [**Browser Testing**]()
-* [**Device Testing**]()
-* [**Lighthouse**]()
-* [**Manual Testing**]()
-    + [**Navigation**]()
-    + [**Home Page**]()
-    + [**About Page**]()
-    + [**Gallery**]()
-    + [**Book a Tour**]()
-    + [**Contact Us Page**]()
-    + [**Sign Up Page**]()
-    + [**Login Page**]()
-    + [**Logout Page**]()
+* [**User Story Testing**](#user-story-testing)
+* [**Code Validation**](#code-validation)
+    + [**HTML**](#html)
+    + [**CSS**](#css)
+    + [**JavaScript**](#javascript)
+    + [**Python**](#python)
+* [**Automated Testing**](#automated-testing)
+* [**Browser Testing**](#browser-testing)
+* [**Device Testing**](#device-testing)
+* [**Lighthouse**](#lighthouse)
+* [**Manual Testing**](#manual-testing)
+    + [**Navigation**](#navigation)
+    + [**Home Page**](#home-page)
+    + [**All Gemstone Page**](#all-gemstones-page)
+    + [**Gemstone's Detail Page**](#gemstones-detail-page)
+    + [**Reviews Page**](#reviews-page)
+    + [**Contact Page**](#contact-page)
+    + [**FAQ Page**](#faq-page)
+    + [**Privacy Policy Page**](#privacy-policy-page)
+    + [**Sign Up Page**](#sign-up-page)
+    + [**Login Page**](#login-page)
+    + [**Log out Page**](#log-out-page)
+    + [**Shopping Bag Page**](#shopping-bag-page)
+    + [**Checkout Page**](#checkout-page)
+    + [**Profile Page**](#profile-page)
+    + [**Add Gemstone Page for Admin**](#add-gemstone-page-for-admin)
+    + [**Edit Gemstone Page for Admin**](#log-out-page)
 * [**Responsiveness**]()
 * [**Bugs & Fixes**]()
 
@@ -401,6 +409,17 @@ All Python was validated using (CI Python Linter)[https://pep8ci.herokuapp.com/]
 | tests.py    | <details><summary>Tests</summary><img src="static/docs/validators/reviews-tests-plinter.png"></details> | <mark>PASS</mark> |
 |  |  |  |
 
+## **Automated Testing**
+
+Some automated testing was done alongside manual and results can be found below:
+
+* Home app<br>
+    ![home app](static/docs/tests/home-tests.png)
+* Contact app<br>
+    ![contact app](static/docs/tests/contact-tests.png)
+* Reviews app<br>
+    ![reviews app](static/docs/tests/reviews-tests.png)
+
 ## **Browser Testing**
 
 The website was tested on Google Chrome, Firefox and Microsoft Edge browsers.
@@ -431,79 +450,155 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 | Element                | Action      | Expected Result                                         | Pass/Fail         |
 | ---------------------- | ----------- | ------------------------------------------------------- | ----------------- |
-| Logo                   | Click       | Redirect to Home page                                   | <mark></mark> |
-| Home Link              | Click       | Redirect to Home page                                   |  |
-| Register Link          | Click       | Redirect to sign up page                                |  |
-| Log in Link            | Click       | Redirect to sign in page                                |  |
-| Log out Link           | Click       | Redirect to log out page                                |  |
-| Hamburger Menu         | Click       | Render a dropdown menu of all links                     |  |
-| Footer Socials         | Click       | Redirect in a new tab to all respective media platforms |  |
-| Footer Email           | Click       | Open up an email provider with developer email attached |  |
-| Register Link          | Display     | Render for non authenticated users                      |  |
-| Log in Link            | Display     | Render for non authenticated users                      |  |
-| Log out Link           | Display     | Render only if user is authenticated                    |  |
+| Logo                   | Click       | Redirect to Home page                                   | <mark>PASS</mark> |
+| Home Link              | Click       | Redirect to Home page                                   | <mark>PASS</mark> |
+| Register Link          | Click       | Redirect to sign up page                                | <mark>PASS</mark> |
+| Log in Link            | Click       | Redirect to sign in page                                | <mark>PASS</mark> |
+| Log out Link           | Click       | Redirect to log out page                                | <mark>PASS</mark> |
+| Chocolate Menu         | Click       | Render a dropdown menu of all links                     | <mark>PASS</mark> |
+| Footer Socials         | Click       | Redirect in a new tab to all respective media platforms | <mark>PASS</mark> |
+| Footer Privacy Policy Link | Click   | Redirect to Priavcy Policy page                         | <mark>PASS</mark> |
+| Footer FAQ Link        | Click       | Redirect to FAQ page                                    | <mark>PASS</mark> |
+| Register Link          | Display     | Render for non authenticated users                      | <mark>PASS</mark> |
+| Log in Link            | Display     | Render for non authenticated users                      | <mark>PASS</mark> |
+| Log out Link           | Display     | Render only if user is authenticated                    | <mark>PASS</mark> |
 
 ### Home Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Shop Now button    | Click       | Redirect to All Gesmtones page           | <mark>PASS</mark> |
+| Subscribe button   | Click       | Submit request for newsletter subscription | <mark>PASS</mark> |
+| Subscribe form     | Enter email | Sign up for newsletter                   | <mark>PASS</mark> |
 
-### About Page
+### All Gemstones Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Category Badges    | Click       | Sorts through categories leaving selected one | <mark>PASS</mark> |
+| Pagination         | Click       | Redirects to the appropriate page        | <mark>PASS</mark> |
+| Sorting            | Click       | Sorting method returns the correct results when element selected | <mark>PASS</mark> |
+| Gemstones Home Link | Click      | Redirects back All Gemstones page        | <mark>PASS</mark> |
+| Scroll to Top button | Click        | Scrolls page to top | <mark>PASS</mark> |
+
+### Gemstone's Detail Page
+
+| Element            | Action      | Expected Result                          | Pass/Fail         |
+| ------------------ | ----------- | ---------------------------------------- | ----------------- |
+| Add to Bag button  | Click       | Gemstone added to shopping bag           | <mark>PASS</mark> |
+| Keep Shopping button | Click     | Redirects back All Gemstones page         | <mark>PASS</mark> |
+| Wishlist heart icon | Click      | User logged in: Adds gemstone to user's wishlist | <mark>PASS</mark> |
+| Wishlist heart icon | Click      | User not logged in: Redirect to login page | <mark>PASS</mark> |
+
+### Reviews Page
+
+| Element            | Action      | Expected Result                          | Pass/Fail         |
+| ------------------ | ----------- | ---------------------------------------- | ----------------- |
+| Review Form | Click        | Takes in neccessary review info and submits    | <mark>PASS</mark> |
+| Submit button | Click       | Submit review form            | <mark>PASS</mark> |
+| Delete review Link | Click        | If user logged in as admin, deletes review | <mark>PASS</mark> |
+| Pagination         | Click       | Redirects to the appropriate page        | <mark>PASS</mark> |
+| Scroll to Top button | Click        | Scrolls page to top | <mark>PASS</mark> |
 
 ### Contact Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Contact Form | Click        | Sends requested contact message to Bling It    | <mark>PASS</mark> |
+| Contact Form | Click        | Once submitted, sends confirmation email to user | <mark>PASS</mark> |
+| Submit button | Click       | Submit contact form            | <mark>PASS</mark> |
 
-### Delete Confirmation Modal
+### FAQ Page
 
-| Element               | Action      | Expected Result                       | Pass/Fail         |
-| --------------------- | ----------- | ------------------------------------- | ----------------- |
-| Close Button          | Click       | Modal and opacic background disappear | <mark></mark> |
-| Confirm Delete Button | Click       | Context item is delete from database  |  |
-| Close Button          | Hover/Focus | Darken Background                     |  |
-| Confirm Delete Button | Hover/Focus | Darken Background                     |  |
+| Element            | Action      | Expected Result                          | Pass/Fail         |
+| ------------------ | ----------- | ---------------------------------------- | ----------------- |
+| Collapsable question header | Click        | Toggles open/ close answers for each question | <mark>PASS</mark> |
+
+### Privacy Policy Page
+
+| Element            | Action      | Expected Result                          | Pass/Fail         |
+| ------------------ | ----------- | ---------------------------------------- | ----------------- |
+| Scroll to Top button | Click        | Scrolls page to top | <mark>PASS</mark> |
 
 ### Sign Up Page
 
 | Element       | Action         | Expected Result                             | Pass/Fail         |
 | ------------- | -------------- | ------------------------------------------- | ----------------- |
-| Page          | Authentication | Authenticated users redirected to Home page | <mark></mark> |
-| Form(Valid)   | Submit         | Redirected to Home page                     |  |
-| Form(Valid)   | Submit         | Sign up in Notification received            |  |
-| Form(Invalid) | Submit         | Error Context rendered to UI                |  |
-| Form(Invalid) | Submit         | Error Notification received                 |  |
-| Login Link    | Click          | Redirect to Login Page                      |  |
-| Form Button   | Hover/Focus    | Darken Background                           |  |
-| Login Link    | Hover/Focus    | Darken Text                                 |  |
+| Form(Valid)   | Submit         | Redirects to Verify Your E-mail Address page | <mark>PASS</mark> |
+| Form(Valid)   | Submit         | Sign up in Notification received            | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Notification received                 | <mark>PASS</mark> |
+| Login Link    | Click          | Redirect to Login Page                      | <mark>PASS</mark> |
+| Sign up button | Hover/Focus   | Darken Background                           | <mark>PASS</mark> |
+| Sign up button | Click         | Submits the form                            | <mark>PASS</mark> |
+| Login Link    | Hover/Focus    | Darken Text                                 | <mark>PASS</mark> |
 
 ### Login Page
 
 | Element       | Action         | Expected Result                             | Pass/Fail         |
 | ------------- | -------------- | ------------------------------------------- | ----------------- |
-| Page          | Authentication | Authenticated users redirected to Home page | <mark></mark> |
-| Form(Valid)   | Submit         | Redirected to Home page                     |  |
-| Form(Valid)   | Submit         | Sign up in Notification received            |  |
-| Form(Invalid) | Submit         | Error Context rendered to UI                |  |
-| Form(Invalid) | Submit         | Error Notification received                 |  |
-| Register Link | Click          | Redirect to Sign Up Page                    |  |
-| Form Button   | Hover/Focus    | Darken Background                           |  |
-| Register Link | Hover/Focus    | Darken Text                                 |  |
+| Form(Valid)   | Submit         | Redirected to Home page                     | <mark>PASS</mark> |
+| Form(Valid)   | Submit         | Sign up in Notification received            | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Notification received                 | <mark>PASS</mark> |
+| Register Link | Click          | Redirect to Sign Up Page                    | <mark>PASS</mark> |
+| Register Link | Hover/Focus    | Darkens Text                                | <mark>PASS</mark> |
+| Log in button | Hover/Focus    | Darkens Background                          | <mark>PASS</mark> |
+| Log in button | Click          | Submits the form                            | <mark>PASS</mark> |
 
 ### Log Out Page
 
 | Element       | Action         | Expected Result                                | Pass/Fail         |
 | ------------- | -------------- | ---------------------------------------------- | ----------------- |
-| Page          | Authentication | Un-authenticated users redirected to Home page | <mark></mark> |
-| Logout Button | Click          | User session is Logged out                     |  |
-| Logout Button | Click          | Redirected to Home page                        |  |
-| Form Button   | Hover/Focus    | Darken Background                              |  |
+| Logout Button | Click          | User session is Logged out                     | <mark>PASS</mark> |
+| Logout Button | Click          | Redirected to Home page                        | <mark>PASS</mark> |
+| Logout Button | Hover/Focus    | Darkens Background                             | <mark>PASS</mark> |
+
+### Shopping Bag Page
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Secure Checkout button | Click | Brings to CHeckout page                        | <mark>PASS</mark> |
+| Keep Shopping button | Click   | Redirects back All Gemstones page              | <mark>PASS</mark> |
+| Remove Link | Click            | Removes gemstone from shoppping bag            | <mark>PASS</mark> |
+
+### Checkout Page
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Checkout Form | Fill out the form and click Complete Order button | Securely comppletes Order using Stripe | <mark>PASS</mark> |
+| Adjust Bag button | Click          | Redirected to Home page                        | <mark>PASS</mark> |
+| Adjust Bag button | Hover/Focus  | Lightens Background                       | <mark>PASS</mark> |
+| Complete Order button | Hover/Focus    | Darkens Background                              | <mark>PASS</mark> |
+| Complete Order button | Click    | Securely completes order and brings to success page | <mark>PASS</mark> |
+
+### Profile Page
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Delivery Info Form | Change details | Details updated | <mark>PASS</mark> |
+| Orders Tab | Hover | Opens wishlist | <mark>PASS</mark> |
+| Delivery Info Tab | Hover | Opens wishlist | <mark>PASS</mark> |
+| Wishlist Tab | Hover | Opens wishlist | <mark>PASS</mark> |
+| Remove Link | Click | Removes gemstone from shoppping bag and redirects to gemstone detail page | <mark>PASS</mark> |
+
+### Add Gemstone Page for Admin
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Add Gemstone Form | Fill in form, add image and click on Add Product button | Adds new gemstone to shop with image | <mark>PASS</mark> |
+| Add Gemstone Form | Fill in form, don't image and click on Add Product button | Adds new gemstone to shop with image placeholder | <mark>PASS</mark> |
+| Cancel button | Click | Cancels gemstone addition | <mark>PASS</mark> |
+| Add Gemstone button | Click | Submits add gemstone form | <mark>PASS</mark> |
+| Select Image button | Click | Opens window to choose image | <mark>PASS</mark> |
+
+### Edit Gemstone Page for Admin
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Edit Gemstone Form | Fill in form, change details and click on Edit Product button | Edits gemstone | <mark>PASS</mark> |
+| Cancel button | Click | Cancels gemstone addition | <mark>PASS</mark> |
+| Edit Gemstone button | Click | Submits edit gemstone form | <mark>PASS</mark> |
 
 ## **Responsiveness**
 
