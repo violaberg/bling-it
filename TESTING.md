@@ -11,6 +11,8 @@
 * [**Browser Testing**](#browser-testing)
 * [**Device Testing**](#device-testing)
 * [**Lighthouse**](#lighthouse)
+    + [**Desktop**](#desktop)
+    + [**Mobile**](#mobile)
 * [**Manual Testing**](#manual-testing)
     + [**Navigation**](#navigation)
     + [**Home Page**](#home-page)
@@ -430,19 +432,29 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Lighthouse**
 
-| Page            | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
-| --------------- | --------- | ----------- | ------------ | - | --------------------------------------------------------------------------------------------------------------------------- |
-| ***Desktop***     |             |               |                |     |
-| Home            |           |            |             |  | <details><summary>Home</summary><img src=""></details> |
-|                 |             |               |                |     |
+# **Desktop**
 
-<br>
+| Home Desktop | <details><summary>Home Desktop</summary><img src="static/docs/lighthouse/home-lhouse-desktop.png"></details> |
+| About Desktop | <details><summary>About Desktop</summary><img src="static/docs/lighthouse/about-lhouse-desktop.png"></details> |
+| All Gemstones Desktop | <details><summary>All Gemstones Desktop</summary><img src="static/docs/lighthouse/gemstones-lhouse-desktop.png"></details> |
+| Gemstone Detail Desktop | <details><summary>Gemstone Detail Desktop</summary><img src="static/docs/lighthouse/gemstone-detail-lhouse-desktop.png"></details> |
+| Reviews Desktop | <details><summary>Reviews Desktop</summary><img src="static/docs/lighthouse/reviews-lhouse-desktop.png"></details> |
+| Contact Desktop | <details><summary>Contact Desktop</summary><img src="static/docs/lighthouse/home-lhouse-desktop.png"></details> |
+| Profile Desktop | <details><summary>Profile Desktop</summary><img src="static/docs/lighthouse/profile-lhouse-desktop.png"></details> |
+| FAQ Desktop | <details><summary>FAQ Desktop</summary><img src="static/docs/lighthouse/faq-lhouse-desktop.png"></details> |
+| Privacy Policy Desktop | <details><summary>Privacy Policy Desktop</summary><img src="static/docs/lighthouse/policy-lhouse-desktop.png"></details> |
 
-| Page            | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
-| --------------- | --------- | ----------- | ------------ | - | --------------------------------------------------------------------------------------------------------------------------- |
-| ***Mobile***     |             |               |                |     |
-| Home            |           |            |             |  | <details><summary>Home</summary><img src=""></details> |
-|                 |             |               |                |     |
+# **Mobile**
+
+| Home Mobile | <details><summary>Home Mobile</summary><img src="static/docs/lighthouse/home-lhouse-mobile.png"></details> |
+| About Mobile | <details><summary>About Mobile</summary><img src="static/docs/lighthouse/about-lhouse-mobile.png"></details> |
+| All Gemstones Mobile | <details><summary>All Gemstones Mobile</summary><img src="static/docs/lighthouse/gemstones-lhouse-mobile.png"></details> |
+| Gemstone Detail Mobile | <details><summary>Gemstone Detail Mobile</summary><img src="static/docs/lighthouse/gemstone-detail-lhouse-mobile.png"></details> |
+| Reviews Mobile | <details><summary>Reviews Mobile</summary><img src="static/docs/lighthouse/reviews-lhouse-mobile.png"></details> |
+| Contact Mobile | <details><summary>Contact Mobile</summary><img src="static/docs/lighthouse/home-lhouse-mobile.png"></details> |
+| Profile Mobile | <details><summary>Profile Mobile</summary><img src="static/docs/lighthouse/profile-lhouse-mobile.png"></details> |
+| FAQ Mobile | <details><summary>FAQ Mobile</summary><img src="static/docs/lighthouse/faq-lhouse-mobile.png"></details> |
+| Privacy Policy Mobile | <details><summary>Privacy Policy Mobile</summary><img src="static/docs/lighthouse/policy-lhouse-mobile.png"></details> |
 
 ## **Manual Testing**
 
