@@ -102,12 +102,6 @@ td.wishlist-td {
 
 .wishlist-td {
     border-bottom: 1px solid var(--gold);
-    max-width: fit-content;
-}
-
-.order-history,
-.wishlist {
-    overflow-y: hidden !important;
 }
 
 @media (min-width: 400px) {
