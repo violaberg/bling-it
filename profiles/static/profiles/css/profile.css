@@ -97,6 +97,15 @@ td.wishlist-td {
     list-style-type: none;
 }
 
+.profile-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.wishlist-table {
+    width: 100%;
+    table-layout: fixed;
+}
 
 .wishlist-td {
     border-bottom: 1px solid var(--gold);

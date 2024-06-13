@@ -117,7 +117,7 @@ def wishlist(request, pk):
     """
     profile = get_object_or_404(UserProfile, id=pk)
     wishlist_items = Wishlist.objects.filter(user=profile).order_by('-created')
-    paginator = Paginator(wishlist_items, 2)
+    paginator = Paginator(wishlist_items, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
