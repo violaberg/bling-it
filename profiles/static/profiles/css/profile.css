@@ -73,6 +73,10 @@ a {
     display: none;
 }
 
+#delivery {
+    display: block;
+}
+
 /* Order history tab */
 .table thead th {
     border-color: var(--gold);
