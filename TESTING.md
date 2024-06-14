@@ -444,6 +444,8 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Profile Desktop | <details><summary>Profile Desktop</summary><img src="static/docs/lighthouse/profile-lhouse-desktop.png"></details> |
 | FAQ Desktop | <details><summary>FAQ Desktop</summary><img src="static/docs/lighthouse/faq-lhouse-desktop.png"></details> |
 | Privacy Policy Desktop | <details><summary>Privacy Policy Desktop</summary><img src="static/docs/lighthouse/policy-lhouse-desktop.png"></details> |
+| Add Gemstone Desktop | <details><summary>Add Gemstone Desktop</summary><img src="static/docs/lighthouse/add-gemstone-lhouse-desktop.png"></details> |
+| Edit Gemstone Desktop | <details><summary>Edit Gemstone Desktop</summary><img src="static/docs/lighthouse/edit-gemstone-lhouse-desktop.png"></details> |
 
 # **Mobile**
 
@@ -456,6 +458,8 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Profile Mobile | <details><summary>Profile Mobile</summary><img src="static/docs/lighthouse/profile-lhouse-mobile.png"></details> |
 | FAQ Mobile | <details><summary>FAQ Mobile</summary><img src="static/docs/lighthouse/faq-lhouse-mobile.png"></details> |
 | Privacy Policy Mobile | <details><summary>Privacy Policy Mobile</summary><img src="static/docs/lighthouse/policy-lhouse-mobile.png"></details> |
+| Add Gemstone Mobile | <details><summary>Add Gemstone Mobile</summary><img src="static/docs/lighthouse/add-gemstone-lhouse-mobile.png"></details> |
+| Edit Gemstone Mobile | <details><summary>Edit Gemstone Mobile</summary><img src="static/docs/lighthouse/edit-gemstone-lhouse-mobile.png"></details> |
 
 ## **Manual Testing**
 
