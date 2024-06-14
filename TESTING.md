@@ -347,6 +347,7 @@ All JavaScript was validated using (JS Hint)[https://jshint.com/]
 |--------------------------------------------|-----------------------------------------------------------|-------------|
 | gemstones.html                             |<details><summary>gemstones.html</summary><img src="static/docs/validators/gemstones-jshint.PNG"></details>| <mark>PASS</mark> |
 | scroll-to-top btn                          |<details><summary>reviews.html</summary><img src="static/docs/validators/scroll-to-top-jshint.PNG"></details>| <mark>PASS</mark> |
+| profile.js                                 |<details><summary>profile.js</summary><img src="static/docs/validators/profiles-jshint.png"></details>| <mark>PASS</mark> |
 
 ### **Python**
 
