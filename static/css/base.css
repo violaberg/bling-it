@@ -711,10 +711,6 @@ span.page-link,
         width: 3%;
     }
 
-    input#id_email {
-        max-width: 66%;
-    }
-
     .image-container.mx-auto.pt-4 {
         width: 66%;
     }
