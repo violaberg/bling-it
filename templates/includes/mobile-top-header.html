@@ -35,19 +35,23 @@
         <div class="dropdown-menu rounded-0" aria-labelledby="mobile-user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'add_gemstone' %}" class="dropdown-item" aria-label="Store Management menu link">Store Management</a>
+            <a href="{% url 'add_gemstone' %}" class="dropdown-item" aria-label="Store Management menu link">Store
+                Management</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="custom-font dropdown-item" aria-label="User Profile menu link">My Profile</a>
-            <a href="{% url 'profile' %}" class="custom-font dropdown-item" aria-label="Wishlist menu link">Wishlist</a>
-            <a href="{% url 'account_logout' %}" class="custom-font dropdown-item" aria-label="Logout menu link">Logout</a>
+            <a href="{% url 'profile' %}" class="custom-font dropdown-item" aria-label="User Profile menu link">My
+                Profile</a>
+            <a href="{% url 'account_logout' %}" class="custom-font dropdown-item"
+                aria-label="Logout menu link">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="custom-font dropdown-item" aria-label="Register menu link">Register</a>
+            <a href="{% url 'account_signup' %}" class="custom-font dropdown-item"
+                aria-label="Register menu link">Register</a>
             <a href="{% url 'account_login' %}" class="custom-font dropdown-item" aria-label="Login menu link">Login</a>
             {% endif %}
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}custom-blue font-weight-bold{% else %}text-blue{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}" aria-label="View bag">
+        <a class="{% if grand_total %}custom-blue font-weight-bold{% else %}text-blue{% endif %} nav-link d-block d-lg-none"
+            href="{% url 'view_bag' %}" aria-label="View bag">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag pb-3 fa-lg"></i></div>
                 <p class="grand-total my-0">
