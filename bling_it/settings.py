@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from urllib.parse import urlparse
+
 
 if os.path.exists("env.py"):
     import env
@@ -29,12 +31,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 CSRF_TRUSTED_ORIGINS = [os.environ.get('CSRF_TRUSTED_ORIGINS')]
 
 ALLOWED_HOSTS = [
     'bling-it-242ac659e1b6.herokuapp.com', 'localhost',
-    '8000-violaberg-blingit-8ylrt9lbn7x.ws.codeinstitute-ide.net']
+    '127.0.0.1']
 
 
 # Application definition
@@ -127,17 +129,18 @@ WSGI_APPLICATION = 'bling_it.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': tmpPostgres.path.replace('/', ''),
+        'USER': tmpPostgres.username,
+        'PASSWORD': tmpPostgres.password,
+        'HOST': tmpPostgres.hostname,
+        'PORT': 5432,
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        },
-    }
+}
 
 
 # Password validation
